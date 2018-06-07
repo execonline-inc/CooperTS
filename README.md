@@ -1,12 +1,12 @@
 # rubeTS
 
-RubeTS is an opinionated ecosystem for building web apps with React Typescript.
+ CooperTS is an opinionated ecosystem for building web apps with React Typescript.
 
 # Not a Framework
 
-RubeTS is a collection of libraries, design patterns, and strongly-held opinions that we think make building web apps fun, easy, and a joy to maintain.
+CooperTS is a collection of libraries, design patterns, and strongly-held opinions that we think make building web apps fun, easy, and a joy to maintain.
 
-Eventually RubeTS will include tooling to help you implement some of the design patterns quickly.
+Eventually CooperTS will include tooling to help you implement some of the design patterns quickly.
 
 ## Opinions
 - Null is not a good representation of nothing. 
