@@ -1,4 +1,4 @@
-# rubeTS
+# CooperTS
 
  CooperTS is an opinionated ecosystem for building web apps with React Typescript.
 
