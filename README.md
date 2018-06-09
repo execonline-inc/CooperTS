@@ -13,8 +13,10 @@ Eventually CooperTS will include tooling to help you implement some of the desig
 - JSON from API endpoints should be validated against our expectations as it is decoded
 - Side effects should be implemented as reactions
 - Typechecking is preferable to writing tests to validate types
+- It should be impossible to enter into an invalid state
 
 ## Design Patterns
+- Finite State Machines
 - Decoders
 - Reactions
 - Stores
