@@ -36,4 +36,4 @@ Eventually CooperTS will include tooling to help you implement some of the desig
 
 ## Docs
 
-[API](https://execonline-inc.github.io/CooperTS/)
+[API](https://execonline-inc.github.io/CooperTS/docs)
