@@ -26,10 +26,14 @@ Eventually CooperTS will include tooling to help you implement some of the desig
 - API calls
 - API data design (based on HATEOAS)
 
-## Libraries
+## Libraries We Use
 
 - [CreateReactAppTypescript](https://github.com/wmonk/create-react-app-typescript)
 - [Mobx](https://github.com/mobxjs/mobx)
 - [Jsonous](https://github.com/kofno/jsonous)
 - [Maybeasy](https://github.com/kofno/maybeasy)
 - [Ajaxian](https://github.com/kofno/ajaxian)
+
+## Docs
+
+[API](https://execonline-inc.github.io/CooperTS/)
