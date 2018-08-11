@@ -23,10 +23,8 @@
   "homepage": "https://github.com/execonline-inc/CooperTS",
   "bugs": "https://github.com/execonline-inc/CooperTS/issues",
   "dependencies": {
-    "@types/ramda": "^0.25.36",
     "ajaxian": "^2.1.1",
     "jsonous": "^3.2.0",
-    "ramda": "^0.25.0",
     "taskarian": "^1.5.0"
   },
   "devDependencies": {
@@ -37,7 +35,7 @@
     "typescript": "^3.0.1"
   },
   "scripts": {
-    "docs": "typedoc --out docs --theme minimal --ignoreCompilerErrors && touch docs/.nojekyll",
+    "docs": "typedoc --out docs --theme minimal && touch docs/.nojekyll",
     "build": "tsc",
     "semantic-release": "semantic-release pre && yarn publish && semantic-release post"
   },
