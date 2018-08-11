@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Linkable | cooper-ts</title>
+	<title>&quot;Decoders/index&quot; | cooper-ts</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,64 +909,125 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-			<a href="_resource_types_.link.html" class="tsd-kind-icon">Link</a>
+		<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+			<a href="_decoders_index_.html#numbertostringdecoder" class="tsd-kind-icon">number<wbr>ToString<wbr>Decoder</a>
 		</li>
-		<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-			<a href="_resource_types_.linkable.html" class="tsd-kind-icon">Linkable</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="_resource_types_.linkable.html#links" class="tsd-kind-icon">links</a>
-				</li>
-			</ul>
+		<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+			<a href="_decoders_index_.html#stringtonumberdecoder" class="tsd-kind-icon">string<wbr>ToNumber<wbr>Decoder</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
-			<a href="_resource_types_.resource.html" class="tsd-kind-icon">Resource</a>
+		<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+			<a href="_decoders_index_.html#eql" class="tsd-kind-icon">eql</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
-			<a href="_resource_types_.resourcewithmetadata.html" class="tsd-kind-icon">Resource<wbr>With<wbr>Metadata</a>
+		<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+			<a href="_decoders_index_.html#stringliteral" class="tsd-kind-icon">string<wbr>Literal</a>
 		</li>
 	</ul>
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
-		<section class="tsd-panel tsd-hierarchy">
-			<h3>Hierarchy</h3>
-			<ul class="tsd-hierarchy">
-				<li>
-					<span class="target">Linkable</span>
-					<ul class="tsd-hierarchy">
-						<li>
-							<a href="_resource_types_.resource.html" class="tsd-signature-type">Resource</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section ">
-						<h3>Properties</h3>
+						<h3>Variables</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_resource_types_.linkable.html#links" class="tsd-kind-icon">links</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_decoders_index_.html#numbertostringdecoder" class="tsd-kind-icon">number<wbr>ToString<wbr>Decoder</a></li>
+							<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_decoders_index_.html#stringtonumberdecoder" class="tsd-kind-icon">string<wbr>ToNumber<wbr>Decoder</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section ">
+						<h3>Functions</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_decoders_index_.html#eql" class="tsd-kind-icon">eql</a></li>
+							<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_decoders_index_.html#stringliteral" class="tsd-kind-icon">string<wbr>Literal</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="links" class="tsd-anchor"></a>
-				<h3>links</h3>
-				<div class="tsd-signature tsd-kind-icon">links<span class="tsd-signature-symbol">:</span> <a href="_resource_types_.link.html" class="tsd-signature-type">Link</a><span class="tsd-signature-symbol">[]</span></div>
+			<h2>Variables</h2>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+				<a name="numbertostringdecoder" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> number<wbr>ToString<wbr>Decoder</h3>
+				<div class="tsd-signature tsd-kind-icon">number<wbr>ToString<wbr>Decoder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Decoder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;number.andThen(value &#x3D;&gt; {return succeed(value.toString());})</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/execonline-inc/CooperTS/blob/0a68214/src/Resource/Types.ts#L11">Resource/Types.ts:11</a></li>
+						<li>Defined in Decoders/index.ts:14</li>
 					</ul>
 				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+				<a name="stringtonumberdecoder" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> string<wbr>ToNumber<wbr>Decoder</h3>
+				<div class="tsd-signature tsd-kind-icon">string<wbr>ToNumber<wbr>Decoder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Decoder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;string.map(s &#x3D;&gt; Number(s)).andThen(n &#x3D;&gt; {return isNaN(n) ? fail(&#x60;Expected a number but got ${n}&#x60;) : succeed(n);})</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in Decoders/index.ts:18</li>
+					</ul>
+				</aside>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Functions</h2>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+				<a name="eql" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> eql</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">eql&lt;T&gt;<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Decoder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in Decoders/index.ts:4</li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>T</h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>t: <span class="tsd-signature-type">T</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Decoder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+				<a name="stringliteral" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagConst">Const</span> string<wbr>Literal</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">string<wbr>Literal&lt;T&gt;<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Decoder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in Decoders/index.ts:9</li>
+							</ul>
+						</aside>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>t: <span class="tsd-signature-type">T</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Decoder</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">

@@ -1,6 +1,6 @@
 {
   "name": "cooper-ts",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": {
@@ -22,7 +22,8 @@
   ],
   "homepage": "https://github.com/execonline-inc/CooperTS",
   "bugs": "https://github.com/execonline-inc/CooperTS/issues",
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "ajaxian": "^2.1.1",
     "jsonous": "^3.2.0",
     "taskarian": "^1.5.0"
