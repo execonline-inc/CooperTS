@@ -9,13 +9,9 @@
   },
   "author": "Ryan L. Bell <rbell@execonline.com>",
   "license": "MIT",
-  "description": "An opinionated ecosystem for building react webapps with Typescript",
-  "keywords": [
-    "typescript",
-    "react",
-    "mobx",
-    "framework"
-  ],
+  "description":
+    "An opinionated ecosystem for building react webapps with Typescript",
+  "keywords": ["typescript", "react", "mobx", "framework"],
   "contributors": [
     "David Christiansen<dave@execonline.com>",
     "Ed Copony<ecopony@execoniline.com>"
@@ -29,7 +25,6 @@
     "taskarian": "^1.5.0"
   },
   "devDependencies": {
-    "semantic-release": "^15.9.8",
     "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
     "typedoc": "^0.11.1",
@@ -37,8 +32,7 @@
   },
   "scripts": {
     "docs": "typedoc --out docs --theme minimal && touch docs/.nojekyll",
-    "build": "tsc",
-    "semantic-release": "semantic-release pre && yarn publish && semantic-release post"
+    "build": "tsc"
   },
   "prettier": {
     "trailingComma": "es5",
