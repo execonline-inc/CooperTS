@@ -1,0 +1,34 @@
+{
+  "name": "@execonline-inc/environment",
+  "version": "0.0.0-development",
+  "description": "Safely read environment cofigurations",
+  "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
+  "homepage": "https://github.com/execonline-inc/CooperTS#readme",
+  "license": "ISC",
+  "main": "lib/environment.js",
+  "typings": "lib/environment.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/execonline-inc/CooperTS.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/execonline-inc/CooperTS/issues"
+  },
+  "dependencies": {
+    "@kofno/piper": "^1.2.0",
+    "maybeasy": "^2.6.0",
+    "resulty": "^3.0.0",
+    "taskarian": "^2.1.0"
+  }
+}

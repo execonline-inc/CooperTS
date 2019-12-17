@@ -1,18 +1,16 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ES5",
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "preserveConstEnums": true,
-    "alwaysStrict": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
     "declaration": true,
-    "outDir": "."
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "lib": ["es6"],
+    "strict": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
