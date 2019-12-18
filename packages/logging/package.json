@@ -1,12 +1,12 @@
 {
-  "name": "@execonline-inc/environment",
+  "name": "@execonline-inc/logging",
   "version": "0.0.0-development",
-  "description": "Safely read environment cofigurations",
+  "description": "Console and HB warnings for background logging",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/environment.js",
-  "typings": "lib/environment.d.ts",
+  "main": "lib/logging.js",
+  "typings": "lib/logging.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -26,10 +26,6 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@kofno/piper": "^1.2.0",
-    "honeybadger-js": "^2.0.0",
-    "maybeasy": "^2.6.0",
-    "resulty": "^3.0.0",
-    "taskarian": "^2.1.0"
+    "honeybadger-js": "^2.0.0"
   }
 }
