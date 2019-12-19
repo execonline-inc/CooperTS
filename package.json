@@ -7,8 +7,15 @@
   },
   "devDependencies": {
     "@types/node": "^12.12.17",
+    "cz-lerna-changelog": "^2.0.2",
     "lerna": "^3.19.0",
+    "lerna-semantic-release": "^9.1.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
   }
 }
