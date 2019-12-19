@@ -1,12 +1,12 @@
 {
-  "name": "@execonline-inc/environment",
+  "name": "@execonline-inc/collections",
   "version": "0.0.0-development",
-  "description": "Safely read environment cofigurations",
+  "description": "Utilities for working with collections of data",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/environment.js",
-  "typings": "lib/environment.d.ts",
+  "main": "lib/collections.js",
+  "typings": "lib/collections.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -26,12 +26,10 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/collections": "^0.0.0-development",
     "@execonline-inc/logging": "^0.0.0-development",
     "@execonline-inc/maybe-adapter": "^0.0.0-development",
     "@kofno/piper": "^1.2.0",
     "ajaxian": "^3.0.1",
-    "honeybadger-js": "^2.0.0",
     "jsonous": "^5.0.1",
     "logging": "^3.2.0",
     "maybeasy": "^2.6.0",
