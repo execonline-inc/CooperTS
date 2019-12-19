@@ -1,12 +1,12 @@
 {
-  "name": "@execonline-inc/collections",
+  "name": "@execonline-inc/appy",
   "version": "0.0.0-development",
-  "description": "Utilities for working with collections of data",
+  "description": "Call api patterns around ajaxian http tasks",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/collections.js",
-  "typings": "lib/collections.d.ts",
+  "main": "lib/appy.js",
+  "typings": "lib/appy.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -27,14 +27,8 @@
   },
   "dependencies": {
     "@execonline-inc/environment": "^0.0.0-development",
-    "@execonline-inc/logging": "^0.0.0-development",
-    "@execonline-inc/maybe-adapter": "^0.0.0-development",
-    "@kofno/piper": "^1.2.0",
+    "@execonline-inc/resource": "^0.0.0-development",
     "ajaxian": "^3.0.1",
-    "jsonous": "^5.0.1",
-    "logging": "^3.2.0",
-    "maybeasy": "^2.6.0",
-    "resulty": "^3.0.0",
-    "taskarian": "^2.1.0"
+    "jsonous": "^5.0.1"
   }
 }

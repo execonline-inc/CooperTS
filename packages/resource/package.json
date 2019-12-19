@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@execonline-inc/collections": "^0.0.0-development",
+    "@execonline-inc/environment": "^0.0.0-development",
     "@execonline-inc/logging": "^0.0.0-development",
     "@execonline-inc/maybe-adapter": "^0.0.0-development",
     "@kofno/piper": "^1.2.0",

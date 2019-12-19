@@ -26,6 +26,8 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
+    "@execonline-inc/environment": "^0.0.0-development",
+    "ajaxian": "^3.0.1",
     "honeybadger-js": "^2.0.0",
     "jsonous": "^5.0.1",
     "logging": "^3.2.0"
