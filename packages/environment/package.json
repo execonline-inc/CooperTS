@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/environment",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Safely read environment cofigurations",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -34,5 +34,8 @@
     "maybeasy": "^2.6.0",
     "resulty": "^3.0.0",
     "taskarian": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
