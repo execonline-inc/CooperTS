@@ -6,7 +6,7 @@
     "publish": "lerna run tsc && lerna publish"
   },
   "devDependencies": {
-    "@types/node": "^12.12.17",
+    "@types/node": "^12.12.21",
     "cz-lerna-changelog": "^2.0.2",
     "lerna": "^3.19.0",
     "prettier": "^1.19.1",
