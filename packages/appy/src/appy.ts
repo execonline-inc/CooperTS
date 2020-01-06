@@ -51,7 +51,7 @@ export const request = <Link extends HReferenceable>(token: Maybe<string>) => <
 >(
   link: Link,
   decoder: Decoder<T>,
-  payload: {}
+  payload: unknown
 ): Task<AppyError, RequestBuilder<T>> =>
   applicationIdHeader
     .map(header => [header])
@@ -90,17 +90,18 @@ const logoutIfSessionExpired = <T>(whenUnauthorized: Task<never, void>) => (
 };
 
 export const callApi = <T, Link extends HReferenceable>(
-  whenUnauthorized: Task<never, void>
-) => (token: Maybe<string>) => (decoder: Decoder<T>, payload: {}) => (
-  link: Link
-): Task<AppyError, T> =>
+  token: Maybe<string>
+) => (whenUnauthorized: Task<never, void>) => (
+  decoder: Decoder<T>,
+  payload: unknown
+) => (link: Link): Task<AppyError, T> =>
   request(token)(link, decoder, payload)
     .andThen(toHttpTask)
     .orElse(logoutIfSessionExpired(whenUnauthorized));
 
 export const postToApi = (token: Maybe<string>) => (
   whenUnauthenticated: Task<never, void>
-) => (payload: {}) => <Link extends HReferenceable>(
+) => (payload: unknown) => <Link extends HReferenceable>(
   link: Link
 ): Task<AppyError, string> =>
   applicationIdHeader
@@ -117,7 +118,7 @@ export const postToApi = (token: Maybe<string>) => (
 
 export const putToApi = (token: Maybe<string>) => (
   whenUnauthenticated: Task<never, void>
-) => (payload: {}) => <Link extends HReferenceable>(
+) => (payload: unknown) => <Link extends HReferenceable>(
   link: Link
 ): Task<AppyError, string> =>
   applicationIdHeader
