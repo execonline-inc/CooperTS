@@ -1,3 +1,8 @@
+export interface Milliseconds {
+  kind: "milliseconds";
+  milliseconds: number;
+}
+
 export interface Seconds {
   kind: "seconds";
   seconds: number;
@@ -8,7 +13,7 @@ export interface Minutes {
   minutes: number;
 }
 
-export type Time = Minutes | Seconds;
+export type Time = Minutes | Seconds | Milliseconds;
 
 export const seconds = (value: number): Seconds => ({
   kind: "seconds",
@@ -20,8 +25,15 @@ export const minutes = (value: number): Minutes => ({
   minutes: value
 });
 
+export const milliseconds = (value: number): Milliseconds => ({
+  kind: "milliseconds",
+  milliseconds: value
+});
+
 export const toSeconds = (time: Time): Seconds => {
   switch (time.kind) {
+    case "milliseconds":
+      return seconds(Math.floor(time.milliseconds / 1000));
     case "seconds":
       return time;
     case "minutes":
@@ -31,6 +43,8 @@ export const toSeconds = (time: Time): Seconds => {
 
 export const toMinutes = (time: Time): Minutes => {
   switch (time.kind) {
+    case "milliseconds":
+      return minutes(Math.floor(time.milliseconds / 60000));
     case "seconds":
       return minutes(Math.floor(time.seconds / 60));
     case "minutes":
@@ -38,11 +52,15 @@ export const toMinutes = (time: Time): Minutes => {
   }
 };
 
-export const toMilliseconds = (time: Time): number => {
+export const toMilliseconds = (time: Time): Milliseconds => {
   switch (time.kind) {
+    case "milliseconds":
+      return time;
     case "seconds":
-      return Math.floor(time.seconds * 1000);
+      return milliseconds(Math.floor(time.seconds * 1000));
     case "minutes":
-      return Math.floor(time.minutes * 60 * 1000);
+      return milliseconds(Math.floor(time.minutes * 60 * 1000));
   }
 };
+
+export const toJS = (time: Time): number => toMilliseconds(time).milliseconds;
