@@ -68,12 +68,12 @@ const confirmLinkRel = <Rel extends string>(
   }));
 
 const confirmLinkRels = <Rel extends string>(
-  ls: UnconfirmedLink<Rel>[]
-): Maybe<Link<Rel>>[] => ls.map(confirmLinkRel);
+  ls: ReadonlyArray<UnconfirmedLink<Rel>>
+): ReadonlyArray<Maybe<Link<Rel>>> => ls.map(confirmLinkRel);
 
 export const linksDecoder = <Rel extends string>(
   toRel: ToRel<Rel>
-): Decoder<Link<Rel>[]> =>
+): Decoder<ReadonlyArray<Link<Rel>>> =>
   array(unconfirmedLinkDecoder(toRel))
     .map(confirmLinkRels)
     .map(mapMaybe(identity));
@@ -96,10 +96,10 @@ export function resourceDecoder<T, Rel extends string>(
   toRel: ToRel<Rel>,
   payloadDecoder?: Decoder<T>
 ) {
-  const doit = (payloadDecoder: Decoder<T>) =>
-    field("payload", payloadDecoder).andThen(payload =>
-      linksDecoder(toRel).map<Resource<T, Rel>>(links => ({ payload, links }))
-    );
+  const doit = (payloadDecoder: Decoder<T>): Decoder<Resource<T, Rel>> =>
+    succeed({})
+      .assign("links", field("links", linksDecoder(toRel)))
+      .assign("payload", field("payload", payloadDecoder));
 
   return typeof payloadDecoder === "undefined" ? doit : doit(payloadDecoder);
 }

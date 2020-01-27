@@ -23,11 +23,11 @@ export function flatMap<T, U>(fn: (value: T) => U[], ary?: ReadonlyArray<T>) {
 
 export function mapMaybe<T, B>(
   fn: (a: T) => Maybe<B>
-): (ts: ReadonlyArray<T>) => B[];
+): (ts: ReadonlyArray<T>) => ReadonlyArray<B>;
 export function mapMaybe<T, B>(
   fn: (a: T) => Maybe<B>,
   ts: ReadonlyArray<T>
-): B[];
+): ReadonlyArray<B>;
 export function mapMaybe<T, B>(fn: (a: T) => Maybe<B>, ts?: ReadonlyArray<T>) {
   const reducer = (collection: ReadonlyArray<T>) =>
     collection.reduce(
@@ -36,7 +36,7 @@ export function mapMaybe<T, B>(fn: (a: T) => Maybe<B>, ts?: ReadonlyArray<T>) {
           Just: value => accum.concat([value]),
           Nothing: always(accum)
         }),
-      [] as B[]
+      [] as ReadonlyArray<B>
     );
 
   return typeof ts === "undefined" ? reducer : reducer(ts);
