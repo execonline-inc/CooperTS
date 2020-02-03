@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/logging",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Console and HB warnings for background logging",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -26,7 +26,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/environment": "^1.0.1",
+    "@execonline-inc/environment": "^1.0.2",
     "ajaxian": "^3.0.1",
     "honeybadger-js": "^2.0.0",
     "jsonous": "^5.0.1",
