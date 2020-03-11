@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 packages/*/lib
 .idea
+.vscode/

@@ -16,5 +16,10 @@
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100
   }
 }
