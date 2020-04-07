@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/translations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Support for typed and interpolatable translations",
   "author": "Patrick Rebsch <pjrebsch@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
