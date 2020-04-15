@@ -1,4 +1,4 @@
-import AlreadyTranslated from './AlreadyTranslatedText';
+import AlreadyTranslated from './AlreadyTranslated';
 import NotTranslated from './NotTranslated';
 import TranslationsContext from './TranslationsContext';
 import TranslationsLoader from './TranslationsLoader';
