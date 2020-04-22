@@ -21,6 +21,7 @@ const invalidUrlError = (error: unknown, href: string, base?: string | URL): Inv
 
 export const toUrlR = (href: string, base?: string | URL): Result<InvalidUrlError, URL> => {
   try {
+    // Working around a bug in safari: https://github.com/zloirock/core-js/issues/656
     const url = base ? new URL(href, base) : new URL(href);
     return ok(url);
   } catch (e) {
