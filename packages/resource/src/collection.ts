@@ -1,35 +1,32 @@
-import { Maybe } from "maybeasy";
-import { Resource } from "./types";
+import { Maybe } from 'maybeasy';
+import { Resource } from './types';
 
-export type ResourceCollection<T, Rel extends string> =
-  | None
-  | Empty
-  | Results<T, Rel>;
+export type ResourceCollection<T, Rel extends string> = None | Empty | Results<T, Rel>;
 
 export interface None {
-  kind: "none";
+  kind: 'none';
 }
 
 export interface Empty {
-  kind: "empty";
+  kind: 'empty';
 }
 
 export interface Results<T, Rel extends string> {
-  kind: "results";
+  kind: 'results';
   results: Resource<T[], Rel>;
 }
 
 export const none = <T, Rel extends string>(): ResourceCollection<T, Rel> => ({
-  kind: "none"
+  kind: 'none',
 });
 export const empty = <T, Rel extends string>(): ResourceCollection<T, Rel> => ({
-  kind: "empty"
+  kind: 'empty',
 });
 export const results = <T, Rel extends string>(
   r: Resource<T[], Rel>
 ): ResourceCollection<T, Rel> => ({
-  kind: "results",
-  results: r
+  kind: 'results',
+  results: r,
 });
 
 export const resources = <T, Rel extends string>(

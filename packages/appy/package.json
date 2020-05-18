@@ -11,9 +11,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
@@ -27,7 +25,7 @@
   },
   "dependencies": {
     "@execonline-inc/environment": "^1.0.2",
-    "@execonline-inc/resource": "^1.1.0",
+    "@execonline-inc/resource": "^1.2.0",
     "ajaxian": "^3.0.1",
     "jsonous": "^5.0.1"
   },
