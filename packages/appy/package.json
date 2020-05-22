@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/appy",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Call api patterns around ajaxian http tasks",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -11,7 +11,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
@@ -25,7 +27,7 @@
   },
   "dependencies": {
     "@execonline-inc/environment": "^1.0.2",
-    "@execonline-inc/resource": "^1.2.0",
+    "@execonline-inc/resource": "^1.3.0",
     "ajaxian": "^3.0.1",
     "jsonous": "^5.0.1"
   },
