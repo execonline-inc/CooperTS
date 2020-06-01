@@ -2,19 +2,19 @@ import { mapMaybe } from '@execonline-inc/collections';
 import { stringLiteral } from '@execonline-inc/decoders';
 import { identity } from '@kofno/piper';
 import { Method } from 'ajaxian';
-import Decoder, { array, field, maybe, string, succeed, number } from 'jsonous';
+import Decoder, { array, field, maybe, number, string, succeed } from 'jsonous';
 import { stringify } from 'jsonous/Internal/ErrorStringify';
 import { Maybe } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
 import {
   Link,
+  PaginationMetadata,
   Resource,
   ResourceWithErrors,
   ResourceWithMetadata,
   ServerError,
-  PaginationMetadata,
-  ValidationErrors,
   ValidationError,
+  ValidationErrors,
 } from './types';
 
 const methodDecoder = new Decoder<Method>((value: unknown) => {
@@ -76,7 +76,9 @@ const confirmLinkRels = <Rel extends string>(
 export const linksDecoder = <Rel extends string>(
   toRel: ToRel<Rel>
 ): Decoder<ReadonlyArray<Link<Rel>>> =>
-  array(unconfirmedLinkDecoder(toRel)).map(confirmLinkRels).map(mapMaybe(identity));
+  array(unconfirmedLinkDecoder(toRel))
+    .map(confirmLinkRels)
+    .map(mapMaybe(identity));
 
 export const errorDecoder: Decoder<ServerError> = succeed({})
   .assign('type', field('type', string))
@@ -116,7 +118,7 @@ export const resourceWithErrorsDecoder = <T, Rel extends string>(toRel: ToRel<Re
   payloadDecoder: Decoder<T>
 ): Decoder<ResourceWithErrors<T, Rel>> =>
   resourceDecoder<T, Rel>(toRel, payloadDecoder).andThen(r =>
-    array(errorDecoder).map(errors => ({ ...r, errors }))
+    field('errors', array(errorDecoder)).map(errors => ({ ...r, errors }))
   );
 
 export const paginationMetadataDecoder: Decoder<PaginationMetadata> = succeed({})
