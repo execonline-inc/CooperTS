@@ -27,9 +27,7 @@
   },
   "dependencies": {
     "@execonline-inc/environment": "^1.0.2",
-    "ajaxian": "^3.0.1",
     "honeybadger-js": "^2.0.0",
-    "jsonous": "^5.0.1",
     "logging": "^3.2.0"
   },
   "publishConfig": {

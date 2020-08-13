@@ -1,4 +1,5 @@
-import { readVarT } from "@execonline-inc/environment";
+import { readVarT } from '@execonline-inc/environment';
+import { identity } from '@kofno/piper';
 import {
   BadStatus,
   del,
@@ -12,32 +13,28 @@ import {
   put,
   RequestBuilder,
   toHttpResponseTask,
-  toHttpTask
-} from "ajaxian";
-import Decoder from "jsonous";
-import { Maybe } from "maybeasy";
-import Task from "taskarian";
+  toHttpTask,
+} from 'ajaxian';
+import Decoder from 'jsonous';
+import { Maybe } from 'maybeasy';
+import Task from 'taskarian';
 export interface MissingApplicationId {
-  kind: "missing-application-id";
+  kind: 'missing-application-id';
 }
 
 export type AppyError = HttpError | MissingApplicationId;
 
 const missingApplicationId = (): MissingApplicationId => ({
-  kind: "missing-application-id"
+  kind: 'missing-application-id',
 });
 
-const appId = readVarT("REACT_APP_APPLICATION_ID").mapError<AppyError>(
-  missingApplicationId
-);
-const applicationIdHeader = appId.map(id => header("application-id", id));
+const appId = readVarT('REACT_APP_APPLICATION_ID').mapError<AppyError>(missingApplicationId);
+const applicationIdHeader = appId.map(id => header('application-id', id));
 
-const appendAuthHeader = (token: Maybe<string>) => (
-  headers: Header[]
-): Header[] => {
+const appendAuthHeader = (token: Maybe<string>) => (headers: Header[]): Header[] => {
   return token.cata({
-    Just: t => [...headers, header("authorization", `Bearer ${t}`)],
-    Nothing: () => headers
+    Just: t => [...headers, header('authorization', `Bearer ${t}`)],
+    Nothing: () => headers,
   });
 };
 
@@ -46,9 +43,7 @@ export interface HReferenceable {
   method: Method;
 }
 
-export const request = <Link extends HReferenceable>(token: Maybe<string>) => <
-  T
->(
+export const request = <Link extends HReferenceable>(token: Maybe<string>) => <T>(
   link: Link,
   decoder: Decoder<T>,
   payload: unknown
@@ -64,7 +59,7 @@ export const request = <Link extends HReferenceable>(token: Maybe<string>) => <
         timeout: 0,
         data: payload,
         withCredentials: false,
-        headers
+        headers,
       });
     });
 
@@ -72,38 +67,34 @@ const logoutIfSessionExpired = <T>(whenUnauthorized: Task<never, void>) => (
   err: AppyError
 ): Task<AppyError, T> => {
   switch (err.kind) {
-    case "bad-status":
+    case 'bad-status':
       if (err.response.status === 401) {
-        return (whenUnauthorized as Task<BadStatus, void>).andThen(() =>
-          Task.fail(err)
-        );
+        return (whenUnauthorized as Task<BadStatus, void>).andThen(() => Task.fail(err));
       } else {
         return Task.fail(err);
       }
-    case "bad-payload":
-    case "bad-url":
-    case "missing-application-id":
-    case "network-error":
-    case "timeout":
+    case 'bad-payload':
+    case 'bad-url':
+    case 'missing-application-id':
+    case 'network-error':
+    case 'timeout':
       return Task.fail(err);
   }
 };
 
-export const callApi = <T, Link extends HReferenceable>(
-  token: Maybe<string>
-) => (whenUnauthorized: Task<never, void>) => (
-  decoder: Decoder<T>,
-  payload: unknown
-) => (link: Link): Task<AppyError, T> =>
-  request(token)(link, decoder, payload)
-    .andThen(toHttpTask)
-    .orElse(logoutIfSessionExpired(whenUnauthorized));
+export const callApi = <T, Link extends HReferenceable>(token: Maybe<string>) => (
+  whenUnauthorized: Task<never, void>
+) => (decoder: Decoder<T>, payload: unknown) => (link: Link): Task<AppyError, T> =>
+  Task.succeed<AppyError, {}>({})
+    .assign('fn', Task.succeed(request(token)))
+    .assign('request', ({ fn }) => fn(link, decoder, payload))
+    .andThen<T>(({ request }) => toHttpTask<T>(request))
+    .orElse(logoutIfSessionExpired(whenUnauthorized))
+    .map<T>(identity);
 
-export const postToApi = (token: Maybe<string>) => (
-  whenUnauthenticated: Task<never, void>
-) => (payload: unknown) => <Link extends HReferenceable>(
-  link: Link
-): Task<AppyError, string> =>
+export const postToApi = (token: Maybe<string>) => (whenUnauthenticated: Task<never, void>) => (
+  payload: unknown
+) => <Link extends HReferenceable>(link: Link): Task<AppyError, string> =>
   applicationIdHeader
     .map(header => [header])
     .map(appendAuthHeader(token))
@@ -116,11 +107,9 @@ export const postToApi = (token: Maybe<string>) => (
     .andThen(toHttpTask)
     .orElse(logoutIfSessionExpired(whenUnauthenticated));
 
-export const putToApi = (token: Maybe<string>) => (
-  whenUnauthenticated: Task<never, void>
-) => (payload: unknown) => <Link extends HReferenceable>(
-  link: Link
-): Task<AppyError, string> =>
+export const putToApi = (token: Maybe<string>) => (whenUnauthenticated: Task<never, void>) => (
+  payload: unknown
+) => <Link extends HReferenceable>(link: Link): Task<AppyError, string> =>
   applicationIdHeader
     .map(header => [header])
     .map(appendAuthHeader(token))
@@ -133,9 +122,11 @@ export const putToApi = (token: Maybe<string>) => (
     .andThen(toHttpTask)
     .orElse(logoutIfSessionExpired(whenUnauthenticated));
 
-export const deleteToApi = (token: Maybe<string>) => (
-  whenAuthenticated: Task<never, void>
-) => <Link extends HReferenceable>(link: Link): Task<AppyError, string> =>
+export const deleteToApi = (token: Maybe<string>) => (whenAuthenticated: Task<never, void>) => <
+  Link extends HReferenceable
+>(
+  link: Link
+): Task<AppyError, string> =>
   applicationIdHeader
     .map(header => [header])
     .map(appendAuthHeader(token))
@@ -148,9 +139,7 @@ export const deleteToApi = (token: Maybe<string>) => (
 
 export const getFromApi = (token: Maybe<string>) => (
   whenAuthenticated: Task<never, void>
-) => (payload: {}) => <Link extends HReferenceable>(
-  link: Link
-): Task<AppyError, string> =>
+) => (payload: {}) => <Link extends HReferenceable>(link: Link): Task<AppyError, string> =>
   applicationIdHeader
     .map(header => [header])
     .map(appendAuthHeader(token))

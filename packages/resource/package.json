@@ -33,7 +33,7 @@
     "@execonline-inc/maybe-adapter": "^1.0.2",
     "@kofno/piper": "^1.2.0",
     "ajaxian": "^3.0.1",
-    "jsonous": "^5.0.1",
+    "jsonous": "^5.1",
     "maybeasy": "^2.6.0",
     "resulty": "^3.0.0",
     "taskarian": "^2.1.0"
