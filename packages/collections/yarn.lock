@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/maybe-adapter@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-1.0.2.tgz#13bba2c9b48eb1bebeeda66a9743c8a5dd20275b"
-  integrity sha512-wfAk2Nc5RLtLfOsWJYPDEhT556lbka8EQ0BA+tRph6js3iH4EGoQzwffWa7LItmWpTy+R5oOlJyR3WxZHj9FQw==
+"@execonline-inc/maybe-adapter@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-1.1.0.tgz#a1ae3dcb907efaebaa64c4d370a3cb493ebac037"
+  integrity sha512-/e1wQ3XVeetcr0vvrkwgRdnPEdFHE7g0AE7whUPHmJ+5oIjlkCRHAuU1PTs7OFk2fMdc8HEoxt2FMVWs361dHQ==
   dependencies:
     "@kofno/piper" "^1.2.0"
     ajaxian "^3.0.1"
-    jsonous "^5.0.1"
+    jsonous "^5.1"
     logging "^3.2.0"
     maybeasy "^2.6.0"
     resulty "^3.0.0"
@@ -73,7 +73,7 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-jsonous@^5.0.1, jsonous@^5.1:
+jsonous@^5.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.1.0.tgz#eda2c5e29df19c982483508c3f33142633c6b859"
   integrity sha512-kq0Lg9zJx3k2J+bz+r4qutqwNEw0cbaeBC+atjTUMjykZSb6fvE7lDDhtFR0/ORS1+nOaxXR5zxQhTm14OYRHg==
@@ -131,7 +131,7 @@ taskarian@^2.1.0:
   resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.1.0.tgz#f4264ed0a6c1f8e6caaef3ba36b8921c9e57822b"
   integrity sha512-OATHkWTfCGIkP295DUxW7sh6U+rJM7yer8O1nNV72FNnFemYhTD5NNsMXB2GIHYKZukYRUfEzV5Enh81XtrSXQ==
 
-taskarian@latest:
+taskarian@^3.0, taskarian@latest:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-3.0.0.tgz#a209c00594b48243229116f526d5f820feb9f3de"
   integrity sha512-BOmlfeNUmsNuCL05gjfROSVAk5i4ZgqEG+1wEJ1/JG/t9yOkTK8WxUKv2qEL7lhNjMqEbyuQ8SqlO8Ky9VMdDg==
