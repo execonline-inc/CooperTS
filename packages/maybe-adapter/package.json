@@ -32,7 +32,7 @@
     "logging": "^3.2.0",
     "maybeasy": "^2.6.0",
     "resulty": "^3.0.0",
-    "taskarian": "^2.1.0"
+    "taskarian": "^3.0"
   },
   "publishConfig": {
     "access": "public"
