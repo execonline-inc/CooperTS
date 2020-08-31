@@ -2,19 +2,6 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/maybe-adapter@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-1.1.0.tgz#a1ae3dcb907efaebaa64c4d370a3cb493ebac037"
-  integrity sha512-/e1wQ3XVeetcr0vvrkwgRdnPEdFHE7g0AE7whUPHmJ+5oIjlkCRHAuU1PTs7OFk2fMdc8HEoxt2FMVWs361dHQ==
-  dependencies:
-    "@kofno/piper" "^1.2.0"
-    ajaxian "^3.0.1"
-    jsonous "^5.1"
-    logging "^3.2.0"
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    taskarian "^2.1.0"
-
 "@kofno/piper@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-1.2.0.tgz#c1f9903664ed90f105130580d3570bc747d7c028"
@@ -125,11 +112,6 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
   integrity sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=
-
-taskarian@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.1.0.tgz#f4264ed0a6c1f8e6caaef3ba36b8921c9e57822b"
-  integrity sha512-OATHkWTfCGIkP295DUxW7sh6U+rJM7yer8O1nNV72FNnFemYhTD5NNsMXB2GIHYKZukYRUfEzV5Enh81XtrSXQ==
 
 taskarian@^3.0, taskarian@latest:
   version "3.0.0"
