@@ -2,33 +2,6 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/environment@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-1.0.2.tgz#2ae93cf705023e6b770afead09c1a11bd6a8483f"
-  integrity sha512-07eoD9iwwyIJaO7Cx/CYNvUgxcRoFPnOHnulaVVuL+CcOTwvzUmB0K8jwARCXPjR7yigiogP20u0bGQCUpefMQ==
-  dependencies:
-    "@kofno/piper" "^1.2.0"
-    ajaxian "^3.0.1"
-    honeybadger-js "^2.0.0"
-    jsonous "^5.0.1"
-    logging "^3.2.0"
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    taskarian "^2.1.0"
-
-"@kofno/piper@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-1.2.0.tgz#c1f9903664ed90f105130580d3570bc747d7c028"
-  integrity sha512-3XgONyr071OX8+olAzYhF+mYxlSo3X9ySyNEmbXtzhyj1hAM+MPYB+bK4gZhrumSTfzYZt4lv9fUAgz8+P6XBQ==
-
-ajaxian@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/ajaxian/-/ajaxian-3.0.1.tgz#2c9c5cecb51a9334d47b9fffee23fca05c37d644"
-  integrity sha512-zKn8qqDm335zOG8K0CXU3A0YAS+JGk5JTXO3TPJHA/vE7OU8Y0duJKz81FU9SD06/8GPHURaLlOf6t5/OUq7Sw==
-  dependencies:
-    resulty latest
-    taskarian latest
-
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -79,15 +52,6 @@ honeybadger-js@^2.0.0:
   resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.2.2.tgz#53b345abcbb39740cd2229683f36959316f947bc"
   integrity sha512-dRdTngkp5oqZ7076DDDMle/XHvMuPDXrh35tFkAGJIUabWMj71IODRm9ggLenDF2XxfB6FjrK4Ry5YixZTM4Ug==
 
-jsonous@^5.0.1:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.1.0.tgz#eda2c5e29df19c982483508c3f33142633c6b859"
-  integrity sha512-kq0Lg9zJx3k2J+bz+r4qutqwNEw0cbaeBC+atjTUMjykZSb6fvE7lDDhtFR0/ORS1+nOaxXR5zxQhTm14OYRHg==
-  dependencies:
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    weakset "^1.0.0"
-
 logging@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/logging/-/logging-3.2.0.tgz#e35cd05e1ef23ef575d4e5b502605f904e197c6c"
@@ -96,11 +60,6 @@ logging@^3.2.0:
     chalk "^1.1.3"
     debug "^2.6.1"
     nicely-format "^1.1.0"
-
-maybeasy@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-2.6.0.tgz#3e402c0129967b2aa0be4ed9299bf2ab7b878a40"
-  integrity sha512-KJ6//02uxyqrhHjY4hMzTwiJTavPqFuUK8ZM+uUZVGw2zC8GBtuzQM2ichXekk0/Jgco7lL3pbfN70dfMztwLA==
 
 ms@2.0.0:
   version "2.0.0"
@@ -115,11 +74,6 @@ nicely-format@^1.1.0:
     ansi-styles "^2.2.1"
     esutils "^2.0.2"
 
-resulty@^3.0.0, resulty@latest:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-3.0.0.tgz#2f852a51f18dd528f43bb7f5ae02a88eaef5bd59"
-  integrity sha512-rdAnIuIC8WMfnlqktJfZz+83djxwQwzVlXnlCRb2h0Zxqzazjp+1z9cfDVmiIWBnjhrcERw3PBK7s+YJ83f2aw==
-
 strip-ansi@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-3.0.1.tgz#6a385fb8853d952d5ff05d0e8aaf94278dc63dcf"
@@ -131,20 +85,3 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
   integrity sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=
-
-taskarian@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-2.1.0.tgz#f4264ed0a6c1f8e6caaef3ba36b8921c9e57822b"
-  integrity sha512-OATHkWTfCGIkP295DUxW7sh6U+rJM7yer8O1nNV72FNnFemYhTD5NNsMXB2GIHYKZukYRUfEzV5Enh81XtrSXQ==
-
-taskarian@latest:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-3.0.0.tgz#a209c00594b48243229116f526d5f820feb9f3de"
-  integrity sha512-BOmlfeNUmsNuCL05gjfROSVAk5i4ZgqEG+1wEJ1/JG/t9yOkTK8WxUKv2qEL7lhNjMqEbyuQ8SqlO8Ky9VMdDg==
-  dependencies:
-    resulty "^3.0.0"
-
-weakset@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/weakset/-/weakset-1.0.0.tgz#7d525ebb93b24d38e6d0a19b0f3e14f099a3b270"
-  integrity sha1-fVJeu5OyTTjm0KGbDz4U8JmjsnA=

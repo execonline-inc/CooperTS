@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/time@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/time/-/time-2.0.1.tgz#3e758b8383e333959c4648aa39aede2c1cb5f41a"
-  integrity sha512-3eu5DPBJ4Yum+tSODU/aRseiKzs133/9hX1XKSZiSmkh0b6dsx6L5T8ojYKNBDJUzUxDwqTexY2Eq10vwOSCVg==
-
 "@types/atob@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@types/atob/-/atob-2.1.2.tgz#157eb0cc46264a8c55f2273a836c7a1a644fb820"
