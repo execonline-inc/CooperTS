@@ -1,13 +1,5 @@
 import { seconds, Time } from "@execonline-inc/time";
-import Decoder, {
-  fail,
-  field,
-  nullable,
-  number,
-  oneOf,
-  string,
-  succeed
-} from "jsonous";
+import Decoder, { fail, field, nullable, number, oneOf, string, succeed } from "jsonous";
 import { fromEmpty, just, Maybe, nothing } from "maybeasy";
 import { err, ok } from "resulty";
 import atob = require("atob");
@@ -25,10 +17,7 @@ export const regexDecoder = (regex: RegExp): Decoder<RegExpExecArray> =>
       : fail(`Expected '${s}' to match the regex '${regex.toString()}'`);
   });
 
-export const stringLiteral = <T extends string>(t: T): Decoder<T> =>
-  new Decoder<T>(v => {
-    return t === v ? ok(v) : err(`Expected ${t} but got ${v}`);
-  });
+export const stringLiteral = <T extends string>(t: T): Decoder<T> => eql<T>(t);
 
 export const nullableBlankString: Decoder<Maybe<string>> = nullable(
   string
