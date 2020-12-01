@@ -87,9 +87,15 @@ const result: number[] = uniq(list);
 
 ### `find`
 
-This function has a curried and non-curried form. It takes an evaluation function and an array.
+`find` returns the first matching element in an Array.
 
-The evaluation function is called on elements of the array until it evaluates to `true`, at which point that element is returned as a `Just`. If no element is found, a `Nothing` is returned.
+Matching is determined by the function passed as the first argument.
+If it returns true, then a match has been identified.
+
+If a match is found, the item is return wrapped in a `Just`.
+Otherwise, a `Nothing` is returned.
+
+This function has a curried and non-curried form.
 
 ```ts
 import { find } from '@execonline-inc/collections';
@@ -102,9 +108,11 @@ const result: Maybe<number> = find((item: number): boolean => item === 2)(list);
 
 ### `findIndex`
 
-This function has a curried and non-curried form. It takes an evaluation function and an array.
+`findIndex` takes an evaluation function and an array.
 
 The evaluation function is called on elements of the array until it evaluates to `true`, at which point that element's index is returned as a `Just`. If no element is found, a `Nothing` iss returned.
+
+This function has a curried and non-curried form.
 
 ```ts
 import { findIndex } from '@execonline-inc/collections';
@@ -156,7 +164,9 @@ const example: Task<ItemNotFound, { id: 2 }> = task.andThen(findItemT(2));
 
 ### `findPayload`
 
-This function has a curried and non-curried form that accepts an ID and a list of payloads of a `{ payload: { id: number } }` interface and returns the first payload with the matching ID as a `Maybe`.
+`findPayload` accepts an ID and a list of payloads of a `{ payload: { id: number } }` interface and returns the first payload with the matching ID as a `Maybe`.
+
+This function has a curried and non-curried form
 
 ```ts
 import { findPayload } from '@execonline-inc/collections';
@@ -241,7 +251,9 @@ const result: number[] = map((item: number): number => item + 10)(list);
 
 ### `flatMap`
 
-This function has curried and non-curried form. It takes a list of items and a transformation function that returns an array for each item. The final return value is a flattened array of each of those resulting arrays.
+`flatMap` takes a list of items and a transformation function that returns an array for each item. The final return value is a flattened array of each of those resulting arrays.
+
+This function has curried and non-curried form.
 
 ```ts
 import { flatMap } from '@execonline-inc/collections';
@@ -253,7 +265,9 @@ const result = flatMap((item: number): number[] => [10, 100, 1000].map(n => n * 
 
 ### `mapMaybe`
 
-This function has curried and non-curried form. It takes a list of items and a function that maps each item of the array to a `Maybe`. The final return value is an array of only the mapped values that were a `Just`.
+`mapMaybe` takes a list of items and a function that maps each item of the array to a `Maybe`. The final return value is an array of only the mapped values that were a `Just`.
+
+This function has curried and non-curried form.
 
 ```ts
 import { mapMaybe } from '@execonline-inc/collections';
@@ -301,13 +315,15 @@ const result: boolean = byPayloadUuid('9f925583-7a8f-4459-979d-5ad2d5ede2f8')(re
 
 ### `sort`
 
-This function has a curried and non-curried form. It provides stable sorting of an array using a given comparison function.
+`sort` provides stable sorting of an array using a given comparison function.
 
 The comparison function should return:
 
 - `< 0` to sort `a` before `b`
 - `0` to consider `a` equal to `b`
 - `> 0` to sort `a` after `b`
+
+This function has a curried and non-curried form.
 
 ```ts
 import { sort } from '@execonline-inc/collections';
@@ -324,7 +340,9 @@ const result = sort((a, b) => a.age - b.age)(list);
 
 ### `take`
 
-This function has a curried and non-curried form. It creates a new array of the specified amount of items from the given array from its beginning.
+`take` creates a new array of the specified amount of items from the given array from its beginning.
+
+This function has a curried and non-curried form.
 
 ```ts
 import { take } from '@execonline-inc/collections';
@@ -360,7 +378,9 @@ const result = last(list);
 
 ### `takeLastUntil`
 
-This function has a curried and non-curried form. It returns a new array of the items from the end of the given array until the given function evalutes `true`.
+`takeLastUntil` returns a new array of the items from the end of the given array until the given function evalutes `true`.
+
+This function has a curried and non-curried form.
 
 ```ts
 import { takeLastUntil } from '@execonline-inc/collections';
@@ -372,7 +392,9 @@ const result = takeLastUntil((item: number): boolean => item === 3)(list);
 
 ### `takeLastWhile`
 
-This function has a curried and non-curried form. It returns a new array of the items from the end of the given array while the given function evaluates `true`.
+`takeLastWhile` returns a new array of the items from the end of the given array while the given function evaluates `true`.
+
+This function has a curried and non-curried form.
 
 ```ts
 import { takeLastWhile } from '@execonline-inc/collections';
