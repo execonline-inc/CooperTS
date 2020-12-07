@@ -2,6 +2,7 @@ import { noop } from '@kofno/piper';
 import { just, Maybe, nothing } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
 import Task from 'taskarian';
+import * as URL from 'url-parse';
 
 export interface InvalidUrlError {
   kind: 'invalid-url-error';

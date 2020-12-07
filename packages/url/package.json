@@ -18,7 +18,9 @@
     "@kofno/piper": "1.2.0",
     "maybeasy": "^2.6.0",
     "resulty": "^3.0.0",
-    "taskarian": "^3.0.0"
+    "taskarian": "^3.0.0",
+    "url-parse": "^1.4.7",
+    "@types/url-parse": "^1.4.3"
   },
   "repository": {
     "type": "git",
