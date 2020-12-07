@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/url",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Safe URL parsing",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -16,11 +16,11 @@
   ],
   "dependencies": {
     "@kofno/piper": "1.2.0",
+    "@types/url-parse": "^1.4.3",
     "maybeasy": "^2.6.0",
     "resulty": "^3.0.0",
     "taskarian": "^3.0.0",
-    "url-parse": "^1.4.7",
-    "@types/url-parse": "^1.4.3"
+    "url-parse": "^1.4.7"
   },
   "repository": {
     "type": "git",
