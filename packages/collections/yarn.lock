@@ -2,6 +2,19 @@
 # yarn lockfile v1
 
 
+"@execonline-inc/maybe-adapter@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-2.0.0.tgz#c7e7610f56a159475ed9333c6e1e1bef3e3ca4ba"
+  integrity sha512-/CABMAQlr2X4bXZMwU3RKxqJxnW3MjhxYOVzPQC3N/rXvUFVoATWxZQr23wEtwEI344sxUhbIq3idlHFTeRxag==
+  dependencies:
+    "@kofno/piper" "^1.2.0"
+    ajaxian "^3.0.1"
+    jsonous "^5.1"
+    logging "^3.2.0"
+    maybeasy "^2.6.0"
+    resulty "^3.0.0"
+    taskarian "^3.0"
+
 "@kofno/piper@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-1.2.0.tgz#c1f9903664ed90f105130580d3570bc747d7c028"

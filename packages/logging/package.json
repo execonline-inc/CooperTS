@@ -20,6 +20,7 @@
   },
   "scripts": {
     "tsc": "tsc",
+    "yarn": "yarn",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {

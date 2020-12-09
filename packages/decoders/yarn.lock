@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@execonline-inc/time@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/time/-/time-3.0.0.tgz#3becb759b066da75c436ba94cd28ee552ebe491a"
+  integrity sha512-nxwBB+NFHyeK6uiqmn/eAoUrZnvL2LCd8HoZLpe1p1l5w8rZPJNFcTEkJTZBSejjBKCXWDeP9WW+6DHULQa6ag==
+
 "@types/atob@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@types/atob/-/atob-2.1.2.tgz#157eb0cc46264a8c55f2273a836c7a1a644fb820"
@@ -12,11 +17,17 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-jsonous@^5.1:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.1.0.tgz#eda2c5e29df19c982483508c3f33142633c6b859"
-  integrity sha512-kq0Lg9zJx3k2J+bz+r4qutqwNEw0cbaeBC+atjTUMjykZSb6fvE7lDDhtFR0/ORS1+nOaxXR5zxQhTm14OYRHg==
+date-fns@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+
+jsonous@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.2.0.tgz#206d04ae0ea76001a4c313d6241ce550b7cff22e"
+  integrity sha512-GkWqc24vIKdi/4hWaT+3AcLje6DYFug4rOl1MrkLK2xa3qRYV3gGMfX/CVlswiRo2gda1Dkzb2tkni4WeF2PoQ==
   dependencies:
+    date-fns "^2.16.1"
     maybeasy "^2.6.0"
     resulty "^3.0.0"
     weakset "^1.0.0"

@@ -20,6 +20,7 @@
   },
   "scripts": {
     "tsc": "tsc",
+    "yarn": "yarn",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
@@ -29,7 +30,7 @@
     "@execonline-inc/time": "^3.0.0",
     "@types/atob": "^2.1.2",
     "atob": "^2.1.2",
-    "jsonous": "^5.1",
+    "jsonous": "^5.2.0",
     "maybeasy": "^2.6.0",
     "resulty": "^3.0.0"
   },

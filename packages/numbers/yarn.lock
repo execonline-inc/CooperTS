@@ -2,18 +2,31 @@
 # yarn lockfile v1
 
 
+"@execonline-inc/maybe-adapter@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-2.0.0.tgz#c7e7610f56a159475ed9333c6e1e1bef3e3ca4ba"
+  integrity sha512-/CABMAQlr2X4bXZMwU3RKxqJxnW3MjhxYOVzPQC3N/rXvUFVoATWxZQr23wEtwEI344sxUhbIq3idlHFTeRxag==
+  dependencies:
+    "@kofno/piper" "^1.2.0"
+    ajaxian "^3.0.1"
+    jsonous "^5.1"
+    logging "^3.2.0"
+    maybeasy "^2.6.0"
+    resulty "^3.0.0"
+    taskarian "^3.0"
+
 "@kofno/piper@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-1.2.0.tgz#c1f9903664ed90f105130580d3570bc747d7c028"
   integrity sha512-3XgONyr071OX8+olAzYhF+mYxlSo3X9ySyNEmbXtzhyj1hAM+MPYB+bK4gZhrumSTfzYZt4lv9fUAgz8+P6XBQ==
 
 ajaxian@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/ajaxian/-/ajaxian-3.0.1.tgz#2c9c5cecb51a9334d47b9fffee23fca05c37d644"
-  integrity sha512-zKn8qqDm335zOG8K0CXU3A0YAS+JGk5JTXO3TPJHA/vE7OU8Y0duJKz81FU9SD06/8GPHURaLlOf6t5/OUq7Sw==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ajaxian/-/ajaxian-3.1.0.tgz#b207c64155f80f97525dbd47f66533213f9372e3"
+  integrity sha512-Z+nn1rkRujF2k4hjfxslPOoUp2RZVbbs2BrSc0h89hc31O+rH0yfLKa76WK6GXZG6el6cG3ECQZS0ynMFdQgrg==
   dependencies:
     resulty latest
-    taskarian latest
+    taskarian "^3.0.0"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -65,12 +78,7 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-honeybadger-js@^2.0.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.2.2.tgz#53b345abcbb39740cd2229683f36959316f947bc"
-  integrity sha512-dRdTngkp5oqZ7076DDDMle/XHvMuPDXrh35tFkAGJIUabWMj71IODRm9ggLenDF2XxfB6FjrK4Ry5YixZTM4Ug==
-
-jsonous@^5.2:
+jsonous@^5.1:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.2.0.tgz#206d04ae0ea76001a4c313d6241ce550b7cff22e"
   integrity sha512-GkWqc24vIKdi/4hWaT+3AcLje6DYFug4rOl1MrkLK2xa3qRYV3gGMfX/CVlswiRo2gda1Dkzb2tkni4WeF2PoQ==
@@ -124,7 +132,7 @@ supports-color@^2.0.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
   integrity sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=
 
-taskarian@3.0.0, taskarian@latest:
+taskarian@^3.0, taskarian@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-3.0.0.tgz#a209c00594b48243229116f526d5f820feb9f3de"
   integrity sha512-BOmlfeNUmsNuCL05gjfROSVAk5i4ZgqEG+1wEJ1/JG/t9yOkTK8WxUKv2qEL7lhNjMqEbyuQ8SqlO8Ky9VMdDg==
