@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/maybe-adapter",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Convert types to and from Maybeasy",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
