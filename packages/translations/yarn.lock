@@ -32,6 +32,11 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.2.tgz#ee5ff8f208c8cd613b389f7b222c9801ca62b3f7"
   integrity sha512-ofovWglpqoqbfLNOTBNZLSbMuGrblAf1efvvArGKOZMBrIoJeu5UsAipQolkijtyQx5MtAzT/J9IHj/CEY1mJw==
 
+date-fns@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+
 dom-serializer@^0.2.1:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/dom-serializer/-/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
@@ -114,11 +119,12 @@ i18next@^19.0.3:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-jsonous@^5.1:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.1.0.tgz#eda2c5e29df19c982483508c3f33142633c6b859"
-  integrity sha512-kq0Lg9zJx3k2J+bz+r4qutqwNEw0cbaeBC+atjTUMjykZSb6fvE7lDDhtFR0/ORS1+nOaxXR5zxQhTm14OYRHg==
+jsonous@^5.2:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.2.0.tgz#206d04ae0ea76001a4c313d6241ce550b7cff22e"
+  integrity sha512-GkWqc24vIKdi/4hWaT+3AcLje6DYFug4rOl1MrkLK2xa3qRYV3gGMfX/CVlswiRo2gda1Dkzb2tkni4WeF2PoQ==
   dependencies:
+    date-fns "^2.16.1"
     maybeasy "^2.6.0"
     resulty "^3.0.0"
     weakset "^1.0.0"
