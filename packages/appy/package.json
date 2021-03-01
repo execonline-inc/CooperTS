@@ -29,6 +29,7 @@
   "dependencies": {
     "@execonline-inc/environment": "^4.0.0",
     "@execonline-inc/resource": "^3.0.0",
+    "@kofno/piper": "^1.2.0",
     "ajaxian": "^3.1",
     "jsonous": "^5.2",
     "maybeasy": "2.6.0",
