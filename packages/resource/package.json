@@ -30,7 +30,6 @@
     "@execonline-inc/collections": "^4.0.0",
     "@execonline-inc/decoders": "^4.0.0",
     "@execonline-inc/environment": "^4.0.0",
-    "@execonline-inc/logging": "^3.0.0",
     "@execonline-inc/maybe-adapter": "^3.0.0",
     "@kofno/piper": "^1.2.0",
     "ajaxian": "^3.0.1",
