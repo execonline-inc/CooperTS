@@ -6,6 +6,6 @@ interface Props {
   content: AlreadyTranslatedText;
 }
 
-const AlreadyTranslated: React.SFC<Props> = ({ content }) => <>{content.text}</>;
+const AlreadyTranslated: React.FC<Props> = ({ content }) => <>{content.text}</>;
 
 export default observer(AlreadyTranslated);

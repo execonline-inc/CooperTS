@@ -5,6 +5,6 @@ interface Props {
   text: string;
 }
 
-const NotTranslated: React.SFC<Props> = ({ text }) => <>{text}</>;
+const NotTranslated: React.FC<Props> = ({ text }) => <>{text}</>;
 
 export default observer(NotTranslated);

@@ -1,23 +1,8 @@
-import { i18n, TFunction } from 'i18next';
 import * as React from 'react';
 import Task from 'taskarian';
 import { Props as LProps } from './L';
 
-export interface Config {
-  loadPath: string;
-  loadCallback: (i18n: i18n) => void;
-}
-
-export interface I18nResults {
-  t: TFunction;
-  lng: string;
-}
-
-export interface LoadedI18n extends I18nResults {}
-
-export interface FallBackI18n extends I18nResults {
-  failure: string;
-}
+export type Translator = (translationKey: string, options: {}) => string;
 
 export interface Uninitialized {
   kind: 'uninitialized';
@@ -25,12 +10,14 @@ export interface Uninitialized {
 
 export interface Loaded {
   kind: 'loaded';
-  results: LoadedI18n;
+  translator: Translator;
+  language: string;
 }
 
 export interface LoadedFromFallback {
   kind: 'loaded-from-fallback';
-  results: FallBackI18n;
+  translator: Translator;
+  language: string;
   error: string;
 }
 
@@ -91,17 +78,16 @@ export type ParameterizedFn<
   ParameterizedPropsT extends ParameterizedProps<ParameterizedKeyT>
 > = (t: ParameterizedPropsT) => Parameterized<ParameterizedKeyT, ParameterizedPropsT>;
 
-export type Loader = Task<FallBackI18n, LoadedI18n>;
+export type Loader = Task<LoadedFromFallback, Loaded>;
 
 export interface TranslationsF<KeyT, PropsT, ParameterizedValuesT> {
-  loader: Loader;
-  L: React.SFC<LProps>;
+  L: React.FC<LProps>;
   translation: (
     text: KeyT,
     interpolation?: Partial<ParameterizedValuesT>
   ) => (ts: TranslationsState) => string;
   translator: (tProps: PropsT) => (ts: TranslationsState) => React.ReactNode;
-  T: React.SFC<PropsT>;
+  T: React.FC<PropsT>;
 }
 
 type DateFormat =

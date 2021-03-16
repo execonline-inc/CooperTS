@@ -1,26 +1,19 @@
 import { find } from '@execonline-inc/collections';
 import { warn } from '@execonline-inc/logging';
 import { toResult } from '@execonline-inc/maybe-adapter';
-import { identity, noop } from '@kofno/piper';
-import { default as i18next, InitOptions, TFunction } from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import XHR from 'i18next-xhr-backend';
+import { identity } from '@kofno/piper';
 import { fromNullable } from 'maybeasy';
 import { observer } from 'mobx-react';
 import * as React from 'react';
 import { err, ok, Result } from 'resulty';
-import Task from 'taskarian';
 import L from './L';
 import { ChildNode, RootNode, TagNode, translationDecoder } from './Parser';
 import TranslationsContext from './TranslationsContext';
 import {
   AlreadyTranslatedText,
-  Config,
-  FallBackI18n,
   Interpolator,
   Loaded,
   LoadedFromFallback,
-  LoadedI18n,
   Parameterized,
   ParameterizedFn,
   ParameterizedProps,
@@ -29,61 +22,25 @@ import {
   TInterpolator,
   TranslationsF,
   TranslationsState,
+  Translator,
   TScalar,
   TValues,
 } from './types';
 
-const i18nSettings = (config: Config): InitOptions => ({
-  fallbackLng: 'en',
-  ns: ['translations'],
-  defaultNS: 'translations',
-  debug: true,
-  keySeparator: false,
-  nsSeparator: false,
-  interpolation: {
-    escapeValue: false,
-  },
-  backend: {
-    loadPath: config.loadPath,
-  },
-});
-
-const initTask = (options: InitOptions): Task<FallBackI18n, LoadedI18n> =>
-  new Task((reject, resolve) => {
-    i18next
-      .use(XHR)
-      .use(LanguageDetector)
-      .init(options, (err, t) => {
-        if (err) {
-          reject({ t, lng: i18next.language, failure: String(err) });
-        } else {
-          resolve({ t, lng: i18next.language });
-        }
-      })
-      .catch(err => warn(err));
-
-    return noop;
-  });
-
-export const loaded = (t: TFunction, lng: string): Loaded => ({
+export const loaded = (translator: Translator, language: string): Loaded => ({
   kind: 'loaded',
-  results: {
-    t,
-    lng,
-  },
+  translator,
+  language,
 });
 
 export const loadedFromFallback = (
-  t: TFunction,
-  lng: string,
+  translator: Translator,
+  language: string,
   error: string
 ): LoadedFromFallback => ({
   kind: 'loaded-from-fallback',
-  results: {
-    t,
-    lng,
-    failure: error,
-  },
+  translator,
+  language,
   error,
 });
 
@@ -125,8 +82,7 @@ export const translations = <
 >(
   plainTextKeys: ReadonlyArray<PlainTextKeyT>,
   notTranslatable: ReadonlyArray<NotTranslatableT>,
-  parameterizedValues: ParameterizedFn<ParameterizedKeyT, ParameterizedPropsT>,
-  config: Config
+  parameterizedValues: ParameterizedFn<ParameterizedKeyT, ParameterizedPropsT>
 ): TranslationsF<
   ParameterizedKeyT | PlainTextKeyT | NotTranslatableT,
   Props<PlainTextKeyT | NotTranslatableT, ParameterizedKeyT, ParameterizedPropsT>,
@@ -148,10 +104,6 @@ export const translations = <
   const asParameterized = (props: PropsT): Result<PlainTextPropsT, ParameterizedPropsT> =>
     isParameterized(props) ? ok(props) : err(props);
 
-  const loader = Task.succeed<FallBackI18n, InitOptions>(i18nSettings(config))
-    .andThen(initTask)
-    .do(_ => config.loadCallback(i18next));
-
   const translation = (text: KeyT, values: Partial<ParameterizedValuesT> = {}) => (
     ts: TranslationsState
   ): string => {
@@ -160,7 +112,7 @@ export const translations = <
       case 'loaded':
         return asNotTranslatable(text)
           .map<string>(identity)
-          .getOrElse(() => ts.results.t(text, values));
+          .getOrElse(() => ts.translator(text, values));
       case 'uninitialized':
         warn('translation is uninitialized');
         return '';
@@ -186,7 +138,7 @@ export const translations = <
             return ok(wrapper(idx, tv.value));
           case 'interpolator':
             return toResult('expected node to have children', node.children)
-              .map(children => children.toArray())
+              .map(({ toArray }) => toArray())
               .map(children =>
                 children.map((child, i) => {
                   switch (child.kind) {
@@ -232,7 +184,7 @@ export const translations = <
   ): React.ReactElement[] =>
     parse(translation)
       .andThen(node => toResult(`Translation "${kind}" had no parsed children`, node.children))
-      .map(children => children.toArray().map((n, i) => nodeToElement(kind, values, n, i)))
+      .map(({ toArray }) => toArray().map((n, i) => nodeToElement(kind, values, n, i)))
       .elseDo(warn)
       .getOrElseValue([]);
 
@@ -244,12 +196,11 @@ export const translations = <
       .getOrElse(() => <React.Fragment key={kind}>{t}</React.Fragment>);
   };
 
-  const T: React.SFC<PropsT> = observer(tProps => (
+  const T: React.FC<PropsT> = observer(tProps => (
     <TranslationsContext.Consumer>{translator(tProps)}</TranslationsContext.Consumer>
   ));
 
   return {
-    loader,
     L,
     translation,
     translator,

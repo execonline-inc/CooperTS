@@ -14,21 +14,6 @@ See the `translations` function for integrating the library into an application.
 
 ## Types
 
-### `Config`
-
-This defines an interface for configuring this library when used in an application.
-
-`loadPath` represents the path where translation mappings are found.
-
-`loadCallback` is a function that will execute after translation mappings are successfully loaded.
-
-```ts
-interface Config {
-  loadPath: string;
-  loadCallback: (i18n: i18n) => void;
-}
-```
-
 ## Components
 
 ### `AlreadyTranslated`
@@ -125,6 +110,31 @@ const decoder: Decoder<AlreadyTranslatedText> = alreadyTranslatedText;
 const result: Result<string, AlreadyTranslatedText> = decoder.decodeAny('content');
 ```
 
+### `defaultSettings`
+
+These are default settings for `i18next` based on ExecOnline's use of the library.
+
+### `initTask`
+
+This function will return a `Task` to initialize `i18next`. It provides the opportunity for `i18next` to be configured as necessary by the user of this library.
+
+```tsx
+import { initTask, TranslationsLoader } from '@execonline-inc/translations';
+import i18next from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend';
+
+const i18nextSettings = {
+  /* ... */
+};
+
+const i18nextWithModules = i18next.use(HttpApi).use(LanguageDetector);
+
+const loader = initTask(i18nextWithModules, i18nextSettings);
+
+<TranslationsLoader loader={loader} loading={<></>} />;
+```
+
 ### `localization`
 
 This function will localize a date/time for a given language and according to a given format.
@@ -160,17 +170,6 @@ const format: LocalizationFormat = 'long-date-and-time';
 const state: TranslationsState = { kind: 'uninitialized' };
 
 const result: string = localizer(localizeable, format)(state);
-```
-
-### `loader`
-
-A `Task` to be used as the `loader` prop of the `TranslationsLoader` component.
-
-```tsx
-import { translations, TranslationsLoader } from '@execonline-inc/translations';
-const { loader } = translations<...>(...) // see `translations` documentation
-
-<TranslationsLoader loader={loader} loading={<></>} />
 ```
 
 ### `translation`
@@ -216,6 +215,15 @@ import {
   ParameterizedFn,
   scalar,
 } from '@execonline-inc/translations';
+import i18next, * as i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+const loader = initTask(i18next.use(LanguageDetector), {
+  ...defaultSettings,
+  backend: {
+    loadPath: 'public/locales/{{lng}}/{{ns}}.json',
+  },
+});
 
 const translatablePlainTextKeys = ['something to translate', 'something else'] as const;
 const notTranslatable = ['email@example.com', 'https://example.com/'] as const;
@@ -240,15 +248,10 @@ const parameterizedValues: ParameterizedFn<ParameterizedKey, ParameterizedProps>
   }
 };
 
-const config: Config = {
-  loadPath: 'public/locales/{{lng}}/{{ns}}.json',
-  loadCallback: () => {},
-};
-
-const { loader, L, translation, translator, T } = translations<
+const { L, translation, translator, T } = translations<
   PlainTextKey,
   NotTranslatable,
   ParameterizedKey,
   ParameterizedProps
->(translatablePlainTextKeys, notTranslatable, parameterizedValues, config);
+>(translatablePlainTextKeys, notTranslatable, parameterizedValues);
 ```

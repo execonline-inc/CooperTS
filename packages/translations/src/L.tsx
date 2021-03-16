@@ -9,7 +9,7 @@ export interface Props {
   format: LocalizationFormat;
 }
 
-const L: React.SFC<Props> = ({ localizeable, format }) => (
+const L: React.FC<Props> = ({ localizeable, format }) => (
   <TranslationsContext.Consumer>{localizer(localizeable, format)}</TranslationsContext.Consumer>
 );
 
