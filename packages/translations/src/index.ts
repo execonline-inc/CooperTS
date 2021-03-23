@@ -3,6 +3,7 @@ import NotTranslated from './NotTranslated';
 import TranslationsContext from './TranslationsContext';
 import TranslationsLoader from './TranslationsLoader';
 
+export * from './adapters/i18next';
 export * from './decoders';
 export * from './translations';
 export * from './types';

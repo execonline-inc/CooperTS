@@ -1,6 +1,5 @@
 import { warn } from '@execonline-inc/logging';
 import * as React from 'react';
-import { loaded, loadedFromFallback } from './translations';
 import TranslationsContext from './TranslationsContext';
 import { Loader, TranslationsState } from './types';
 
@@ -37,11 +36,11 @@ class TranslationsLoader extends React.Component<Props, State> {
 
   componentDidMount() {
     this.props.loader.fork(
-      ({ t, lng, failure }) => {
-        warn(`Translations: ${failure}. Falling back to default language.`);
-        this.setState({ translations: loadedFromFallback(t, lng, failure) });
+      loadedFromFallback => {
+        warn(`Translations: ${loadedFromFallback.error}. Falling back to default language.`);
+        this.setState({ translations: loadedFromFallback });
       },
-      ({ t, lng }) => this.setState({ translations: loaded(t, lng) })
+      loaded => this.setState({ translations: loaded })
     );
   }
 

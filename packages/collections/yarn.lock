@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/maybe-adapter@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-2.0.0.tgz#c7e7610f56a159475ed9333c6e1e1bef3e3ca4ba"
-  integrity sha512-/CABMAQlr2X4bXZMwU3RKxqJxnW3MjhxYOVzPQC3N/rXvUFVoATWxZQr23wEtwEI344sxUhbIq3idlHFTeRxag==
+"@execonline-inc/maybe-adapter@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-3.0.0.tgz#c852989d2f7e043cd04d52fb7da4d541bef4d503"
+  integrity sha512-iwqCdigbBEcL034TL4taAeRkaz78mpwYwZZL9CgEU8xsBNs1WEROpWOYKax0Gp39aX3ASdUr1ojB8gO9kBMbOw==
   dependencies:
     "@kofno/piper" "^1.2.0"
     ajaxian "^3.0.1"
-    jsonous "^5.1"
+    jsonous "^5.2"
     logging "^3.2.0"
     maybeasy "^2.6.0"
     resulty "^3.0.0"
@@ -49,6 +49,11 @@ chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
+date-fns@^2.16.1:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.19.0.tgz#65193348635a28d5d916c43ec7ce6fbd145059e1"
+  integrity sha512-X3bf2iTPgCAQp9wvjOQytnf5vO5rESYRXlPIVcgSbtT5OTScPcsf9eZU+B/YIkKAtYr5WeCii58BgATrNitlWg==
+
 debug@^2.6.1:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -73,11 +78,12 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-jsonous@^5.1:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.1.0.tgz#eda2c5e29df19c982483508c3f33142633c6b859"
-  integrity sha512-kq0Lg9zJx3k2J+bz+r4qutqwNEw0cbaeBC+atjTUMjykZSb6fvE7lDDhtFR0/ORS1+nOaxXR5zxQhTm14OYRHg==
+jsonous@^5.2:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.2.0.tgz#206d04ae0ea76001a4c313d6241ce550b7cff22e"
+  integrity sha512-GkWqc24vIKdi/4hWaT+3AcLje6DYFug4rOl1MrkLK2xa3qRYV3gGMfX/CVlswiRo2gda1Dkzb2tkni4WeF2PoQ==
   dependencies:
+    date-fns "^2.16.1"
     maybeasy "^2.6.0"
     resulty "^3.0.0"
     weakset "^1.0.0"

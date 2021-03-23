@@ -118,7 +118,7 @@ export const localizer = (localizeable: Localizeable, format: LocalizationFormat
   switch (ts.kind) {
     case 'loaded-from-fallback':
     case 'loaded':
-      return localization(localizeable, format, ts.results.lng);
+      return localization(localizeable, format, ts.language);
     case 'uninitialized':
       warn('localization is uninitialized');
       return String(localizeable);
