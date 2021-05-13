@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/translations",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Support for typed and interpolatable translations",
   "author": "Patrick Rebsch <pjrebsch@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -27,9 +27,9 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/collections": "^5.0.0",
-    "@execonline-inc/logging": "^4.0.0",
-    "@execonline-inc/maybe-adapter": "^3.0.0",
+    "@execonline-inc/collections": "^6.0.0",
+    "@execonline-inc/logging": "^5.0.0",
+    "@execonline-inc/maybe-adapter": "^4.0.0",
     "@kofno/piper": "^3.0.0",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "@types/react": "^16.9.23",
