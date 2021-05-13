@@ -30,7 +30,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@kofno/piper": "^1.2.0",
-    "taskarian": "^3.0.0"
+    "@kofno/piper": "^3.0.0",
+    "taskarian": "^4.0.0"
   }
 }
