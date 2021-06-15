@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@kofno/piper@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-1.2.0.tgz#c1f9903664ed90f105130580d3570bc747d7c028"
-  integrity sha512-3XgONyr071OX8+olAzYhF+mYxlSo3X9ySyNEmbXtzhyj1hAM+MPYB+bK4gZhrumSTfzYZt4lv9fUAgz8+P6XBQ==
-
-resulty@^3.0.0:
+"@kofno/piper@^3.0.0":
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-3.0.0.tgz#2f852a51f18dd528f43bb7f5ae02a88eaef5bd59"
-  integrity sha512-rdAnIuIC8WMfnlqktJfZz+83djxwQwzVlXnlCRb2h0Zxqzazjp+1z9cfDVmiIWBnjhrcERw3PBK7s+YJ83f2aw==
+  resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-3.0.0.tgz#0897d8ddf701f171dddb1765e020f2dbb90ba2f1"
+  integrity sha512-fIqI7m9E6QWimpcNhayQdKg8eNi4c3+pVtDdu6jEJeipJKS95d17bpz7mJHAKnNY7YP6Z+ra2Ol54fqKAY7AAw==
 
-taskarian@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-3.0.0.tgz#a209c00594b48243229116f526d5f820feb9f3de"
-  integrity sha512-BOmlfeNUmsNuCL05gjfROSVAk5i4ZgqEG+1wEJ1/JG/t9yOkTK8WxUKv2qEL7lhNjMqEbyuQ8SqlO8Ky9VMdDg==
+resulty@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
+  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
+
+taskarian@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-4.0.0.tgz#c82484b7b135629f07c18c689f99142c466894dd"
+  integrity sha512-C0cDkBYMpG6jXDUhdTxYL0ckXhRUVZddukexD+rrXamYIZy8k3DJ0vmNa49CrXiyLrcIDMoz1yJd6jFd2Lifcg==
   dependencies:
-    resulty "^3.0.0"
+    resulty "^4.0.0"

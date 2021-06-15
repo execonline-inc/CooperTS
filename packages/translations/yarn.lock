@@ -9,59 +9,59 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@execonline-inc/collections@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-4.0.0.tgz#93d68a56b53f4ac2bda7a0a89918e5c6c97bca3d"
-  integrity sha512-U0yRDzGe1oXLzwD/odiN8YgBy58LqvoqaZRRP/fYe4s/a8+HBwnobgHDNyp8Ud4IWxDsou72P+t97gOvMNbJrQ==
+"@execonline-inc/collections@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.0.0.tgz#47c7db1724523f6893364bea3158532fc2b1a1d9"
+  integrity sha512-o1bC9zg798eBaRuC9j/RJLycNf01/e/Cayi02jWnVIj0Efp0PF39OB/XGAvyxnkns4QsnkSCF2n6dI8aaniKJA==
   dependencies:
-    "@execonline-inc/maybe-adapter" "^3.0.0"
-    "@kofno/piper" "^1.2.0"
-    ajaxian "^3.0.1"
-    jsonous "^5.1"
-    logging "^3.2.0"
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    taskarian "^3.0"
+    "@execonline-inc/maybe-adapter" "^4.0.0"
+    "@kofno/piper" "^3.0.0"
+    ajaxian "^4.0.0"
+    jsonous "^6.1.0"
+    logging "^3.3.0"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
+    taskarian "^4.0.0"
 
-"@execonline-inc/environment@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-4.0.0.tgz#d523b0b194d41e3ecf14599749e9f001645ce81f"
-  integrity sha512-kQSw+rUdmYkB84bNLcOIecSneD8g0cVGeD/uZkwCx7n9aYhh+GxNRAgaM6LroSkl6y+T0Etbrg2TVooF0T/IBg==
+"@execonline-inc/environment@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.0.0.tgz#5f38612cd07a8a5ea8e66c7b4218031e01aa9e7d"
+  integrity sha512-Grx9PzpwWLChyy6Ba4rXdx0oxSRp+r2mxoYuS2kDkQXCT3V5YRrd3kPwsC17h6TX4wO0mLqyb1eeJzl0byul9w==
   dependencies:
-    "@kofno/piper" "^1.2.0"
-    ajaxian "^3.0.1"
+    "@kofno/piper" "^3.0.0"
+    ajaxian "^4.0.0"
     honeybadger-js "^2.0.0"
-    jsonous "^5.2"
+    jsonous "^6.1.0"
     logging "^3.2.0"
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    taskarian "3.0.0"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
+    taskarian "^4.0.0"
 
-"@execonline-inc/logging@^4.0.0":
+"@execonline-inc/logging@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/logging/-/logging-5.0.0.tgz#bab2d7701eea6e2c76faeef47375dad33e2dee61"
+  integrity sha512-9pJ0iLA3kfvz0/o1KCcNqDKXEioqXGxRlvqb2R6e4FGDXv2N7TdnD2u/sso0V00mr8By+110jDi8SI0zfTdgxg==
+  dependencies:
+    "@execonline-inc/environment" "^5.0.0"
+    logging "^3.2.0"
+
+"@execonline-inc/maybe-adapter@^4.0.0":
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/logging/-/logging-4.0.0.tgz#231b10cefb3dc07f225b5f12d0865b8ce8ac80e7"
-  integrity sha512-Wm9scYv1v69C5lHZZG0qLjHv76BvTlak50d6NI+yMjX8gC+ULTZ6v9IV+NHzcL2xLDFIWmqDKRyShzNzJ9YUvg==
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.0.0.tgz#79286e3cc73b0ca60c6afdbe7f62f44e7163e07b"
+  integrity sha512-BmljRq+2fgknxXFVopGl1qN/xnXSziWbBoab26zOvlFlZ96rcyYb880A1Lc4c34N4FS+eVn3MrQ0CLSwUcJpNA==
   dependencies:
-    "@execonline-inc/environment" "^4.0.0"
+    "@kofno/piper" "^3.0.0"
+    ajaxian "^4.0.0"
+    jsonous "^6.1.0"
     logging "^3.2.0"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
+    taskarian "^4.0.0"
 
-"@execonline-inc/maybe-adapter@^3.0.0":
+"@kofno/piper@^3.0.0":
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-3.0.0.tgz#c852989d2f7e043cd04d52fb7da4d541bef4d503"
-  integrity sha512-iwqCdigbBEcL034TL4taAeRkaz78mpwYwZZL9CgEU8xsBNs1WEROpWOYKax0Gp39aX3ASdUr1ojB8gO9kBMbOw==
-  dependencies:
-    "@kofno/piper" "^1.2.0"
-    ajaxian "^3.0.1"
-    jsonous "^5.2"
-    logging "^3.2.0"
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
-    taskarian "^3.0"
-
-"@kofno/piper@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-1.2.0.tgz#c1f9903664ed90f105130580d3570bc747d7c028"
-  integrity sha512-3XgONyr071OX8+olAzYhF+mYxlSo3X9ySyNEmbXtzhyj1hAM+MPYB+bK4gZhrumSTfzYZt4lv9fUAgz8+P6XBQ==
+  resolved "https://registry.yarnpkg.com/@kofno/piper/-/piper-3.0.0.tgz#0897d8ddf701f171dddb1765e020f2dbb90ba2f1"
+  integrity sha512-fIqI7m9E6QWimpcNhayQdKg8eNi4c3+pVtDdu6jEJeipJKS95d17bpz7mJHAKnNY7YP6Z+ra2Ol54fqKAY7AAw==
 
 "@prebsch-exo/i18next@19.9.2-patch.1":
   version "19.9.2-patch.1"
@@ -83,13 +83,13 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-ajaxian@^3.0.1:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ajaxian/-/ajaxian-3.1.0.tgz#b207c64155f80f97525dbd47f66533213f9372e3"
-  integrity sha512-Z+nn1rkRujF2k4hjfxslPOoUp2RZVbbs2BrSc0h89hc31O+rH0yfLKa76WK6GXZG6el6cG3ECQZS0ynMFdQgrg==
+ajaxian@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ajaxian/-/ajaxian-4.0.0.tgz#555f347248015cce616531463c586d765139d5cb"
+  integrity sha512-7GVGgXycw13In2cuW8h4A7rmKbICbiH8C3m8j30PrOXLv8sr67ctAL7FyuD+AqJUvBSutfLtmV+HkTEl077fjg==
   dependencies:
-    resulty latest
-    taskarian "^3.0.0"
+    resulty "^4.0.0"
+    taskarian "^4.0.0"
 
 ansi-styles@^2.2.1:
   version "2.2.1"
@@ -211,17 +211,17 @@ htmlparser2@^4.1.0:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
-jsonous@^5.1, jsonous@^5.2:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-5.2.0.tgz#206d04ae0ea76001a4c313d6241ce550b7cff22e"
-  integrity sha512-GkWqc24vIKdi/4hWaT+3AcLje6DYFug4rOl1MrkLK2xa3qRYV3gGMfX/CVlswiRo2gda1Dkzb2tkni4WeF2PoQ==
+jsonous@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-6.1.0.tgz#ced81b0ca07d90e27be85e529ba581fa2f5bd417"
+  integrity sha512-AOR1ciUWGVy8TVBqBa15yhREJfvz6TotJf261RADRzGk8XtigvZpRmfHXqcG2BcDj99HOQgOl48JNypNuqgHaA==
   dependencies:
     date-fns "^2.16.1"
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
     weakset "^1.0.0"
 
-logging@^3.2.0:
+logging@^3.2.0, logging@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/logging/-/logging-3.3.0.tgz#5743f9154f790308c5d6f2e28196dd0259fcf0ad"
   integrity sha512-Hnmu3KlGTbXMVS7ONjBpnjjiF9cBlK5qsmj77sOcqRkNpvO9ouUGPKe2PmBCWWYpKAbxb96b08cYEv4hiBk3lQ==
@@ -237,10 +237,10 @@ loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-maybeasy@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-2.6.0.tgz#3e402c0129967b2aa0be4ed9299bf2ab7b878a40"
-  integrity sha512-KJ6//02uxyqrhHjY4hMzTwiJTavPqFuUK8ZM+uUZVGw2zC8GBtuzQM2ichXekk0/Jgco7lL3pbfN70dfMztwLA==
+maybeasy@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-3.0.0.tgz#732c244da190c742de99aa682e6f86a66152bbcc"
+  integrity sha512-hMjmt0Kmfp2PdG9knKi6eUdp4513hkDib99EKqMK5tu1mn+t4Hih/pbJ4g5Kf3+f+c6GV6tBinZqtTtcnubm/g==
 
 mobx-react@^5.4.4:
   version "5.4.4"
@@ -263,13 +263,13 @@ nicely-format@^1.1.0:
     ansi-styles "^2.2.1"
     esutils "^2.0.2"
 
-nonempty-list@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/nonempty-list/-/nonempty-list-1.0.5.tgz#96d97af7e73f2abd3611e51a963ef7a290c561af"
-  integrity sha512-uitQkVTBWlvIy9Uuz1FyHHmTdLkbKW6JAqctb7EtBvYwUGWNOYvZaNrFs2PxUjwEw35pDrjY4lbA23s0L3/L9g==
+nonempty-list@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/nonempty-list/-/nonempty-list-2.1.0.tgz#246dbf960f1cec78ede4b4169cbd3dd3fa963046"
+  integrity sha512-YOTyIuhGOULPBO2rhBCukvGpKn295AZEn1q1BObfj31qwz8mT5L0CjJ79RTWUZjXTuHEq/AO+UOZuh63exP89Q==
   dependencies:
-    maybeasy "^2.6.0"
-    resulty "^3.0.0"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -309,10 +309,10 @@ regenerator-runtime@^0.13.4:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
   integrity sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
 
-resulty@^3.0.0, resulty@latest:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-3.0.0.tgz#2f852a51f18dd528f43bb7f5ae02a88eaef5bd59"
-  integrity sha512-rdAnIuIC8WMfnlqktJfZz+83djxwQwzVlXnlCRb2h0Zxqzazjp+1z9cfDVmiIWBnjhrcERw3PBK7s+YJ83f2aw==
+resulty@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
+  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
 
 supports-color@^7.1.0:
   version "7.2.0"
@@ -321,12 +321,12 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-taskarian@3.0.0, taskarian@^3.0, taskarian@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-3.0.0.tgz#a209c00594b48243229116f526d5f820feb9f3de"
-  integrity sha512-BOmlfeNUmsNuCL05gjfROSVAk5i4ZgqEG+1wEJ1/JG/t9yOkTK8WxUKv2qEL7lhNjMqEbyuQ8SqlO8Ky9VMdDg==
+taskarian@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-4.0.0.tgz#c82484b7b135629f07c18c689f99142c466894dd"
+  integrity sha512-C0cDkBYMpG6jXDUhdTxYL0ckXhRUVZddukexD+rrXamYIZy8k3DJ0vmNa49CrXiyLrcIDMoz1yJd6jFd2Lifcg==
   dependencies:
-    resulty "^3.0.0"
+    resulty "^4.0.0"
 
 weakset@^1.0.0:
   version "1.0.0"
