@@ -92,13 +92,16 @@ export interface TranslationsF<KeyT, PropsT, ParameterizedValuesT> {
 
 type DateFormat =
   | 'short-month'
+  | 'long-month'
   | 'date-and-time'
   | 'day-of-month'
+  | 'long-month-day'
   | 'long-month-day-year'
   | 'short-month-day-year'
   | 'month-and-year'
   | 'narrow-weekday'
   | 'long-weekday'
+  | 'long-weekday-month'
   | 'long-weekday-month-year'
   | 'time-of-day'
   | 'long-date-and-time';
