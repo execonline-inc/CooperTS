@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/numbers",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Type safe number ops",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -29,7 +29,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@execonline-inc/maybe-adapter": "^4.0.0",
+    "@execonline-inc/maybe-adapter": "^4.1.0",
     "@kofno/piper": "^3.0.0",
     "maybeasy": "^3.0.0",
     "resulty": "^4.0.0",
