@@ -11,6 +11,11 @@ const shortMonth = (lng: string, date: Date): string =>
     month: 'short',
   })(date);
 
+const longMonth = (lng: string, date: Date): string =>
+  intlFormatter(lng, {
+    month: 'long',
+  })(date);
+
 const dayOfMonth = (lng: string, date: Date): string =>
   intlFormatter(lng, {
     day: 'numeric',
@@ -24,6 +29,12 @@ const dateAndTime = (lng: string, date: Date): string =>
     hour: 'numeric',
     minute: 'numeric',
     timeZoneName: 'short',
+  })(date);
+
+const longMonthDay = (lng: string, date: Date): string =>
+  intlFormatter(lng, {
+    month: 'long',
+    day: 'numeric',
   })(date);
 
 const longMonthDayYear = (lng: string, date: Date): string =>
@@ -54,6 +65,13 @@ const narrowWeekday = (lng: string, date: Date): string =>
 const longWeekday = (lng: string, date: Date): string =>
   intlFormatter(lng, {
     weekday: 'long',
+  })(date);
+
+const longWeekdayMonth = (lng: string, date: Date): string =>
+  intlFormatter(lng, {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
   })(date);
 
 const longWeekdayMonthYear = (lng: string, date: Date): string =>
@@ -89,10 +107,14 @@ export const localization = (
   switch (format) {
     case 'short-month':
       return shortMonth(lng, value);
+    case 'long-month':
+      return longMonth(lng, value);
     case 'day-of-month':
       return dayOfMonth(lng, value);
     case 'date-and-time':
       return dateAndTime(lng, value);
+    case 'long-month-day':
+      return longMonthDay(lng, value);
     case 'long-month-day-year':
       return longMonthDayYear(lng, value);
     case 'short-month-day-year':
@@ -103,6 +125,8 @@ export const localization = (
       return narrowWeekday(lng, value);
     case 'long-weekday':
       return longWeekday(lng, value);
+    case 'long-weekday-month':
+      return longWeekdayMonth(lng, value);
     case 'long-weekday-month-year':
       return longWeekdayMonthYear(lng, value);
     case 'time-of-day':
