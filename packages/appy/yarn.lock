@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/collections@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.0.0.tgz#47c7db1724523f6893364bea3158532fc2b1a1d9"
-  integrity sha512-o1bC9zg798eBaRuC9j/RJLycNf01/e/Cayi02jWnVIj0Efp0PF39OB/XGAvyxnkns4QsnkSCF2n6dI8aaniKJA==
+"@execonline-inc/collections@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.1.0.tgz#7a3c9eaddaade1431ce0a533529489ca14e2be69"
+  integrity sha512-vUVbM8mI2XD7JZY1PrjwzQ1kDOYp8Vx9NKz6HlhO67S6mUs/3xnq1uQIq/JRbgy93I4vsuZCwdbDaewAuSdWog==
   dependencies:
-    "@execonline-inc/maybe-adapter" "^4.0.0"
+    "@execonline-inc/maybe-adapter" "^4.1.0"
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
     jsonous "^6.1.0"
@@ -16,10 +16,10 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/decoders@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/decoders/-/decoders-5.0.0.tgz#aff1c231b31c027c678c92e5a6fa0dad4ce1edfb"
-  integrity sha512-MjoJWMVhRR9ylbk6lwTgzhkB+QfXGIWWdhYdPW97qy/31l9WOvXcK5a90BDrGmd3pAQBoCl7f57w/LrXont1uA==
+"@execonline-inc/decoders@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/decoders/-/decoders-5.1.0.tgz#18d1d4616143dd7495433dcf62dc2ee7197621df"
+  integrity sha512-T5CE2fBlYfYtQU/9VA/CSwb9Lt6YQGIW/jgFI9qXTlIy6hhyerxgyiu4O2NXDV/3b+piQ+2P18LE9eFOu7hT4g==
   dependencies:
     "@execonline-inc/time" "^4.0.0"
     "@types/atob" "^2.1.2"
@@ -28,10 +28,10 @@
     maybeasy "^3.0.0"
     resulty "^4.0.0"
 
-"@execonline-inc/environment@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.0.0.tgz#5f38612cd07a8a5ea8e66c7b4218031e01aa9e7d"
-  integrity sha512-Grx9PzpwWLChyy6Ba4rXdx0oxSRp+r2mxoYuS2kDkQXCT3V5YRrd3kPwsC17h6TX4wO0mLqyb1eeJzl0byul9w==
+"@execonline-inc/environment@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.1.0.tgz#98ac2376cdf148cceac8bb6f6e42931a747c20a7"
+  integrity sha512-jgBtefjxl64ntvTtDAfHL+CRxoYPZA9bKG/VZcWbeg9we7q2ZJ0WqfNizTOaOzeDl2Ya5Vg56xBcKUpvzeNhZA==
   dependencies:
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
@@ -42,10 +42,10 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/maybe-adapter@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.0.0.tgz#79286e3cc73b0ca60c6afdbe7f62f44e7163e07b"
-  integrity sha512-BmljRq+2fgknxXFVopGl1qN/xnXSziWbBoab26zOvlFlZ96rcyYb880A1Lc4c34N4FS+eVn3MrQ0CLSwUcJpNA==
+"@execonline-inc/maybe-adapter@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.1.0.tgz#292d65d6ba6599ecb61365d120016d47fe2a0899"
+  integrity sha512-CnXE8MClri/dL32eAb0ifyVz7TiJO/MTZ4SILD4L1bC4Tq1WyaV16Xp/n4P/ckJBtozcZmtmZjoFDajVFhZgKQ==
   dependencies:
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
@@ -55,15 +55,15 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/resource@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/resource/-/resource-6.0.0.tgz#0f7539566615116c76fb88b01bc9a5fe3212bdcd"
-  integrity sha512-rH1Abq7JFuJ0TxCElI0tvqR1LA3H6t7Sm3obrlEgSxHtlwjGwoDgjSSQYWrF6ONo/ESClbK6IvewmaSzGxLW5A==
+"@execonline-inc/resource@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/resource/-/resource-6.1.0.tgz#9ea2590a11c75213a93cce08c5aefcd1979091be"
+  integrity sha512-u2m03rfxst4CyuqfIWZz7ltFf6Y799a8eXLkeK3kMeCXzhzLGR0HCliKanq58AJsn5YvXwNGXgFdbRkWRvqdlQ==
   dependencies:
-    "@execonline-inc/collections" "^6.0.0"
-    "@execonline-inc/decoders" "^5.0.0"
-    "@execonline-inc/environment" "^5.0.0"
-    "@execonline-inc/maybe-adapter" "^4.0.0"
+    "@execonline-inc/collections" "^6.1.0"
+    "@execonline-inc/decoders" "^5.1.0"
+    "@execonline-inc/environment" "^5.1.0"
+    "@execonline-inc/maybe-adapter" "^4.1.0"
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
     jsonous "^6.1.0"

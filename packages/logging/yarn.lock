@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/environment@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.0.0.tgz#5f38612cd07a8a5ea8e66c7b4218031e01aa9e7d"
-  integrity sha512-Grx9PzpwWLChyy6Ba4rXdx0oxSRp+r2mxoYuS2kDkQXCT3V5YRrd3kPwsC17h6TX4wO0mLqyb1eeJzl0byul9w==
+"@execonline-inc/environment@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.1.0.tgz#98ac2376cdf148cceac8bb6f6e42931a747c20a7"
+  integrity sha512-jgBtefjxl64ntvTtDAfHL+CRxoYPZA9bKG/VZcWbeg9we7q2ZJ0WqfNizTOaOzeDl2Ya5Vg56xBcKUpvzeNhZA==
   dependencies:
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"

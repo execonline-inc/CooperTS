@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/maybe-adapter@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.0.0.tgz#79286e3cc73b0ca60c6afdbe7f62f44e7163e07b"
-  integrity sha512-BmljRq+2fgknxXFVopGl1qN/xnXSziWbBoab26zOvlFlZ96rcyYb880A1Lc4c34N4FS+eVn3MrQ0CLSwUcJpNA==
+"@execonline-inc/maybe-adapter@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.1.0.tgz#292d65d6ba6599ecb61365d120016d47fe2a0899"
+  integrity sha512-CnXE8MClri/dL32eAb0ifyVz7TiJO/MTZ4SILD4L1bC4Tq1WyaV16Xp/n4P/ckJBtozcZmtmZjoFDajVFhZgKQ==
   dependencies:
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
