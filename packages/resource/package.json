@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/resource",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Models JSON api resources ",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/collections": "^6.1.0",
+    "@execonline-inc/collections": "^6.1.1",
     "@execonline-inc/decoders": "^5.1.0",
     "@execonline-inc/environment": "^5.1.0",
     "@execonline-inc/maybe-adapter": "^4.1.0",
