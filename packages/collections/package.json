@@ -30,7 +30,7 @@
     "@execonline-inc/maybe-adapter": "^4.1.0",
     "@kofno/piper": "^3.0.0",
     "ajaxian": "^4.0.0",
-    "jsonous": "^6.1.0",
+    "jsonous": "^7.0.0",
     "logging": "^3.3.0",
     "maybeasy": "^3.0.0",
     "resulty": "^4.0.0",

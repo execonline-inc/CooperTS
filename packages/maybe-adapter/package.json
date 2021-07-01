@@ -29,7 +29,7 @@
   "dependencies": {
     "@kofno/piper": "^3.0.0",
     "ajaxian": "^4.0.0",
-    "jsonous": "^6.1.0",
+    "jsonous": "^7.0.0",
     "logging": "^3.2.0",
     "maybeasy": "^3.0.0",
     "resulty": "^4.0.0",

@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/collections@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.1.0.tgz#7a3c9eaddaade1431ce0a533529489ca14e2be69"
-  integrity sha512-vUVbM8mI2XD7JZY1PrjwzQ1kDOYp8Vx9NKz6HlhO67S6mUs/3xnq1uQIq/JRbgy93I4vsuZCwdbDaewAuSdWog==
+"@execonline-inc/collections@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.1.1.tgz#3acc8ca0f2b1d5fea21e0a779978735bb977dc50"
+  integrity sha512-e52kBR1EyzLfZdfBFRGvqFtjNIf/ssfhIhqQgLX0StRLw/nsONyRIbJ2t73U7ZXIOZVUgBOo5JxJqzw/c2URBQ==
   dependencies:
     "@execonline-inc/maybe-adapter" "^4.1.0"
     "@kofno/piper" "^3.0.0"
@@ -55,12 +55,12 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/resource@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/resource/-/resource-6.1.0.tgz#9ea2590a11c75213a93cce08c5aefcd1979091be"
-  integrity sha512-u2m03rfxst4CyuqfIWZz7ltFf6Y799a8eXLkeK3kMeCXzhzLGR0HCliKanq58AJsn5YvXwNGXgFdbRkWRvqdlQ==
+"@execonline-inc/resource@^6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/resource/-/resource-6.1.1.tgz#4b049338aaa792c3de694b3db2b0c0814043a646"
+  integrity sha512-d99U6gIRdDa3jhxT4lX9Zqx4NUUtmc36/vKCX7K56twEqUwN8yqs84YiQ7dWjXK9dloedBGCJCk9qZKCsjGc4w==
   dependencies:
-    "@execonline-inc/collections" "^6.1.0"
+    "@execonline-inc/collections" "^6.1.1"
     "@execonline-inc/decoders" "^5.1.0"
     "@execonline-inc/environment" "^5.1.0"
     "@execonline-inc/maybe-adapter" "^4.1.0"
@@ -132,9 +132,9 @@ color-name@~1.1.4:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 date-fns@^2.16.1:
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
-  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
+  integrity sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==
 
 debug@^4.3.1:
   version "4.3.1"
@@ -162,6 +162,16 @@ jsonous@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-6.1.0.tgz#ced81b0ca07d90e27be85e529ba581fa2f5bd417"
   integrity sha512-AOR1ciUWGVy8TVBqBa15yhREJfvz6TotJf261RADRzGk8XtigvZpRmfHXqcG2BcDj99HOQgOl48JNypNuqgHaA==
+  dependencies:
+    date-fns "^2.16.1"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
+    weakset "^1.0.0"
+
+jsonous@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.0.0.tgz#1f2e5c280e6b8b6323d394afaccd2836d69df5f9"
+  integrity sha512-G7sa82OluhBZio6N4mLNEjNy5nOetsfETWWIYBIamobJdTex9EPo58Wl38lw4VSed0Ful+PfVTEEyb39vJorxw==
   dependencies:
     date-fns "^2.16.1"
     maybeasy "^3.0.0"

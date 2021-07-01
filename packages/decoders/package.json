@@ -30,7 +30,7 @@
     "@execonline-inc/time": "^4.0.0",
     "@types/atob": "^2.1.2",
     "atob": "^2.1.2",
-    "jsonous": "^6.1.0",
+    "jsonous": "^7.0.0",
     "maybeasy": "^3.0.0",
     "resulty": "^4.0.0"
   },

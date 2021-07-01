@@ -77,9 +77,9 @@ color-name@~1.1.4:
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 date-fns@^2.16.1:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.19.0.tgz#65193348635a28d5d916c43ec7ce6fbd145059e1"
-  integrity sha512-X3bf2iTPgCAQp9wvjOQytnf5vO5rESYRXlPIVcgSbtT5OTScPcsf9eZU+B/YIkKAtYr5WeCii58BgATrNitlWg==
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
+  integrity sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==
 
 debug@^2.6.1:
   version "2.6.9"
@@ -121,6 +121,16 @@ jsonous@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-6.1.0.tgz#ced81b0ca07d90e27be85e529ba581fa2f5bd417"
   integrity sha512-AOR1ciUWGVy8TVBqBa15yhREJfvz6TotJf261RADRzGk8XtigvZpRmfHXqcG2BcDj99HOQgOl48JNypNuqgHaA==
+  dependencies:
+    date-fns "^2.16.1"
+    maybeasy "^3.0.0"
+    resulty "^4.0.0"
+    weakset "^1.0.0"
+
+jsonous@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.0.0.tgz#1f2e5c280e6b8b6323d394afaccd2836d69df5f9"
+  integrity sha512-G7sa82OluhBZio6N4mLNEjNy5nOetsfETWWIYBIamobJdTex9EPo58Wl38lw4VSed0Ful+PfVTEEyb39vJorxw==
   dependencies:
     date-fns "^2.16.1"
     maybeasy "^3.0.0"

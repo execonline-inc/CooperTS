@@ -37,9 +37,9 @@ chalk@^1.1.3:
     supports-color "^2.0.0"
 
 date-fns@^2.16.1:
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
-  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+  version "2.22.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
+  integrity sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==
 
 debug@^2.6.1:
   version "2.6.9"
@@ -70,10 +70,10 @@ honeybadger-js@^2.0.0:
   resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.2.2.tgz#53b345abcbb39740cd2229683f36959316f947bc"
   integrity sha512-dRdTngkp5oqZ7076DDDMle/XHvMuPDXrh35tFkAGJIUabWMj71IODRm9ggLenDF2XxfB6FjrK4Ry5YixZTM4Ug==
 
-jsonous@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-6.1.0.tgz#ced81b0ca07d90e27be85e529ba581fa2f5bd417"
-  integrity sha512-AOR1ciUWGVy8TVBqBa15yhREJfvz6TotJf261RADRzGk8XtigvZpRmfHXqcG2BcDj99HOQgOl48JNypNuqgHaA==
+jsonous@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.0.0.tgz#1f2e5c280e6b8b6323d394afaccd2836d69df5f9"
+  integrity sha512-G7sa82OluhBZio6N4mLNEjNy5nOetsfETWWIYBIamobJdTex9EPo58Wl38lw4VSed0Ful+PfVTEEyb39vJorxw==
   dependencies:
     date-fns "^2.16.1"
     maybeasy "^3.0.0"
