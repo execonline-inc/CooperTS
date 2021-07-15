@@ -77,3 +77,19 @@ export function putQueryParam(key: string, value: string, url?: ParsedURL) {
 
   return url ? putIt(url) : putIt;
 }
+
+export function getPathname(url: ParsedURL): string {
+  return url.pathname;
+}
+
+export function putPathname(pathname: string): (url: ParsedURL) => ParsedURL;
+export function putPathname(pathname: string, url: ParsedURL): ParsedURL;
+export function putPathname(pathname: string, url?: ParsedURL) {
+  const doit = (url: ParsedURL): ParsedURL => {
+    return toUrl(url.href)
+      .map(u => u.set('pathname', pathname))
+      .getOrElseValue(url);
+  };
+
+  return typeof url === 'undefined' ? doit : doit(url);
+}
