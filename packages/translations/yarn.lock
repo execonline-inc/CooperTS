@@ -9,50 +9,50 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@execonline-inc/collections@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.1.1.tgz#3acc8ca0f2b1d5fea21e0a779978735bb977dc50"
-  integrity sha512-e52kBR1EyzLfZdfBFRGvqFtjNIf/ssfhIhqQgLX0StRLw/nsONyRIbJ2t73U7ZXIOZVUgBOo5JxJqzw/c2URBQ==
+"@execonline-inc/collections@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.2.0.tgz#ce2259351e8b9a99230de85ed2a7c7adc0edacd5"
+  integrity sha512-JFunMLgbooru4EKb1C/aMJkZCMWU+hRvOUebTgufGrmSjwOh0EOyz8WGjF2MEnbkDOuO14J1Gjh/+K/njXHO2Q==
   dependencies:
-    "@execonline-inc/maybe-adapter" "^4.1.0"
+    "@execonline-inc/maybe-adapter" "^4.2.0"
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
-    jsonous "^6.1.0"
+    jsonous "^7.0.0"
     logging "^3.3.0"
     maybeasy "^3.0.0"
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/environment@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.1.0.tgz#98ac2376cdf148cceac8bb6f6e42931a747c20a7"
-  integrity sha512-jgBtefjxl64ntvTtDAfHL+CRxoYPZA9bKG/VZcWbeg9we7q2ZJ0WqfNizTOaOzeDl2Ya5Vg56xBcKUpvzeNhZA==
+"@execonline-inc/environment@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/environment/-/environment-5.2.0.tgz#64673842198a9f97da6c2e2e54481f9de5e465d8"
+  integrity sha512-LrTu703ZqER+ccm/1Ck2bklsNkSO7XTjB1kQRbdhxw/HCCoJKwWZ/h1vilzNp6NMFw8ExhM10Lw2dU4mMyf9Qg==
   dependencies:
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
     honeybadger-js "^2.0.0"
-    jsonous "^6.1.0"
+    jsonous "^7.0.0"
     logging "^3.2.0"
     maybeasy "^3.0.0"
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/logging@^5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/logging/-/logging-5.1.1.tgz#b17e6c3af12c32c9d13121f697906bd539dd1bec"
-  integrity sha512-1YpfOotP4YJlcrzJG6SuTJ5TCZhj02Hyl2vy/t4bid+BjyIPpnn2Vnl/UJJVYmuPIrs1gurZcXRcfjpobyh86A==
+"@execonline-inc/logging@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/logging/-/logging-5.2.0.tgz#3b5227a48bab0f39bfec38fed38ba105368533c8"
+  integrity sha512-ec5uiuWW01fPmMyGwqlx/0ee1IKsnTQb7GzXyPlRUUO7rnTEvgm4VzkwfnEnKW42PydO/Viy+j2/QCc/p56fBw==
   dependencies:
-    "@execonline-inc/environment" "^5.1.0"
+    "@execonline-inc/environment" "^5.2.0"
     logging "^3.2.0"
 
-"@execonline-inc/maybe-adapter@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.1.0.tgz#292d65d6ba6599ecb61365d120016d47fe2a0899"
-  integrity sha512-CnXE8MClri/dL32eAb0ifyVz7TiJO/MTZ4SILD4L1bC4Tq1WyaV16Xp/n4P/ckJBtozcZmtmZjoFDajVFhZgKQ==
+"@execonline-inc/maybe-adapter@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/maybe-adapter/-/maybe-adapter-4.2.0.tgz#0bff6a8cfb4a6db673f3aef13d1efc82f57f8f6e"
+  integrity sha512-6fve6R8g5RiNlHH//yYFxjcpZXn1JVa53g4Dfe2WFqLuxUJy1bKcDmgx3ppUZqhMvCjnsH4xb1IZNt6OA9GN/Q==
   dependencies:
     "@kofno/piper" "^3.0.0"
     ajaxian "^4.0.0"
-    jsonous "^6.1.0"
+    jsonous "^7.0.0"
     logging "^3.2.0"
     maybeasy "^3.0.0"
     resulty "^4.0.0"
@@ -75,13 +75,19 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react@^16.9.23":
-  version "16.9.46"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.46.tgz#f0326cd7adceda74148baa9bff6e918632f5069e"
-  integrity sha512-dbHzO3aAq1lB3jRQuNpuZ/mnu+CdD3H0WVaaBQA8LTT3S33xhVBUj232T8M3tAhSWJs/D/UqORYUlJNl/8VQZg==
+"@types/react@*":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
+  integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
   dependencies:
     "@types/prop-types" "*"
+    "@types/scheduler" "*"
     csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
 ajaxian@^4.0.0:
   version "4.0.0"
@@ -184,13 +190,6 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-hoist-non-react-statics@^3.0.0:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
-  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
-  dependencies:
-    react-is "^16.7.0"
-
 honeybadger-js@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.3.0.tgz#040200066d60a8c1eca036e9f8568f9cff8b8d55"
@@ -205,21 +204,6 @@ htmlparser2@^4.1.0:
     domhandler "^3.0.0"
     domutils "^2.0.0"
     entities "^2.0.0"
-
-"js-tokens@^3.0.0 || ^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
-  integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
-
-jsonous@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-6.1.0.tgz#ced81b0ca07d90e27be85e529ba581fa2f5bd417"
-  integrity sha512-AOR1ciUWGVy8TVBqBa15yhREJfvz6TotJf261RADRzGk8XtigvZpRmfHXqcG2BcDj99HOQgOl48JNypNuqgHaA==
-  dependencies:
-    date-fns "^2.16.1"
-    maybeasy "^3.0.0"
-    resulty "^4.0.0"
-    weakset "^1.0.0"
 
 jsonous@^7.0.0:
   version "7.0.0"
@@ -240,25 +224,10 @@ logging@^3.2.0, logging@^3.3.0:
     debug "^4.3.1"
     nicely-format "^1.1.0"
 
-loose-envify@^1.1.0, loose-envify@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
-  integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
-  dependencies:
-    js-tokens "^3.0.0 || ^4.0.0"
-
 maybeasy@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-3.0.0.tgz#732c244da190c742de99aa682e6f86a66152bbcc"
   integrity sha512-hMjmt0Kmfp2PdG9knKi6eUdp4513hkDib99EKqMK5tu1mn+t4Hih/pbJ4g5Kf3+f+c6GV6tBinZqtTtcnubm/g==
-
-mobx-react@^5.4.4:
-  version "5.4.4"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.4.4.tgz#b3de9c6eabcd0ed8a40036888cb0221ab9568b80"
-  integrity sha512-2mTzpyEjVB/RGk2i6KbcmP4HWcAUFox5ZRCrGvSyz49w20I4C4qql63grPpYrS9E9GKwgydBHQlA4y665LuRCQ==
-  dependencies:
-    hoist-non-react-statics "^3.0.0"
-    react-lifecycles-compat "^3.0.2"
 
 ms@2.1.2:
   version "2.1.2"
@@ -280,39 +249,6 @@ nonempty-list@^2.1.0:
   dependencies:
     maybeasy "^3.0.0"
     resulty "^4.0.0"
-
-object-assign@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
-  integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
-
-prop-types@^15.6.2:
-  version "15.7.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
-  integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
-  dependencies:
-    loose-envify "^1.4.0"
-    object-assign "^4.1.1"
-    react-is "^16.8.1"
-
-react-is@^16.7.0, react-is@^16.8.1:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
-  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-react-lifecycles-compat@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
-  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-
-react@^16.13.0:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
-  integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 regenerator-runtime@^0.13.4:
   version "0.13.7"
