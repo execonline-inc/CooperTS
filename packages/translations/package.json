@@ -32,15 +32,19 @@
     "@execonline-inc/maybe-adapter": "^4.2.0",
     "@kofno/piper": "^3.0.0",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
-    "@types/react": "^16.9.23",
     "htmlparser2": "^4.1.0",
     "jsonous": "^7.0.0",
     "maybeasy": "^3.0.0",
-    "mobx-react": "^5.4.4",
     "nonempty-list": "^2.1.0",
-    "react": "^16.13.0",
     "resulty": "^4.0.0",
     "taskarian": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "*"
+  },
+  "peerDependencies": {
+    "mobx-react": ">=5 <7",
+    "react": "*"
   },
   "publishConfig": {
     "access": "public"
