@@ -35,16 +35,17 @@
     "htmlparser2": "^4.1.0",
     "jsonous": "^7.0.0",
     "maybeasy": "^3.0.0",
+    "mobx": ">=4 <6",
+    "mobx-react": ">=5 <7",
     "nonempty-list": "^2.1.0",
     "resulty": "^4.0.0",
     "taskarian": "^4.0.0"
   },
   "devDependencies": {
-    "@types/react": "*"
+    "@types/react": ">=16"
   },
   "peerDependencies": {
-    "mobx-react": ">=5 <7",
-    "react": "*"
+    "react": ">=16"
   },
   "publishConfig": {
     "access": "public"
