@@ -101,7 +101,7 @@ export const translations = <
   const asNotTranslatable = (key: KeyT): Result<KeyT, NotTranslatableT> =>
     isNotTranslatable(key) ? ok(key) : err(key);
 
-  const asParameterized = (props: PropsT): Result<PlainTextPropsT, ParameterizedPropsT> =>
+  const asParameterized = (props: PropsT): Result<PropsT, ParameterizedPropsT> =>
     isParameterized(props) ? ok(props) : err(props);
 
   const translation = (text: KeyT, values: Partial<ParameterizedValuesT> = {}) => (
@@ -196,7 +196,7 @@ export const translations = <
       .getOrElse(() => <React.Fragment key={kind}>{t}</React.Fragment>);
   };
 
-  const T: React.FC<PropsT> = observer(tProps => (
+  const T: React.FC<PropsT> = observer((tProps: PropsT) => (
     <TranslationsContext.Consumer>{translator(tProps)}</TranslationsContext.Consumer>
   ));
 

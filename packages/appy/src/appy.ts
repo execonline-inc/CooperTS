@@ -18,6 +18,7 @@ import {
 import Decoder from 'jsonous';
 import { Maybe } from 'maybeasy';
 import Task from 'taskarian';
+
 export interface MissingApplicationId {
   kind: 'missing-application-id';
 }
