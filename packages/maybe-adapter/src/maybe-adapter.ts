@@ -34,3 +34,6 @@ export function when<T>(predicate: PredicateParam<T>, result?: T) {
 }
 
 export const fromBool = when;
+
+export const toValues = <T>(arr: ReadonlyArray<Maybe<T>>): ReadonlyArray<T> =>
+  arr.reduce<T[]>((vs, m) => m.map(v => [...vs, v]).getOrElseValue(vs), []);
