@@ -1,5 +1,5 @@
 import { seconds, Time } from "@execonline-inc/time";
-import Decoder, { fail, field, nullable, number, oneOf, string, succeed } from "jsonous";
+import Decoder, { fail, field, nullable, boolean, number, oneOf, string, succeed } from "jsonous";
 import { fromEmpty, just, Maybe, nothing } from "maybeasy";
 import { err, ok } from "resulty";
 import atob = require("atob");
@@ -57,6 +57,10 @@ export const jsonParserDecoder = (decoder: Decoder<string>): Decoder<unknown> =>
   });
 
 export const numberToStringDecoder: Decoder<string> = number.andThen(value =>
+  succeed(value.toString())
+);
+
+export const booleanToStringDecoder: Decoder<string> = boolean.andThen(value =>
   succeed(value.toString())
 );
 
