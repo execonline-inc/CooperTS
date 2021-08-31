@@ -60,10 +60,7 @@ export const numberToStringDecoder: Decoder<string> = number.andThen(value =>
   succeed(value.toString())
 );
 
-export const booleanToStringDecoder: Decoder<string> = boolean.andThen(value =>
-  succeed(value.toString())
-);
-
+export const booleanToStringDecoder: Decoder<string> = boolean.map(String);
 export const stringToNumberDecoder: Decoder<number> = string
   .map(s => Number(s))
   .andThen(n =>
