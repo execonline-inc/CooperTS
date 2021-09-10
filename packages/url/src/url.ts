@@ -93,3 +93,5 @@ export function putPathname(pathname: string, url?: ParsedURL) {
 
   return typeof url === 'undefined' ? doit : doit(url);
 }
+
+export const windowLocation = (): Task<InvalidUrlError, ParsedURL> => toUrlT(window.location.href);
