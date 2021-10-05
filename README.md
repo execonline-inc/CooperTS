@@ -1,6 +1,6 @@
 # CooperTS and Associated Libraries:
 
-## The ultimate tool for creating a robust etc etcaaaaa
+## The ultimate tool for creating a (relatively) error-themed project.
 
 ## CooperTS
 
@@ -57,21 +57,23 @@
 
 ### decoders
 
-eql 3
-stringLiteral (a lot)
-regexDecoder 1
-nullableBlankString 35
-base64Decoder 8
-jsonParserDecoder 8
-pipeD 8
-numberToStringDecoder 44
-stringToNumberDecoder 5
-jsonValueDecoder 1
-secondsDecoder 5
-explicitJust 0
-explicitNothing 0
-explicitMaybe (a lot)
-mergeObjectDecoders 20
+#### decoders (temporary formatting)
+
+    eql 3
+    stringLiteral (a lot)
+    regexDecoder 1
+    nullableBlankString 35
+    base64Decoder 8
+    jsonParserDecoder 8
+    pipeD 8
+    numberToStringDecoder 44
+    stringToNumberDecoder 5
+    jsonValueDecoder 1
+    secondsDecoder 5
+    explicitJust 0
+    explicitNothing 0
+    explicitMaybe (a lot)
+    mergeObjectDecoders 20
 
 ### dom
 
