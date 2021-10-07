@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@execonline-inc/collections@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.2.0.tgz#ce2259351e8b9a99230de85ed2a7c7adc0edacd5"
-  integrity sha512-JFunMLgbooru4EKb1C/aMJkZCMWU+hRvOUebTgufGrmSjwOh0EOyz8WGjF2MEnbkDOuO14J1Gjh/+K/njXHO2Q==
+"@execonline-inc/collections@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.4.0.tgz#191970226eb95a1f8a41632ce4e6249e03c3c99d"
+  integrity sha512-6OraNzNXOm91apDZH7EAuCQTHY3lqwT0L+uxSl3qiu65KXlvx6xUJWERq8Qi8Jqoe/LDHG0YGm96sj+Z9pFa8g==
   dependencies:
     "@execonline-inc/maybe-adapter" "^4.2.0"
     "@kofno/piper" "^3.0.0"
@@ -37,10 +37,10 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/logging@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/logging/-/logging-5.2.0.tgz#3b5227a48bab0f39bfec38fed38ba105368533c8"
-  integrity sha512-ec5uiuWW01fPmMyGwqlx/0ee1IKsnTQb7GzXyPlRUUO7rnTEvgm4VzkwfnEnKW42PydO/Viy+j2/QCc/p56fBw==
+"@execonline-inc/logging@^5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/logging/-/logging-5.3.0.tgz#b27c33aaacb8d17a34f0de6505143c394811c43a"
+  integrity sha512-NyYLTzPKoFy4wuWaExbxt52AFvv57QnY0+CdSdadWLQL06hw8Ohv/i68kBHvQ4/v3nWpPG6vVvPzanR13to3wA==
   dependencies:
     "@execonline-inc/environment" "^5.2.0"
     logging "^3.2.0"
@@ -190,6 +190,13 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
+hoist-non-react-statics@^3.0.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
+
 honeybadger-js@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.3.0.tgz#040200066d60a8c1eca036e9f8568f9cff8b8d55"
@@ -229,22 +236,18 @@ maybeasy@^3.0.0:
   resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-3.0.0.tgz#732c244da190c742de99aa682e6f86a66152bbcc"
   integrity sha512-hMjmt0Kmfp2PdG9knKi6eUdp4513hkDib99EKqMK5tu1mn+t4Hih/pbJ4g5Kf3+f+c6GV6tBinZqtTtcnubm/g==
 
-mobx-react-lite@^2.2.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-2.2.2.tgz#87c217dc72b4e47b22493daf155daf3759f868a6"
-  integrity sha512-2SlXALHIkyUPDsV4VTKVR9DW7K3Ksh1aaIv3NrNJygTbhXe2A9GrcKHZ2ovIiOp/BXilOcTYemfHHZubP431dg==
-
-"mobx-react@>=5 <7":
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.3.1.tgz#204f9756e42e19d91cb6598837063b7e7de87c52"
-  integrity sha512-IOxdJGnRSNSJrL2uGpWO5w9JH5q5HoxEqwOF4gye1gmZYdjoYkkMzSGMDnRCUpN/BNzZcFoMdHXrjvkwO7KgaQ==
+mobx-react@^5.4.4:
+  version "5.4.4"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.4.4.tgz#b3de9c6eabcd0ed8a40036888cb0221ab9568b80"
+  integrity sha512-2mTzpyEjVB/RGk2i6KbcmP4HWcAUFox5ZRCrGvSyz49w20I4C4qql63grPpYrS9E9GKwgydBHQlA4y665LuRCQ==
   dependencies:
-    mobx-react-lite "^2.2.0"
+    hoist-non-react-statics "^3.0.0"
+    react-lifecycles-compat "^3.0.2"
 
-"mobx@>=4 <6":
-  version "5.15.7"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.15.7.tgz#b9a5f2b6251f5d96980d13c78e9b5d8d4ce22665"
-  integrity sha512-wyM3FghTkhmC+hQjyPGGFdpehrcX1KOXsDuERhfK2YbJemkUhEB+6wzEN639T21onxlfYBmriA1PFnvxTUhcKw==
+mobx@^4.15.7:
+  version "4.15.7"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-4.15.7.tgz#933281268c3b4658b6cf2526e872cf78ea48ab95"
+  integrity sha512-X4uQvuf2zYKHVO5kRT5Utmr+J9fDnRgxWWnSqJ4oiccPTQU38YG+/O3nPmOhUy4jeHexl7XJJpWDBgEnEfp+8w==
 
 ms@2.1.2:
   version "2.1.2"
@@ -266,6 +269,16 @@ nonempty-list@^2.1.0:
   dependencies:
     maybeasy "^3.0.0"
     resulty "^4.0.0"
+
+react-is@^16.7.0:
+  version "16.13.1"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-lifecycles-compat@^3.0.2:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
 regenerator-runtime@^0.13.4:
   version "0.13.7"
