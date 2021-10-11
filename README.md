@@ -13,3 +13,7 @@ See how easy it is?
 ## Installation
 
 Install it like this:
+
+## Index
+
+Quick links to README files goes here. 
