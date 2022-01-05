@@ -7,20 +7,15 @@
   resolved "https://registry.yarnpkg.com/@execonline-inc/time/-/time-4.0.0.tgz#20fea75ba29ae250d0acc44be1216ff5638b16d7"
   integrity sha512-PN7P2MsbaHygopQ1F8SPYEL+m0QwddjMTukHJtCclBJuzqIQ6OLUnWYNY1/Jw+4y0M82E/4JBTNiB7S8AotrCw==
 
-"@types/atob@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@types/atob/-/atob-2.1.2.tgz#157eb0cc46264a8c55f2273a836c7a1a644fb820"
-  integrity sha512-8GAYQ1jDRUQkSpHzJUqXwAkYFOxuWAOGLhIR4aPd/Y/yL12Q/9m7LsKpHKlfKdNE/362Hc9wPI1Yh6opDfxVJg==
-
-atob@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
-  integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-
 date-fns@^2.16.1:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
   integrity sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==
+
+js-base64@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.2.tgz#816d11d81a8aff241603d19ce5761e13e41d7745"
+  integrity sha512-NnRs6dsyqUXejqk/yv2aiXlAvOs56sLkX6nUdeaNezI5LFFLlsZjOThmwnrcwh5ZZRwZlCMnVAY3CvhIhoVEKQ==
 
 jsonous@^7.0.0:
   version "7.0.0"
