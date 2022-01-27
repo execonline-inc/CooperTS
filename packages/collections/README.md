@@ -16,6 +16,19 @@ const result = bifurcateWhen((item: number): boolean => item === 3, list);
 // [[1, 2], [3, 4, 5]]
 ```
 
+### `bifurcateBy`
+
+This function splits an array by the evaluation of the provided function. Array elements that evaluate to `true` are returned as the first bifurcated array, those that evaluate to `false` are returned as the second bifurcated array.
+
+```ts
+import { bifurcateBy } from '@execonline-inc/collections';
+
+const list = [1, 2, 3, 4, 5];
+const isEven = (item: number): boolean => !(item % 2);
+const result = bifurcateBy(isEven, list);
+// [[2, 4], [1, 3, 5]]
+```
+
 ### `concat`
 
 This curried function simply concatenates two arrays.
