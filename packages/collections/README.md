@@ -60,6 +60,20 @@ const result: number[] = concatAll(lists);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
+### `drop`
+
+`drop` creates a new array by dropping the specified number of items from the front of the array.
+
+This function has a curried and non-curried form.
+
+```ts
+import { drop } from '@execonline-inc/collections';
+
+const list = [1, 2, 3, 4, 5];
+const result = drop(3)(list);
+// [ 4, 5 ]
+```
+
 ### `dropUntil`
 
 This function has a curried and non-curried form. It takes an evaluation function and an array.
