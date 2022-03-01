@@ -9,10 +9,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@execonline-inc/collections@^6.4.0":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-6.4.0.tgz#191970226eb95a1f8a41632ce4e6249e03c3c99d"
-  integrity sha512-6OraNzNXOm91apDZH7EAuCQTHY3lqwT0L+uxSl3qiu65KXlvx6xUJWERq8Qi8Jqoe/LDHG0YGm96sj+Z9pFa8g==
+"@execonline-inc/collections@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/collections/-/collections-9.0.0.tgz#4ead0e32d9b5fd543083912718fcf165afc6a432"
+  integrity sha512-mGypqHNw+c9e1Z2VDKEXEpG9Bn3almqs5bSFrwVyawkfixqdADxCkCuIktJ2GwaADNhkSTjJfGar1NgaCJc3DQ==
   dependencies:
     "@execonline-inc/maybe-adapter" "^4.2.0"
     "@kofno/piper" "^3.0.0"

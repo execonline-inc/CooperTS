@@ -2,10 +2,12 @@
 # yarn lockfile v1
 
 
-"@execonline-inc/time@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/time/-/time-4.0.0.tgz#20fea75ba29ae250d0acc44be1216ff5638b16d7"
-  integrity sha512-PN7P2MsbaHygopQ1F8SPYEL+m0QwddjMTukHJtCclBJuzqIQ6OLUnWYNY1/Jw+4y0M82E/4JBTNiB7S8AotrCw==
+"@execonline-inc/time@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/time/-/time-5.0.0.tgz#b9f09d98f3de2af36b1acef39fd079fde056e8dc"
+  integrity sha512-HWnsBA80ceazdUTLHuk1n7ZHLDIPfeJY7tvdviVyoGSnFvPW0P/yACRaIGYxzeMpF+5sVdCExTLUstIohySVLg==
+  dependencies:
+    resulty "^5.0.0"
 
 resulty@^5.0.0:
   version "5.0.0"
