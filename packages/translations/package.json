@@ -38,7 +38,7 @@
     "mobx": "^4.15.7",
     "mobx-react": "^5.4.4",
     "nonempty-list": "^2.1.0",
-    "resulty": "^4.0.0",
+    "resulty": "^5.0.0",
     "taskarian": "^4.0.0"
   },
   "devDependencies": {

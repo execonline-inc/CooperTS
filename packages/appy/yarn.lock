@@ -16,10 +16,10 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/decoders@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/decoders/-/decoders-6.1.0.tgz#928a4f4ec70463f79db74d394358929a9ab95948"
-  integrity sha512-zicfe0i3SgtfLsL99+HlQO5CREQ3tMuIZxagziUfB1KUZpZ4C6JEvJKevF1y3emlYSoTUP0U6H4c8iwEz71kOg==
+"@execonline-inc/decoders@^6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/decoders/-/decoders-6.2.0.tgz#6734a2744428d2e3754d6ce05e2f8c0d5fc5c007"
+  integrity sha512-19DeTzHcSwPLKymqD+74cuYz/wNb2uGQ9IbKkjzfcBYumF3YTWwhwuPw2CS+hpJc9m6r940XfnRcn5GRxzTCug==
   dependencies:
     "@execonline-inc/time" "^5.0.0"
     js-base64 "^3.7.2"
@@ -54,13 +54,13 @@
     resulty "^4.0.0"
     taskarian "^4.0.0"
 
-"@execonline-inc/resource@^6.9.0":
-  version "6.9.0"
-  resolved "https://registry.yarnpkg.com/@execonline-inc/resource/-/resource-6.9.0.tgz#6801041858a9e901d590dbc032f11171347eb911"
-  integrity sha512-51+fn5zbg2CLTcMLB5xeO89MJkrT1QQbR9oH7vwVFeJRvoJPd0BlRN9/c76wcBiSwWo4mBZcF036o6pBcDfAtg==
+"@execonline-inc/resource@^6.10.0":
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/@execonline-inc/resource/-/resource-6.10.0.tgz#7f69ac65859f32dc3bd6b1a350b76aaac18ff765"
+  integrity sha512-UmCXvyJiYVY5b62yAcwZnxkFh2yi0mdL0jMCvkQm9CuVIX2ZM8fSA9/WiTRszw2MzWzRIThCyyH7IBCYBXqyTg==
   dependencies:
     "@execonline-inc/collections" "^9.0.0"
-    "@execonline-inc/decoders" "^6.1.0"
+    "@execonline-inc/decoders" "^6.2.0"
     "@execonline-inc/environment" "^5.2.0"
     "@execonline-inc/maybe-adapter" "^4.2.0"
     "@kofno/piper" "^3.0.0"

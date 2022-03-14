@@ -31,7 +31,7 @@
     "js-base64": "^3.7.2",
     "jsonous": "^7.0.0",
     "maybeasy": "^3.0.0",
-    "resulty": "^4.0.0"
+    "resulty": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"

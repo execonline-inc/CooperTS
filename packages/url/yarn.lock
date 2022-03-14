@@ -27,22 +27,22 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
-resulty@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
-  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
+resulty@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/resulty/-/resulty-5.0.0.tgz#962fec061caaade8d600d39d88db370c4f4a9a9a"
+  integrity sha512-K4E8JWqVqjCimjfdM/QyQWLs8xwdhJGVsVy2T6hvU9ihTEaEL72/eI/8wtVP7ddM+DKD2dNnNxLwthoX0RZrow==
 
-taskarian@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-4.0.0.tgz#c82484b7b135629f07c18c689f99142c466894dd"
-  integrity sha512-C0cDkBYMpG6jXDUhdTxYL0ckXhRUVZddukexD+rrXamYIZy8k3DJ0vmNa49CrXiyLrcIDMoz1yJd6jFd2Lifcg==
+taskarian@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/taskarian/-/taskarian-4.2.0.tgz#ecb3fd874e7ebb9bd073814d6680e88fb31e38e0"
+  integrity sha512-unOpUkjHC2iHG9ZDsxYkwDqKORDFAPHWWlGzASiDB7rXEzNdHDx+EU1PqMscjBkXjdFnYCVrD4m9/hDOBjFrEg==
   dependencies:
-    resulty "^4.0.0"
+    resulty "^5.0.0"
 
-url-parse@^1.4.7:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.8.tgz#3f8090e4d6f80053eb861ec496049849f700337e"
-  integrity sha512-9JZ5zDrn9wJoOy/t+rH00HHejbU8dq9VsOYVu272TYDrCiyVAgHKUSpPh3ruZIpv8PMVR+NXLZvfRPJv8xAcQw==
+url-parse@^1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"

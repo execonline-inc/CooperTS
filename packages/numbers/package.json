@@ -32,7 +32,7 @@
     "@execonline-inc/maybe-adapter": "^4.2.0",
     "@kofno/piper": "^3.0.0",
     "maybeasy": "^3.0.0",
-    "resulty": "^4.0.0",
-    "taskarian": "^4.0.0"
+    "resulty": "^5.0.0",
+    "taskarian": "^4.2.0"
   }
 }
