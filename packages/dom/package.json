@@ -30,7 +30,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@kofno/piper": "^3.0.0",
-    "taskarian": "^4.0.0"
+    "@kofno/piper": "^4.3.0",
+    "@types/node": "^17.0.23",
+    "taskarian": "^5.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
   }
 }

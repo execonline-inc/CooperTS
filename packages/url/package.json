@@ -15,11 +15,11 @@
     "lib"
   ],
   "dependencies": {
-    "@kofno/piper": "^3.0.0",
+    "@kofno/piper": "^4.3.0",
     "@types/url-parse": "^1.4.3",
     "maybeasy": "^3.0.0",
-    "resulty": "^4.0.0",
-    "taskarian": "^4.0.0",
+    "resulty": "^5.0.0",
+    "taskarian": "^5.1.0",
     "url-parse": "^1.4.7"
   },
   "repository": {
@@ -36,5 +36,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "typescript": "^4.6.3"
   }
 }

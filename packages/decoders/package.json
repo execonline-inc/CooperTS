@@ -29,12 +29,16 @@
   "dependencies": {
     "@execonline-inc/time": "^5.0.0",
     "js-base64": "^3.7.2",
-    "jsonous": "^7.0.0",
+    "jsonous": "^7.3.0",
     "maybeasy": "^3.0.0",
-    "resulty": "^4.0.0"
+    "resulty": "^5.0.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "551c57fe501811e1b5b2d4f049a79c19b6d087c0"
+  "gitHead": "551c57fe501811e1b5b2d4f049a79c19b6d087c0",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "typescript": "^4.6.3"
+  }
 }

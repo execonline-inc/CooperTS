@@ -9,6 +9,11 @@
   dependencies:
     resulty "^5.0.0"
 
+"@types/node@^17.0.23":
+  version "17.0.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
+  integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
+
 date-fns@^2.16.1:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
@@ -19,14 +24,14 @@ js-base64@^3.7.2:
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.2.tgz#816d11d81a8aff241603d19ce5761e13e41d7745"
   integrity sha512-NnRs6dsyqUXejqk/yv2aiXlAvOs56sLkX6nUdeaNezI5LFFLlsZjOThmwnrcwh5ZZRwZlCMnVAY3CvhIhoVEKQ==
 
-jsonous@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.0.0.tgz#1f2e5c280e6b8b6323d394afaccd2836d69df5f9"
-  integrity sha512-G7sa82OluhBZio6N4mLNEjNy5nOetsfETWWIYBIamobJdTex9EPo58Wl38lw4VSed0Ful+PfVTEEyb39vJorxw==
+jsonous@^7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.3.0.tgz#b6f1a1c3b35fac21859ccb527429871063dfe8da"
+  integrity sha512-ZE7vCB/U8CrFmQZi9RLWkzHYmupi9ypier5eVDj4vdvLIuW93stwydWZsyLYiY6k9NrqTOLfPcy73ofg9VQimg==
   dependencies:
     date-fns "^2.16.1"
     maybeasy "^3.0.0"
-    resulty "^4.0.0"
+    resulty "^5.0.0"
     weakset "^1.0.0"
 
 maybeasy@^3.0.0:
@@ -34,15 +39,15 @@ maybeasy@^3.0.0:
   resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-3.0.0.tgz#732c244da190c742de99aa682e6f86a66152bbcc"
   integrity sha512-hMjmt0Kmfp2PdG9knKi6eUdp4513hkDib99EKqMK5tu1mn+t4Hih/pbJ4g5Kf3+f+c6GV6tBinZqtTtcnubm/g==
 
-resulty@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
-  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
-
 resulty@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/resulty/-/resulty-5.0.0.tgz#962fec061caaade8d600d39d88db370c4f4a9a9a"
   integrity sha512-K4E8JWqVqjCimjfdM/QyQWLs8xwdhJGVsVy2T6hvU9ihTEaEL72/eI/8wtVP7ddM+DKD2dNnNxLwthoX0RZrow==
+
+typescript@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.3.tgz#eefeafa6afdd31d725584c67a0eaba80f6fc6c6c"
+  integrity sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==
 
 weakset@^1.0.0:
   version "1.0.0"
