@@ -20,7 +20,7 @@
     "maybeasy": "^3.0.0",
     "resulty": "^5.0.0",
     "taskarian": "^5.1.0",
-    "url-parse": "^1.4.7"
+    "url-parse": "^1.5.10"
   },
   "repository": {
     "type": "git",
