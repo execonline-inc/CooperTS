@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/error-handling",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Functions to simplifiy error handling across monad types",
   "author": "kofno <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -25,10 +25,10 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
+    "@kofno/piper": "^4.3.0",
     "maybeasy": "^3.0.0",
     "resulty": "^5.0.0",
-    "taskarian": "^5.1.0",
-    "@kofno/piper": "^4.3.0"
+    "taskarian": "^5.1.0"
   },
   "publishConfig": {
     "access": "public"
