@@ -1,3 +1,5 @@
+import * as date from 'date-fns';
+
 const defaultPrefix = '[EXO]';
 
 export const logger = (prefix: string) => (...messages: any): void => {
@@ -19,4 +21,9 @@ export const warnAndNotify = (notify: (...args: any[]) => any) => (
 ): void => {
   warn(message);
   notify(errorName, message, { context });
+};
+
+export const logWithTimestamp = (...messages: any): void => {
+  const timestamp = date.formatRFC3339(new Date(), { fractionDigits: 3 });
+  console.log(`[${timestamp}]`, ...messages);
 };

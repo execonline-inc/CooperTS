@@ -43,6 +43,17 @@ log('hello');
 // [EXO] hello
 ```
 
+### `logWithTimestamp`
+
+A logger with a timestamp prefix.
+
+```ts
+import { logWithTimestamp } from '@execonline-inc/logging';
+
+logWithTimestamp('hello');
+// [2022-05-23T16:34:13.462-04:00] hello
+```
+
 ### `warn`
 
 _Specific to ExecOnline_
