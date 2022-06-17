@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link'
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -16,10 +17,12 @@ const Home: NextPage = () => {
         </h1>
 
         <div className={styles.grid}>
-          <a href="#" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>In-depth information on CooperTS features and API</p>
-          </a>
+          <Link href="doc/1">
+            <a href="#" className={styles.card}>
+              <h2>Documentation &rarr;</h2>
+              <p>In-depth information on CooperTS features and API</p>
+            </a>
+          </Link>
 
           <a href="#" className={styles.card}>
             <h2>Learn &rarr;</h2>
@@ -30,6 +33,7 @@ const Home: NextPage = () => {
             <h2>Examples &rarr;</h2>
             <p>Discover boilerplate example CooperTS projects</p>
           </a>
+          
         </div>
       </main>
 
