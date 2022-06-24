@@ -4,17 +4,19 @@ import { err, ok, Result } from 'resulty';
 import Task from 'taskarian';
 import * as ParsedURL from 'url-parse';
 
+export type URLParser = ParsedURL<Record<string, string | undefined>>;
+
 export interface InvalidUrlError {
   kind: 'invalid-url-error';
   href: string;
-  base?: string | ParsedURL;
+  base?: string | URLParser;
   error: unknown;
 }
 
 const invalidUrlError = (
   error: unknown,
   href: string,
-  base?: string | ParsedURL
+  base?: string | URLParser
 ): InvalidUrlError => {
   return {
     kind: 'invalid-url-error',
@@ -24,10 +26,10 @@ const invalidUrlError = (
   };
 };
 
-export const toUrlR = (
+export const toUrlR = <T>(
   href: string,
-  base?: string | ParsedURL
-): Result<InvalidUrlError, ParsedURL> => {
+  base?: string | URLParser
+): Result<InvalidUrlError, URLParser> => {
   try {
     // Working around a bug in safari: https://github.com/zloirock/core-js/issues/656
     const url = base ? new ParsedURL(href, base, true) : new ParsedURL(href, true);
@@ -37,14 +39,14 @@ export const toUrlR = (
   }
 };
 
-export const toUrl = (href: string, base?: string | ParsedURL): Maybe<ParsedURL> => {
-  return toUrlR(href, base).cata<Maybe<ParsedURL>>({
+export const toUrl = (href: string, base?: string | URLParser): Maybe<URLParser> => {
+  return toUrlR(href, base).cata<Maybe<URLParser>>({
     Ok: just,
     Err: nothing,
   });
 };
 
-export const toUrlT = (href: string, base?: string | ParsedURL): Task<InvalidUrlError, ParsedURL> =>
+export const toUrlT = (href: string, base?: string | URLParser): Task<InvalidUrlError, URLParser> =>
   new Task((reject, resolve) => {
     toUrlR(href, base).cata({
       Ok: resolve,
@@ -54,18 +56,18 @@ export const toUrlT = (href: string, base?: string | ParsedURL): Task<InvalidUrl
     return noop;
   });
 
-export function getQueryParam(key: string): (url: ParsedURL) => Maybe<string>;
-export function getQueryParam(key: string, url: ParsedURL): Maybe<string>;
-export function getQueryParam(key: string, url?: ParsedURL) {
-  const getIt = (url: ParsedURL) => fromNullable(url.query[key]);
+export function getQueryParam(key: string): (url: URLParser) => Maybe<string>;
+export function getQueryParam(key: string, url: URLParser): Maybe<string>;
+export function getQueryParam(key: string, url?: URLParser) {
+  const getIt = (url: URLParser) => fromNullable(url.query[key]);
 
   return url ? getIt(url) : getIt;
 }
 
-export function putQueryParam(key: string, value: string): (url: ParsedURL) => ParsedURL;
-export function putQueryParam(key: string, value: string, url: ParsedURL): ParsedURL;
-export function putQueryParam(key: string, value: string, url?: ParsedURL) {
-  const putIt = (url: ParsedURL): ParsedURL => {
+export function putQueryParam(key: string, value: string): (url: URLParser) => URLParser;
+export function putQueryParam(key: string, value: string, url: URLParser): URLParser;
+export function putQueryParam(key: string, value: string, url?: URLParser) {
+  const putIt = (url: URLParser): URLParser => {
     const q = url.query;
     return toUrl(url.href)
       .map(u => u.set('query', { ...q, [key]: value }))
@@ -78,14 +80,14 @@ export function putQueryParam(key: string, value: string, url?: ParsedURL) {
   return url ? putIt(url) : putIt;
 }
 
-export function getPathname(url: ParsedURL): string {
+export function getPathname(url: URLParser): string {
   return url.pathname;
 }
 
-export function putPathname(pathname: string): (url: ParsedURL) => ParsedURL;
-export function putPathname(pathname: string, url: ParsedURL): ParsedURL;
-export function putPathname(pathname: string, url?: ParsedURL) {
-  const doit = (url: ParsedURL): ParsedURL => {
+export function putPathname(pathname: string): (url: URLParser) => URLParser;
+export function putPathname(pathname: string, url: URLParser): URLParser;
+export function putPathname(pathname: string, url?: URLParser) {
+  const doit = (url: URLParser): URLParser => {
     return toUrl(url.href)
       .map(u => u.set('pathname', pathname))
       .getOrElseValue(url);
@@ -94,4 +96,4 @@ export function putPathname(pathname: string, url?: ParsedURL) {
   return typeof url === 'undefined' ? doit : doit(url);
 }
 
-export const windowLocation = (): Task<InvalidUrlError, ParsedURL> => toUrlT(window.location.href);
+export const windowLocation = (): Task<InvalidUrlError, URLParser> => toUrlT(window.location.href);
