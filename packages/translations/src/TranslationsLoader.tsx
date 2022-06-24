@@ -6,6 +6,7 @@ import { Loader, TranslationsState } from './types';
 interface Props {
   loader: Loader;
   loading: React.ReactElement;
+  children: React.ReactNode;
 }
 
 interface State {
