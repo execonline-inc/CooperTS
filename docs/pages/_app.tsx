@@ -14,7 +14,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         className={clsx(
           'fixed-origin',
           'content-container-width',
-          'relative mx-auto flex justify-center'
+          'relative mx-auto flex flex-col justify-center'
         )}
       >
         <Component {...pageProps} />
