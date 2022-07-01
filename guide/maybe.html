@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="next-head-count" content="2"/><link rel="preload" href="/_next/static/css/d5dddaf8529238a3.css" as="style"/><link rel="stylesheet" href="/_next/static/css/d5dddaf8529238a3.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-69bfa6990bb9e155.js" defer=""></script><script src="/_next/static/chunks/framework-76d02cbefae1782a.js" defer=""></script><script src="/_next/static/chunks/main-b92974553887b4ef.js" defer=""></script><script src="/_next/static/chunks/pages/_app-9f98dae87cb0d5e0.js" defer=""></script><script src="/_next/static/chunks/584-80bdec2b9215d0a8.js" defer=""></script><script src="/_next/static/chunks/pages/guide/%5Bslug%5D-10baf375277e2a9b.js" defer=""></script><script src="/_next/static/kCzBXaAWMS451dhIPYcEb/_buildManifest.js" defer=""></script><script src="/_next/static/kCzBXaAWMS451dhIPYcEb/_ssgManifest.js" defer=""></script><script src="/_next/static/kCzBXaAWMS451dhIPYcEb/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><header class="Header_header__Z8PUO"><nav><ul><li><a href="/">CooperTS</a></li><li><a href="/about">About</a></li><li><a href="/start">Getting Started</a></li><li><a href="/guide">Guide</a></li><li><a href="/examples">Examples</a></li></ul></nav></header><main class="container"><a href="/guide" aria-label="Go Back">← Go Back</a><h3>Maybe Adapter</h3><div><p>The <code>maybe-adapter</code> package provides functions to convert to/from <code>Maybe</code> types.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="toresult"><code>toResult</code></h3>
+<p>This function has a curried and non-curried form. It takes an error and a <code>Maybe</code>. When the <code>Maybe</code> is a <code>Just</code>, a successful <code>Result</code> is returned with the wrapped value, otherwise an error <code>Result</code> is returned with the given error value.</p>
+<pre><code class="language-ts">import { toResult } from &#39;@execonline-inc/maybe-adapter&#39;;
+import { nothing } from &#39;maybeasy&#39;;
+
+toResult&lt;string, number&gt;(&#39;an error message&#39;)(nothing());
+</code></pre>
+<h3 id="totask"><code>toTask</code></h3>
+<p>This function has a curried and non-curried form. It takes an error and a <code>Maybe</code>. When the <code>Maybe</code> is a <code>Just</code>, a succeeding <code>Task</code> is returned with the wrapped value, otherwise a failing <code>Task</code> is returned with the given error value.</p>
+<pre><code class="language-ts">import { toTask } from &#39;@execonline-inc/maybe-adapter&#39;;
+import { nothing } from &#39;maybeasy&#39;;
+
+toTask&lt;string, number&gt;(&#39;an error message&#39;)(nothing());
+</code></pre>
+<h3 id="frombool"><code>fromBool</code></h3>
+<p>This function has a curried and non-curried form. It wraps a given value in a <code>Maybe</code> depending on either the given boolean value or boolean return value of the given function.</p>
+<pre><code class="language-ts">import { fromBool } from &#39;@execonline-inc/maybe-adapter&#39;;
+
+fromBool(true)(123);
+fromBool((): boolean =&gt; true)(123);
+// Just&lt;123&gt;
+</code></pre>
+</div></main></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"page":{"frontmatter":{"title":"Maybe Adapter","description":"Use Maybe to handle possibly-nullish values"},"slug":"maybe","content":"\nThe `maybe-adapter` package provides functions to convert to/from `Maybe` types.\n\n## Functions\n\n### `toResult`\n\nThis function has a curried and non-curried form. It takes an error and a `Maybe`. When the `Maybe` is a `Just`, a successful `Result` is returned with the wrapped value, otherwise an error `Result` is returned with the given error value.\n\n```ts\nimport { toResult } from '@execonline-inc/maybe-adapter';\nimport { nothing } from 'maybeasy';\n\ntoResult\u003cstring, number\u003e('an error message')(nothing());\n```\n\n### `toTask`\n\nThis function has a curried and non-curried form. It takes an error and a `Maybe`. When the `Maybe` is a `Just`, a succeeding `Task` is returned with the wrapped value, otherwise a failing `Task` is returned with the given error value.\n\n```ts\nimport { toTask } from '@execonline-inc/maybe-adapter';\nimport { nothing } from 'maybeasy';\n\ntoTask\u003cstring, number\u003e('an error message')(nothing());\n```\n\n### `fromBool`\n\nThis function has a curried and non-curried form. It wraps a given value in a `Maybe` depending on either the given boolean value or boolean return value of the given function.\n\n```ts\nimport { fromBool } from '@execonline-inc/maybe-adapter';\n\nfromBool(true)(123);\nfromBool((): boolean =\u003e true)(123);\n// Just\u003c123\u003e\n```\n"}},"__N_SSG":true},"page":"/guide/[slug]","query":{"slug":"maybe"},"buildId":"kCzBXaAWMS451dhIPYcEb","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

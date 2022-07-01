@@ -1,0 +1,1 @@
+{"pageProps":{"pages":[{"slug":"maybe","frontmatter":{"title":"Maybe Adapter","description":"Use Maybe to handle possibly-nullish values"}},{"slug":"translations","frontmatter":{"title":"Translations Package","description":"Typescript-enforced keys & React-based interpolation for translations"}}]},"__N_SSG":true}
