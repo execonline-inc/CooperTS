@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { marked } from 'marked';
 import path from 'path';
+import React from 'react';
+import Markdown from '../../components/Markdown';
 import { getFilesFromPath } from '../../lib';
-import { Page, requireFrontmatterDuringBuild } from '../../Types/guide';
+import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../../Types/guide';
 
 interface Props {
   page: Page;
@@ -12,8 +13,8 @@ interface Props {
 
 const PackagePage: React.FC<Props> = ({
   page: {
-    frontmatter: { title, description },
-    content,
+    frontmatter: { title },
+    markdown,
   },
 }) => (
   <div className={clsx('py-10 md:py-16')}>
@@ -49,48 +50,29 @@ const PackagePage: React.FC<Props> = ({
           {title}
         </h1>
       </header>
-      <div
-        className={clsx(
-          'prose prose-slate w-full lg:max-w-none',
-          'prose-headings:scroll-mt-28',
-          'prose-headings:font-display prose-headings:font-normal',
-          'prose-lead:text-slate-500',
-          'prose-a:font-semibold prose-a:no-underline',
-          'prose-a:shadow-[var(--proseAShadow)]',
-          'hover:prose-a:[--tw-prose-underline-size:6px]',
-          'prose-pre:rounded-xl prose-pre:bg-slate-900 prose-pre:shadow-lg',
-          'prose-pre:p-3 md:prose-pre:p-5',
-          'prose-pre:text-xs md:prose-pre:text-sm lg:prose-pre:text-base',
-          'dark:prose-invert dark:text-slate-400',
-
-          'dark:[--tw-prose-background:theme(colors.slate.900)] dark:prose-lead:text-slate-400',
-          'dark:prose-a:text-sky-400',
-
-          'dark:prose-a:shadow-[var(--darkProseAShadow)]',
-          'dark:hover:prose-a:[--tw-prose-underline-size:6px]',
-          'dark:prose-pre:bg-slate-800/60 dark:prose-pre:shadow-none dark:prose-pre:ring-1',
-
-          'dark:prose-pre:ring-slate-300/10 dark:prose-hr:border-slate-800',
-          'lg:prose-headings:scroll-mt-[8.5rem]'
-        )}
-        dangerouslySetInnerHTML={{ __html: marked(content) }}
-      ></div>
+      <Markdown markdown={markdown} />
     </article>
   </div>
 );
 
 export async function getStaticPaths() {
   const files = getFilesFromPath('guide');
-  const paths = files.map((filename) => ({ params: { slug: filename.replace('.md', '') } }));
+  const paths = files.map(filename => ({ params: { slug: filename.replace('.md', '') } }));
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}): Promise<{ props: Props }> {
   const markDownWithMeta = fs.readFileSync(path.join('guide', `${slug}.md`), 'utf-8');
   const { data, content } = matter(markDownWithMeta);
+  // This is safe because we're reading our own markdown, not user-submitted markdown.
+  const markdown = unsafeMarkdownFromContent(content);
 
   return {
-    props: { page: { frontmatter: requireFrontmatterDuringBuild(data), slug, content } },
+    props: { page: { frontmatter: requireFrontmatterDuringBuild(data), slug, markdown } },
   };
 }
 

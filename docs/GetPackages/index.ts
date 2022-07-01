@@ -6,6 +6,7 @@ import path from 'path';
 import { cwd } from 'process';
 import Task from 'taskarian';
 import { requireDecoderDuringBuild, requireResultDuringBuild } from '../RequireDecoderDuringBuild';
+import { SafeMarkdown, unsafeMarkdownFromContent } from '../Types/guide';
 import { packageDirDecoder } from './Decoders';
 import { GlobError, globT, ReadFileError, readFileT } from './filesystem';
 import { festivePossumPackagesPath, GithubFestivePossumPath, PackageDir } from './Types';
@@ -18,7 +19,7 @@ export interface PackageMetadata {
 export interface PackageData {
   slug: string;
   metadata: PackageMetadata;
-  readme: string;
+  markdown: SafeMarkdown;
 }
 
 const packageMetadataDecoder: Decoder<PackageMetadata> = succeed({})
@@ -40,13 +41,14 @@ const localPackageMetadataFromSlug = (slug: string): Task<ReadFileError, Package
     .map(packageMetadataDecoder.toJsonFn())
     .map(requireResultDuringBuild);
 
-const localReadmeFromSlug = (slug: string): Task<ReadFileError, string> =>
-  readFileT(`${localPackageDirFromSlug(slug)}/README.md`);
+const localReadmeFromSlug = (slug: string): Task<ReadFileError, SafeMarkdown> =>
+  // This is safe because we're reading from markdown we own locally
+  readFileT(`${localPackageDirFromSlug(slug)}/README.md`).map(unsafeMarkdownFromContent);
 
 const localPackageDataFromSlug = (slug: string): Task<ReadFileError, PackageData> =>
   Task.succeed<ReadFileError, { slug: string }>({ slug })
     .assign('metadata', localPackageMetadataFromSlug(slug))
-    .assign('readme', localReadmeFromSlug(slug));
+    .assign('markdown', localReadmeFromSlug(slug));
 
 type GetLocalPackagesError = GlobError | ReadFileError;
 
@@ -93,12 +95,15 @@ const festivePossumPackageMetadata = (
 
 const festivePossumPackageReadmeContent = (
   paths: FestivePossumPackagePaths
-): Task<HttpError, string> => toHttpTask(get(paths.readme).withDecoder(string));
+): Task<HttpError, SafeMarkdown> =>
+  // This is safe because we're reading from a hard-coded list of https urls
+  // owned either by EXO or Ryan
+  toHttpTask(get(paths.readme).withDecoder(string)).map(unsafeMarkdownFromContent);
 
 const festivePossumPackageData = (paths: FestivePossumPackagePaths): Task<HttpError, PackageData> =>
   Task.succeed<HttpError, { slug: string }>({ slug: paths.slug })
     .assign('metadata', festivePossumPackageMetadata(paths))
-    .assign('readme', festivePossumPackageReadmeContent(paths));
+    .assign('markdown', festivePossumPackageReadmeContent(paths));
 
 type GetFestivePossumPackagesError = HttpError;
 
