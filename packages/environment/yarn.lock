@@ -70,11 +70,6 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-honeybadger-js@^2.0.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/honeybadger-js/-/honeybadger-js-2.2.2.tgz#53b345abcbb39740cd2229683f36959316f947bc"
-  integrity sha512-dRdTngkp5oqZ7076DDDMle/XHvMuPDXrh35tFkAGJIUabWMj71IODRm9ggLenDF2XxfB6FjrK4Ry5YixZTM4Ug==
-
 jsonous@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.3.0.tgz#b6f1a1c3b35fac21859ccb527429871063dfe8da"

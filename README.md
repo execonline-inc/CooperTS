@@ -14,7 +14,7 @@ Most CooperTS packages are utility packages that build on primitive functional t
 - [`decoders`](https://github.com/execonline-inc/CooperTS/tree/master/packages/decoders) - Provides useful utility decoder implementations (see `jsonous`)
 - [`dom`](https://github.com/execonline-inc/CooperTS/tree/master/packages/dom) - Manipulate the HTML dom using Tasks (see `taskarian`)
 - [`environment`](https://github.com/execonline-inc/CooperTS/tree/master/packages/environment) - Provides functions to read from the execution environment
-- [`logging`](https://github.com/execonline-inc/CooperTS/tree/master/packages/logging) - Provides a few logging functions and also exports [`Honeybadger`](https://www.honeybadger.io/)
+- [`logging`](https://github.com/execonline-inc/CooperTS/tree/master/packages/logging) - Provides a few logging functions
 - [`maybe-adapter`](https://github.com/execonline-inc/CooperTS/tree/master/packages/maybe-adapter) - Provides functions to convert to/from `Maybe` types (see `maybeasy`)
 - [`numbers`](https://github.com/execonline-inc/CooperTS/tree/master/packages/numbers) - Parse strings into numbers
 - [`url`](https://github.com/execonline-inc/CooperTS/tree/master/packages/url) - Provides functions to validate URLs
@@ -26,7 +26,6 @@ Other CooperTS packages provide types & patterns for developers to conform to kn
 - [`translations`](https://github.com/execonline-inc/CooperTS/tree/master/packages/translations) - Provides support for typed translation keys and typed React-based translation interpolation using the [i18next](https://www.i18next.com/) library with a custom adapter
 - [`time`](https://github.com/execonline-inc/CooperTS/tree/master/packages/time) - Provides interfaces and functions for dealing with time durations
 - [`time-distance`](https://github.com/execonline-inc/CooperTS/tree/master/packages/time-distance) - Provides interfaces and functions for dealing with distances between dates
-
 
 See also the lower-level packages at [`festive-possum`](https://github.com/kofno/festive-possum), especially:
 

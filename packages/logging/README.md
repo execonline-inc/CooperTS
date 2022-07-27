@@ -2,8 +2,6 @@
 
 The `logging` package provides a few logging functions.
 
-It also exports `Honeybadger` to provide a single point of configuration and use for that service's API.
-
 ## Functions
 
 ### `logger`
@@ -74,7 +72,9 @@ _Specific to ExecOnline_
 This function accepts an error name, an error message, and a context object. It sends the message to the console using `warn`, and also uses the provided information to post a notification to the third-party [Honeybadger](https://www.honeybadger.io/) exception monitoring service.
 
 ```ts
-import { warnAndNotify } from '@execonline-inc/logging';
+import { warnAndNotify as warnAndNotifyImpl } from '@execonline-inc/logging';
+
+export const warnAndNotify = warnAndNotifyImpl(Honeybadger.notify);
 
 const context = { user_id: 123 };
 warnAndNotify('ErrorName', 'Some error message', context);
