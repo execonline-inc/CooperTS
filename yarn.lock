@@ -3503,6 +3503,11 @@ neo-async@^2.6.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+nested-query-params@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/nested-query-params/-/nested-query-params-1.1.1.tgz#5cd872e8ae79f03e2c8caa1a8c62b1e884e847c5"
+  integrity sha512-M0BBFxh18Hpf2jyZ+tVvpG/3Y5VGx8Ex8+eFeNdocgvOTXkDrgmSbTYgcZPVZ8zIEGASRNlQ0n55PlmdezoalQ==
+
 next@12.1.6:
   version "12.1.6"
   resolved "https://registry.yarnpkg.com/next/-/next-12.1.6.tgz#eb205e64af1998651f96f9df44556d47d8bbc533"
