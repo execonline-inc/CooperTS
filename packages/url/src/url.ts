@@ -69,9 +69,11 @@ export function getQueryParam(key: string, url?: URLParser) {
   return url ? getIt(url) : getIt;
 }
 
+export function putQueryParam(key: string, value: QueryParamVal): (url: URLParser) => URLParser;
+export function putQueryParam(key: string, value: QueryParamVal, url: URLParser): URLParser;
 export function putQueryParam(key: string, value: string): (url: URLParser) => URLParser;
 export function putQueryParam(key: string, value: string, url: URLParser): URLParser;
-export function putQueryParam(key: string, value: string, url?: URLParser) {
+export function putQueryParam(key: string, value: QueryParamVal, url?: URLParser) {
   const updateQuery = pipe(fromQueryString, put(key, value), toQueryString);
   const putIt = (url: URLParser): URLParser => {
     return toUrl(url.href)
