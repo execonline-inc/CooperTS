@@ -2,3 +2,7 @@
 @import './tailwind/components';
 @import './tailwind/utils';
 @import './fontawesome';
+
+code {
+  white-space: pre-wrap;
+}

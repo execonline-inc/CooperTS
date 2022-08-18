@@ -1,10 +1,10 @@
-import Header from '../components/Header/Header';
 import clsx from 'clsx';
-import { Footer } from '../components/Footer/Footer';
 import type { AppProps } from 'next/app';
 import * as React from 'react';
-import '../styles/globals.css';
 import BreakPointDebug from '../components/BreakPointDebug/BreakPointDebug';
+import { Footer } from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import '../styles/globals.css';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

@@ -1,10 +1,18 @@
 import Decoder, { field, string, succeed } from 'jsonous';
 import { requireDecoderDuringBuild } from '../RequireDecoderDuringBuild';
 
+export interface SafeMarkdown {
+  content: string;
+}
+
+// Users of this method need to verify that the markdown content is from a
+// trusted source; otherwise we could be vulnerable to a XSS attack.
+export const unsafeMarkdownFromContent = (content: string): SafeMarkdown => ({ content });
+
 export interface Page {
   slug: string;
   frontmatter: Frontmatter;
-  content: string;
+  markdown: SafeMarkdown;
 }
 
 export interface Frontmatter {
