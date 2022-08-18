@@ -1,1 +1,0 @@
-{"pageProps":{"packageData":{"slug":"nonempty-list","metadata":{"name":"nonempty-list","description":"A list that always has at least one thing in it."},"readme":"# NonEmpty List\n\nA data structure that acts like a list but guarantees that the list always has at least one item.\n"}},"__N_SSG":true}

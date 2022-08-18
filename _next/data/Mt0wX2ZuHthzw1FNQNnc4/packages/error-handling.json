@@ -1,0 +1,1 @@
+{"pageProps":{"packageData":{"slug":"error-handling","metadata":{"name":"@execonline-inc/error-handling","description":"Functions to simplifiy error handling across monad types"},"markdown":{"content":"# `error-handling`\n\n> TODO: description\n\n## Usage\n\n```\nconst errorHandling = require('error-handling');\n\n// TODO: DEMONSTRATE API\n```\n"}}},"__N_SSG":true}
