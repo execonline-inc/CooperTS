@@ -1,0 +1,20 @@
+@tailwind utilities;
+
+@layer utilities {
+  .content-container-width {
+    @apply w-full px-5;
+
+    @screen sm {
+      @apply max-w-2xl px-6;
+    }
+    @screen md {
+      @apply max-w-4xl px-6;
+    }
+    @screen lg {
+      @apply max-w-4xl px-6;
+    }
+    @screen xl {
+      @apply max-w-5xl;
+    }
+  }
+}

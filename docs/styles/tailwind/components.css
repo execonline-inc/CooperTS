@@ -1,0 +1,80 @@
+@tailwind components;
+
+@layer components {
+  *,
+  ::before,
+  ::after {
+    --link-grid-hover-bg: theme(colors.sky.50);
+    --link-grid-hover-bg-dark: theme(colors.slate.800);
+    --tileGradient: linear-gradient(
+          var(--link-grid-hover-bg, theme(colors.sky.50)),
+          var(--link-grid-hover-bg, theme(colors.sky.50))
+        )
+        padding-box,
+      linear-gradient(
+          to top,
+          theme(colors.indigo.400),
+          theme(colors.cyan.400),
+          theme(colors.sky.500)
+        )
+        border-box;
+
+    --tileGradientDark: linear-gradient(
+          var(--link-grid-hover-bg-dark, theme(colors.slate.800)),
+          var(--link-grid-hover-bg-dark, theme(colors.slate.800))
+        )
+        padding-box,
+      linear-gradient(
+          to top,
+          theme(colors.indigo.400),
+          theme(colors.cyan.400),
+          theme(colors.sky.500)
+        )
+        border-box;
+    --darkProseAShadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+      var(--tw-shadow);
+    --proseAShadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+      var(--tw-shadow);
+
+    --darkTileGradient: linear-gradient(
+          var(--link-grid-hover-bg, theme(colors.sky.50)),
+          var(--link-grid-hover-bg, theme(colors.sky.50))
+        )
+        padding-box,
+      linear-gradient(
+          to top,
+          theme(colors.indigo.400),
+          theme(colors.cyan.400),
+          theme(colors.sky.500)
+        )
+        border-box;
+  }
+  pre {
+    @apply whitespace-pre-line break-normal text-xs;
+  }
+
+  .tile {
+    background: linear-gradient(
+        var(--link-grid-hover-bg, theme(color.sky.50)),
+        var(--link-grid-hover-bg, theme(color.sky.50))
+      ),
+      linear-gradient(
+        to top,
+        theme(colors.indigo.400),
+        theme(colors.cyan.400),
+        theme(colors.sky.500)
+      );
+    background-origin: padding-box, border-box;
+  }
+
+  .dark {
+    /* --link-grid-hover-bg: theme(colors.slate.800); */
+    --tw-shadow: inset 0 calc(-1 * var(--tw-prose-underline-size, 2px)) 0 0
+      var(--tw-prose-underline, #075985);
+    --tw-shadow-colored: inset 0 0 0 var(--tw-shadow-color);
+  }
+}
+
+.fixed-origin {
+  transform: translate3d(0, 0, 0);
+}
