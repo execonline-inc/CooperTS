@@ -1,4 +1,5 @@
 import Decoder, { field, string, succeed } from 'jsonous';
+import { requireDecoderDuringBuild } from '../RequireDecoderDuringBuild';
 
 export interface Page {
   slug: string;
@@ -15,12 +16,4 @@ const frontmatterDecoder: Decoder<Frontmatter> = succeed({})
   .assign('title', field('title', string))
   .assign('description', field('description', string));
 
-const raise = (err: string): never => {
-  throw `[EXO] ${err}`;
-};
-
-export const requireFrontmatterDuringBuild = (data: unknown): Frontmatter =>
-  frontmatterDecoder
-    .decodeAny(data)
-    .elseDo(raise)
-    .getOrElse(() => raise('Unreachable'));
+export const requireFrontmatterDuringBuild = requireDecoderDuringBuild(frontmatterDecoder);

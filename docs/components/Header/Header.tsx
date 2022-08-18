@@ -19,16 +19,14 @@ const Header: React.FC = () => {
   return (
     <header
       className={clsx(
-        `not-prose sticky top-0 z-50 
-        flex items-center justify-between 
-        space-x-6 bg-white
-        py-3 shadow-md shadow-slate-900/5 transition 
-        duration-500 dark:shadow-none sm:space-x-10 sm:py-4 
-        md:py-5 
-       `,
+        'not-prose sticky top-0 z-50',
+        'flex items-center justify-between',
+        'space-x-6 bg-white',
+        'py-3 shadow-md shadow-slate-900/5 transition',
+        'duration-500 dark:shadow-none sm:space-x-10 sm:py-4',
+        'md:py-5',
         {
-          'dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75] dark:bg-slate-900/95 dark:backdrop-blur':
-            isScrolled,
+          'dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75] dark:bg-slate-900/95 dark:backdrop-blur': isScrolled,
           'dark:bg-transparent': !isScrolled,
         }
       )}
@@ -78,6 +76,16 @@ const Header: React.FC = () => {
               )}
             >
               Guide
+            </a>
+          </Link>
+          <Link href="/packages">
+            <a
+              className={clsx(
+                'font-medium text-gray-600 hover:text-gray-900',
+                'dark:text-gray-300 dark:hover:text-white'
+              )}
+            >
+              Packages
             </a>
           </Link>
           <Link href="/examples">
