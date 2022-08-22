@@ -3182,7 +3182,7 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jsonous@^7.0.0, jsonous@^7.3.0:
+jsonous@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.3.0.tgz#b6f1a1c3b35fac21859ccb527429871063dfe8da"
   integrity sha512-ZE7vCB/U8CrFmQZi9RLWkzHYmupi9ypier5eVDj4vdvLIuW93stwydWZsyLYiY6k9NrqTOLfPcy73ofg9VQimg==
@@ -4783,11 +4783,6 @@ restore-cursor@^3.1.0:
   dependencies:
     onetime "^5.1.0"
     signal-exit "^3.0.2"
-
-resulty@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
-  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
 
 resulty@^5.0.0:
   version "5.0.0"
