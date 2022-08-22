@@ -33,7 +33,7 @@
     "jsonous": "^7.3.0",
     "logging": "^3.3.0",
     "maybeasy": "^3.0.0",
-    "resulty": "^4.0.0",
+    "resulty": "^5.0.0",
     "taskarian": "^5.1.0"
   },
   "publishConfig": {

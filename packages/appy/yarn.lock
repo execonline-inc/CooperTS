@@ -40,11 +40,6 @@ maybeasy@^3.0.0:
   resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-3.0.0.tgz#732c244da190c742de99aa682e6f86a66152bbcc"
   integrity sha512-hMjmt0Kmfp2PdG9knKi6eUdp4513hkDib99EKqMK5tu1mn+t4Hih/pbJ4g5Kf3+f+c6GV6tBinZqtTtcnubm/g==
 
-resulty@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
-  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
-
 resulty@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/resulty/-/resulty-5.0.0.tgz#962fec061caaade8d600d39d88db370c4f4a9a9a"

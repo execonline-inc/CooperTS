@@ -33,12 +33,12 @@
     "@kofno/piper": "^4.3.0",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "htmlparser2": "^4.1.0",
-    "jsonous": "^7.0.0",
+    "jsonous": "^7.3.0",
     "maybeasy": "^3.0.0",
     "mobx": "^4.15.7",
     "mobx-react": "^5.4.4",
     "nonempty-list": "^3.3.0",
-    "resulty": "^4.0.0",
+    "resulty": "^5.0.0",
     "taskarian": "^5.1.0"
   },
   "devDependencies": {

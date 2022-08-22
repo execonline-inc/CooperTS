@@ -106,16 +106,6 @@ htmlparser2@^4.1.0:
     domutils "^2.0.0"
     entities "^2.0.0"
 
-jsonous@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/jsonous/-/jsonous-7.0.0.tgz#1f2e5c280e6b8b6323d394afaccd2836d69df5f9"
-  integrity sha512-G7sa82OluhBZio6N4mLNEjNy5nOetsfETWWIYBIamobJdTex9EPo58Wl38lw4VSed0Ful+PfVTEEyb39vJorxw==
-  dependencies:
-    date-fns "^2.16.1"
-    maybeasy "^3.0.0"
-    resulty "^4.0.0"
-    weakset "^1.0.0"
-
 maybeasy@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/maybeasy/-/maybeasy-3.0.0.tgz#732c244da190c742de99aa682e6f86a66152bbcc"
@@ -156,11 +146,6 @@ regenerator-runtime@^0.13.4:
   version "0.13.7"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
   integrity sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
-
-resulty@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resulty/-/resulty-4.0.0.tgz#fbd6470fde712a88b7c983394c7486da290ea6e2"
-  integrity sha512-toajg6lqdp9tmV0ohsTxWiwoaWJd2WiuH7vOx+BJtj1Bs9+XoGa+0Zu8yRNV02gS5DphnrdnRG4Xjr7vl+eP8g==
 
 resulty@^5.0.0:
   version "5.0.0"
