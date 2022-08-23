@@ -1,7 +1,7 @@
 {
   "name": "@execonline-inc/cooperts-docs",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
