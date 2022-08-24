@@ -1,12 +1,10 @@
-import { always, identity, noop, pipe } from '@kofno/piper';
-import { just, Maybe, nothing } from 'maybeasy';
-import { QueryParamVal } from 'nested-query-params';
+import { always, identity, noop } from '@kofno/piper';
+import { fromNullable, just, Maybe, nothing } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
 import Task from 'taskarian';
 import * as ParsedURL from 'url-parse';
-import { fromQueryString, get, put, toQueryString } from './querystring';
 
-export type URLParser = ParsedURL<string>;
+export type URLParser = ParsedURL<Record<string, string | undefined>>;
 
 export interface InvalidUrlError {
   kind: 'invalid-url-error';
@@ -34,7 +32,7 @@ export const toUrlR = <T>(
 ): Result<InvalidUrlError, URLParser> => {
   try {
     // Working around a bug in safari: https://github.com/zloirock/core-js/issues/656
-    const url = base ? new ParsedURL(href, base, false) : new ParsedURL(href, false);
+    const url = base ? new ParsedURL(href, base, true) : new ParsedURL(href, true);
     return ok(url);
   } catch (e) {
     return err(invalidUrlError(e, href, base));
@@ -58,26 +56,21 @@ export const toUrlT = (href: string, base?: string | URLParser): Task<InvalidUrl
     return noop;
   });
 
-export function getQueryParam(key: string): (url: URLParser) => Maybe<QueryParamVal>;
-export function getQueryParam(key: string, url: URLParser): Maybe<QueryParamVal>;
+export function getQueryParam(key: string): (url: URLParser) => Maybe<string>;
+export function getQueryParam(key: string, url: URLParser): Maybe<string>;
 export function getQueryParam(key: string, url?: URLParser) {
-  const getIt = (url: URLParser) =>
-    just(url.query)
-      .map(fromQueryString)
-      .andThen(get(key));
+  const getIt = (url: URLParser) => fromNullable(url.query[key]);
 
   return url ? getIt(url) : getIt;
 }
 
-export function putQueryParam(key: string, value: QueryParamVal): (url: URLParser) => URLParser;
-export function putQueryParam(key: string, value: QueryParamVal, url: URLParser): URLParser;
 export function putQueryParam(key: string, value: string): (url: URLParser) => URLParser;
 export function putQueryParam(key: string, value: string, url: URLParser): URLParser;
-export function putQueryParam(key: string, value: QueryParamVal, url?: URLParser) {
-  const updateQuery = pipe(fromQueryString, put(key, value), toQueryString);
+export function putQueryParam(key: string, value: string, url?: URLParser) {
   const putIt = (url: URLParser): URLParser => {
+    const q = url.query;
     return toUrl(url.href)
-      .map(u => u.set('query', updateQuery(url.query)))
+      .map(u => u.set('query', { ...q, [key]: value }))
       .cata({
         Just: identity,
         Nothing: always(url),
