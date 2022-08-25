@@ -1,4 +1,7 @@
-# CooperTS
+---
+title: 'CooperTS - Practical Patterns'
+description: 'Patterns we use at ExecOnline'
+---
 
 Elm-inspired functional-programming tools in Typescript.
 
