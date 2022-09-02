@@ -9,10 +9,8 @@ import '../styles/globals.css';
 import { navTreeDecoder } from '../Types/NavTree/Decoder';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const navTree = requireDecoderDuringBuild(navTreeDecoder)(pageProps.navTree);
-
   // TODO: render the navTree
-  console.log(navTree);
+  const navTree = requireDecoderDuringBuild(navTreeDecoder)(pageProps.navTree);
   return (
     <div className="flex h-screen w-screen flex-col justify-between scroll-smooth">
       <Header />
