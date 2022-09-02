@@ -1,11 +1,17 @@
+import { pipe } from '@kofno/piper';
 import clsx from 'clsx';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { string } from 'jsonous';
+import { GetStaticProps } from 'next';
 import path from 'path';
 import React from 'react';
+import Task from 'taskarian';
 import Markdown from '../../components/Markdown';
 import { getFilesFromPath } from '../../lib';
+import { requireDecoderDuringBuild } from '../../RequireDecoderDuringBuild';
 import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../../Types/guide';
+import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../../Types/NavTree';
 
 interface Props {
   page: Page;
@@ -57,23 +63,25 @@ const PackagePage: React.FC<Props> = ({
 
 export async function getStaticPaths() {
   const files = getFilesFromPath('guide');
-  const paths = files.map(filename => ({ params: { slug: filename.replace('.md', '') } }));
+  const paths = files.map((filename) => ({ params: { slug: filename.replace('.md', '') } }));
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({
-  params: { slug },
-}: {
-  params: { slug: string };
-}): Promise<{ props: Props }> {
-  const markDownWithMeta = fs.readFileSync(path.join('guide', `${slug}.md`), 'utf-8');
-  const { data, content } = matter(markDownWithMeta);
-  // This is safe because we're reading our own markdown, not user-submitted markdown.
-  const markdown = unsafeMarkdownFromContent(content);
-
-  return {
-    props: { page: { frontmatter: requireFrontmatterDuringBuild(data), slug, markdown } },
-  };
-}
+export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
+  (context) =>
+    Task.succeed(requireDecoderDuringBuild(string)(context.params?.slug))
+      .map((slug) => ({ slug }))
+      .map((o) => ({ ...o, path: path.join('guide', `${o.slug}.md`) }))
+      .map((o) => ({ ...o, file: fs.readFileSync(o.path, 'utf-8') }))
+      .map((o) => ({ ...o, ...matter(o.file) }))
+      // This is safe because we're reading our own markdown during build, not
+      // user-submitted markdown.
+      .map((o) => ({ ...o, markdown: unsafeMarkdownFromContent(o.content) }))
+      .map((o) => ({ ...o, frontmatter: requireFrontmatterDuringBuild(o.data) }))
+      .map<Page>(({ slug, frontmatter, markdown }) => ({ slug, frontmatter, markdown }))
+      .map((page) => ({ page })),
+  withNavTreeStaticProp,
+  taskToStaticProps
+);
 
 export default PackagePage;

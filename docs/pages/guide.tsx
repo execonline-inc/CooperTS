@@ -1,8 +1,12 @@
 import clsx from 'clsx';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Task from 'taskarian';
 import { getFilesFromPath, getMarkDownWithMeta } from '../lib';
 import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../Types/guide';
+import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
+import { pipe } from '@kofno/piper';
+import { GetStaticProps } from 'next';
 
 interface Props {
   pages: Page[];
@@ -61,29 +65,31 @@ const Guide: React.FC<Props> = ({ pages }) => {
   );
 };
 
-export async function getStaticProps(): Promise<{ props: Props }> {
-  const files = getFilesFromPath('guide');
+export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
+  () => {
+    const pages = getFilesFromPath('guide')
+      .map(Task.succeed)
+      .map((task) =>
+        task.map((filename) => {
+          const slug = filename.replace('.md', '');
+          const markDownWithMeta = getMarkDownWithMeta('guide', filename);
 
-  const pages: Array<Page> = files.map(filename => {
-    const slug = filename.replace('.md', '');
-    const markDownWithMeta = getMarkDownWithMeta('guide', filename);
+          const { data, content } = matter(markDownWithMeta);
+          // This is safe because we're reading our own markdown, not user-submitted markdown.
+          const markdown = unsafeMarkdownFromContent(content);
 
-    const { data, content } = matter(markDownWithMeta);
-    // This is safe because we're reading our own markdown, not user-submitted markdown.
-    const markdown = unsafeMarkdownFromContent(content);
+          return {
+            slug,
+            frontmatter: requireFrontmatterDuringBuild(data),
+            markdown,
+          };
+        })
+      );
 
-    return {
-      slug,
-      frontmatter: requireFrontmatterDuringBuild(data),
-      markdown,
-    };
-  });
-
-  return {
-    props: {
-      pages,
-    },
-  };
-}
+    return Task.all(pages).map((pages) => ({ pages }));
+  },
+  withNavTreeStaticProp,
+  taskToStaticProps
+);
 
 export default Guide;

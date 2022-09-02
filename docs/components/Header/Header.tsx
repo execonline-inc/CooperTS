@@ -26,7 +26,8 @@ const Header: React.FC = () => {
         'duration-500 dark:shadow-none sm:space-x-10 sm:py-4',
         'md:py-5',
         {
-          'dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75] dark:bg-slate-900/95 dark:backdrop-blur': isScrolled,
+          'dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75] dark:bg-slate-900/95 dark:backdrop-blur':
+            isScrolled,
           'dark:bg-transparent': !isScrolled,
         }
       )}
@@ -56,16 +57,6 @@ const Header: React.FC = () => {
               )}
             >
               About
-            </a>
-          </Link>
-          <Link href="/start">
-            <a
-              className={clsx(
-                'font-medium text-gray-600 hover:text-gray-900',
-                'dark:text-gray-300 dark:hover:text-white'
-              )}
-            >
-              Getting Started
             </a>
           </Link>
           <Link href="/guide">
