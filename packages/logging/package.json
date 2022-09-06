@@ -28,8 +28,7 @@
   },
   "dependencies": {
     "@execonline-inc/environment": "^5.5.0",
-    "date-fns": "^2.28.0",
-    "logging": "^3.2.0"
+    "date-fns": "^2.28.0"
   },
   "publishConfig": {
     "access": "public"
