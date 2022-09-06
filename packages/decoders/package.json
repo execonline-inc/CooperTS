@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/decoders",
-  "version": "6.4.0",
+  "version": "6.4.1",
   "description": "Generally useful decoders that extend Jsonous",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/time": "^5.1.0",
+    "@execonline-inc/time": "^5.1.1",
     "js-base64": "^3.7.2",
     "jsonous": "^7.3.0",
     "maybeasy": "^3.0.0",

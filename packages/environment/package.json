@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/environment",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "description": "Safely read environment cofigurations",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
