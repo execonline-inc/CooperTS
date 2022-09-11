@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 
       <main>
         <h1 className="text-xl text-sky-500 md:text-2xl lg:text-3xl">Welcome to CooperTS</h1>
-
+        <div>A collection of methods and a way of programming that aims to reduce the cost of building correct software.</div>
         <div className="not-prose my-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           <div
             className={clsx(
