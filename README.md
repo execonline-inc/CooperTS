@@ -47,3 +47,16 @@ cd CooperTS
 # Install dependencies
 yarn run bootstrap
 ```
+
+# To run the docs app
+```bash
+yarn bootstrap
+```
+
+Then, run the development server in the same root directory:
+
+```bash
+yarn docs dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
