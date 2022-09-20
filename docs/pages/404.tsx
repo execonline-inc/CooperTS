@@ -5,7 +5,7 @@ import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/
 
 interface Props {}
 
-const About: NextPage<Props> = () => <div>About</div>;
+const ErrorPage: NextPage<Props> = () => <h1>404 - Page Not Found</h1>;
 
 export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   (_context) => Task.succeed({}),
@@ -13,4 +13,4 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   taskToStaticProps
 );
 
-export default About;
+export default ErrorPage;

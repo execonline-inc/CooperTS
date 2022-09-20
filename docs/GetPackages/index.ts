@@ -112,7 +112,7 @@ const getAllFestivePossumPackageData = (): Task<
   Array<PackageData>
 > => Task.all(festivePossumPaths().map(festivePossumPackageData));
 
-type GetCombinedPackageError = GetFestivePossumPackagesError | GetLocalPackagesError;
+export type GetCombinedPackageError = GetFestivePossumPackagesError | GetLocalPackagesError;
 
 export const getCombinedPackageData = (): Task<GetCombinedPackageError, Array<PackageData>> =>
   Task.succeed<GetCombinedPackageError, {}>({})

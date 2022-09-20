@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import clsx from 'clsx';
-import BreakPointDebug from '../components/BreakPointDebug/BreakPointDebug';
 
 const Document: React.FC = () => (
   <Html className="dark js-focus-visible antialiased [font-feature-settings:'ss01']" lang="en">

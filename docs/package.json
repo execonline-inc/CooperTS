@@ -8,6 +8,7 @@
     "start": "yarn run build && serve out"
   },
   "dependencies": {
+    "@kofno/piper": "^4.3.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/marked": "^4.0.3",
     "clsx": "^1.1.1",

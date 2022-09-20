@@ -1,6 +1,9 @@
+import { pipe } from '@kofno/piper';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import { getCombinedPackageData, PackageData } from '../GetPackages';
+import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
 
 interface Props {
   allPackageData: PackageData[];
@@ -25,14 +28,10 @@ const Packages: React.FC<Props> = ({ allPackageData }) => {
   );
 };
 
-export async function getStaticProps() {
-  return getCombinedPackageData()
-    .map(allPackageData => ({
-      props: {
-        allPackageData,
-      },
-    }))
-    .resolve();
-}
+export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
+  () => getCombinedPackageData().map((allPackageData) => ({ allPackageData })),
+  withNavTreeStaticProp,
+  taskToStaticProps
+);
 
 export default Packages;
