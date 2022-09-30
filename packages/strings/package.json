@@ -1,0 +1,32 @@
+{
+  "name": "@execonline-inc/strings",
+  "version": "0.0.0",
+  "description": "Functions for manipulating strings",
+  "author": "kofno <ryan.l.bell@gmail.com>",
+  "homepage": "https://github.com/execonline-inc/CooperTS#readme",
+  "license": "ISC",
+  "main": "lib/strings.js",
+  "typings": "lib/strings.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/execonline-inc/CooperTS.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "yarn": "yarn",
+    "test": "node ./__tests__/strings.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/execonline-inc/CooperTS/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
