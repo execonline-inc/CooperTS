@@ -34,3 +34,10 @@ export const parseIntT = pipe(parseIntM, toTask(numberParseFailure())) as UnaryF
   string,
   Task<NumberParseFailure, number>
 >;
+
+export function clamp(min: number, max: number): (value: number) => number;
+export function clamp(min: number, max: number, value: number): number;
+export function clamp(min: number, max: number, value?: number) {
+  const doit = (value: number) => Math.min(Math.max(value, min), max);
+  return typeof value === 'undefined' ? doit : doit(value);
+}
