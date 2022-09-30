@@ -1,3 +1,5 @@
+import { Emptyable } from 'maybeasy';
+
 export const byId = (id: number) => (thing: { id: number }): boolean => id === thing.id;
 
 export const byPayloadId = <T extends { payload: { id: number } }>(id: number) => (
@@ -15,3 +17,5 @@ export function equals<T>(left: T, right?: T) {
 
   return typeof right === 'undefined' ? doit : doit(right);
 }
+
+export const isEmpty = <T extends Emptyable>(thing: T): boolean => thing.length === 0;
