@@ -23,6 +23,10 @@
     "yarn": "yarn",
     "test": "node ./__tests__/strings.test.js"
   },
+  "dependencies": {
+    "maybeasy": "3.0.0",
+    "@kofno/piper": "4.3.0"
+  },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
