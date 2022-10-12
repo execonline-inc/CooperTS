@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/strings",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Functions for manipulating strings",
   "author": "kofno <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -24,8 +24,8 @@
     "test": "node ./__tests__/strings.test.js"
   },
   "dependencies": {
-    "maybeasy": "3.0.0",
-    "@kofno/piper": "4.3.0"
+    "@kofno/piper": "4.3.0",
+    "maybeasy": "3.0.0"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
