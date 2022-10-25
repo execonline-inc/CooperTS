@@ -21,7 +21,7 @@
   "scripts": {
     "tsc": "tsc",
     "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "node ./__tests__/collections.test.js"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
