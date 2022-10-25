@@ -2,6 +2,7 @@ import { pipe } from '@kofno/piper';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import PageTitle from '../components/PageTitle';
 import { getCombinedPackageData, PackageData } from '../GetPackages';
 import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
 
@@ -11,20 +12,23 @@ interface Props {
 
 const Packages: React.FC<Props> = ({ allPackageData }) => {
   return (
-    <ul>
-      {allPackageData
-        .sort((a, b) => (a.metadata.name > b.metadata.name ? 1 : -1))
-        .map(({ slug, metadata: { name, description } }) => (
-          <li key={slug}>
-            <Link href={`/packages/${slug}`}>
-              <a>
-                <strong>{name}</strong>
-              </a>
-            </Link>
-            : {description}
-          </li>
-        ))}
-    </ul>
+    <>
+      <PageTitle title="Packages" />
+      <ul>
+        {allPackageData
+          .sort((a, b) => (a.metadata.name > b.metadata.name ? 1 : -1))
+          .map(({ slug, metadata: { name, description } }) => (
+            <li key={slug}>
+              <Link href={`/packages/${slug}`}>
+                <a>
+                  <strong>{name}</strong>
+                </a>
+              </Link>
+              : {description}
+            </li>
+          ))}
+      </ul>
+    </>
   );
 };
 

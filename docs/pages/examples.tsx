@@ -1,12 +1,14 @@
 import { pipe } from '@kofno/piper';
 import { GetStaticProps, NextPage } from 'next';
 import Task from 'taskarian';
+import PageTitle from '../components/PageTitle';
 import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
 
 interface Props {}
 
 const Examples: NextPage<Props> = () => (
   <>
+    <PageTitle title="Examples" />
     <div className="example">
       <h2>Task Manager App</h2>
       <iframe

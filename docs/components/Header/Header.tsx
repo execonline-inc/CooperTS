@@ -48,7 +48,10 @@ const Header: React.FC = () => {
             CooperTS
           </a>
         </Link>
-        <nav className={`md:text-md flex items-center space-x-5 text-sm sm:space-x-10 sm:text-sm`}>
+        <nav
+          className={`md:text-md flex items-center space-x-5 text-sm sm:space-x-10 sm:text-sm`}
+          aria-label="Primary"
+        >
           <Link href="/about">
             <a
               className={clsx(
@@ -87,6 +90,16 @@ const Header: React.FC = () => {
               )}
             >
               Examples
+            </a>
+          </Link>
+          <Link href="/faq">
+            <a
+              className={clsx(
+                'font-medium text-gray-600 hover:text-gray-900',
+                'dark:text-gray-300 dark:hover:text-white'
+              )}
+            >
+              FAQs
             </a>
           </Link>
           <Link href="https://github.com/execonline-inc/CooperTS" target={'_blank'}>
