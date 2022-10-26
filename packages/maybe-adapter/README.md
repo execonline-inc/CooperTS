@@ -26,9 +26,13 @@ import { nothing } from 'maybeasy';
 toTask<string, number>('an error message')(nothing());
 ```
 
-### `fromBool`
+### `fromBool`, `when`
 
 This function has a curried and non-curried form. It wraps a given value in a `Maybe` depending on either the given boolean value or boolean return value of the given function.
+
+Also, if the first argument is a function, the second argument is passed to that function for evaluation. (See advanced usage example)
+
+Aliased as `when`
 
 ```ts
 import { fromBool } from '@execonline-inc/maybe-adapter';
@@ -36,4 +40,8 @@ import { fromBool } from '@execonline-inc/maybe-adapter';
 fromBool(true)(123);
 fromBool((): boolean => true)(123);
 // Just<123>
+
+// Advanced usage.
+mapMaybe(when(even), [1, 2, 3, 4]);
+// [2, 4]
 ```
