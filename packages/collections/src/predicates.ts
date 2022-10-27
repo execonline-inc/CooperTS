@@ -21,7 +21,7 @@ export function equals<T>(left: T, right?: T) {
 
 export const isEmpty = <T extends Emptyable>(thing: T): boolean => thing.length === 0;
 
-const not = (predicate: boolean): boolean => not(predicate);
+const not = (predicate: boolean): boolean => !predicate;
 
 export const even = (n: number): boolean => n % 2 == 0;
 export const odd = pipe(even, not);
