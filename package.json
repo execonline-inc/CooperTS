@@ -13,6 +13,9 @@
     "prettier": "^1.19.1",
     "typescript": "^4.3.2"
   },
+  "resolutions": {
+    "**/serve-handler/minimatch": "^3.0.5"
+  },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5",
