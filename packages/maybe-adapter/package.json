@@ -32,7 +32,7 @@
     "jsonous": "^7.3.0",
     "maybeasy": "^5.0.0",
     "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "taskarian": "^5.3.0"
   },
   "publishConfig": {
     "access": "public"
