@@ -19,7 +19,7 @@
     "@types/url-parse": "^1.4.8",
     "maybeasy": "^5.0.0",
     "resulty": "^5.0.0",
-    "taskarian": "^5.1.0",
+    "taskarian": "^5.3.0",
     "url-parse": "^1.5.10"
   },
   "repository": {
