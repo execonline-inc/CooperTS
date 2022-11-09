@@ -30,7 +30,7 @@
     "@kofno/piper": "^4.3.0",
     "ajaxian": "^4.4.0",
     "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
+    "maybeasy": "^5.0.0",
     "resulty": "^5.0.0",
     "taskarian": "^5.1.0"
   },

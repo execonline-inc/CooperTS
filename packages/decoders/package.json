@@ -29,8 +29,8 @@
   "dependencies": {
     "@execonline-inc/time": "^5.1.1",
     "js-base64": "^3.7.2",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
+    "jsonous": "^7.6.0",
+    "maybeasy": "^5.0.0",
     "resulty": "^5.0.0"
   },
   "publishConfig": {

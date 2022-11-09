@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@kofno/piper": "4.3.0",
-    "maybeasy": "3.0.0"
+    "maybeasy": "^5.0.0"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

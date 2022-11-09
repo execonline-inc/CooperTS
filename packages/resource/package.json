@@ -32,11 +32,11 @@
     "@execonline-inc/environment": "^5.5.1",
     "@execonline-inc/maybe-adapter": "^4.5.0",
     "@kofno/piper": "^4.3.0",
-    "ajaxian": "^4.4.0",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
+    "ajaxian": "^4.6.0",
+    "jsonous": "^7.6.0",
+    "maybeasy": "^5.0.0",
     "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "taskarian": "^5.3.0"
   },
   "publishConfig": {
     "access": "public"

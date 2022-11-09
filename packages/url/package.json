@@ -17,7 +17,7 @@
   "dependencies": {
     "@kofno/piper": "^4.3.0",
     "@types/url-parse": "^1.4.8",
-    "maybeasy": "^3.0.0",
+    "maybeasy": "^5.0.0",
     "resulty": "^5.0.0",
     "taskarian": "^5.1.0",
     "url-parse": "^1.5.10"
