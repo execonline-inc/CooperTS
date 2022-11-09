@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/error-handling",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Functions to simplifiy error handling across monad types",
   "author": "kofno <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",

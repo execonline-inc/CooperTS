@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/collections",
-  "version": "10.6.0",
+  "version": "10.7.0",
   "description": "Utilities for working with collections of data",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/maybe-adapter": "^4.6.0",
+    "@execonline-inc/maybe-adapter": "^4.7.0",
     "@kofno/piper": "^4.3.0",
     "ajaxian": "^4.4.0",
     "jsonous": "^7.3.0",
