@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             CooperTS
           </a>
         </Link>
-        <nav className={`md:text-md flex space-x-5 text-sm sm:space-x-10 sm:text-sm`}>
+        <nav className={`md:text-md flex items-center space-x-5 text-sm sm:space-x-10 sm:text-sm`}>
           <Link href="/about">
             <a
               className={clsx(
