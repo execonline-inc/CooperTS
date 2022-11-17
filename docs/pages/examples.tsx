@@ -13,7 +13,7 @@ const Examples: NextPage<Props> = () => (
         src="https://codesandbox.io/embed/dawn-cookies-yhsxo9?fontsize=14&hidenavigation=1&theme=dark"
         style={{
           width: '100%',
-          height: '700px',
+          height: '800px',
           border: '0',
           borderRadius: '4px',
           overflow: 'hidden',

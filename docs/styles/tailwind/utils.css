@@ -14,7 +14,7 @@
       @apply max-w-4xl px-6;
     }
     @screen xl {
-      @apply max-w-6xl;
+      @apply max-w-7xl;
     }
   }
 }
