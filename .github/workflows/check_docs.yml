@@ -2,7 +2,7 @@ name: Check Docs
 
 on:
   push:
-    branches-ignore: [master] # Use deploy_docs.yml on master
+    branches-ignore: [main] # Use deploy_docs.yml on main
 
 jobs:
   build-docs:
