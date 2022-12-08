@@ -21,19 +21,25 @@ Let's take a moment to explore referential integrity. Given this function:
 
 ### add2
 
-        const add2 = (n: number) => n + 2;
+```typescript
+const add2 = (n: number) => n + 2;
+```
 
 Then this program:
 
 ### referential program 1
 
-        add2(2) === 4;
+```typescript
+add2(2) === 4;
+```
 
 is identical to this program:
 
 ### referential program 2
 
-        4 === 4;
+```typescript
+4 === 4;
+```
 
 So.. that was probably a tad underwhelming.
 
@@ -41,10 +47,12 @@ Now let's consider a slightly different version of add2.
 
 ### side effectual add2
 
-        const add2 = (n: number) => {
-          sendEngagement(`Someone added 2 to ${n}`);
-          return n + 2;
-        }
+```typescript
+const add2 = (n: number) => {
+  sendEngagement(`Someone added 2 to ${n}`);
+  return n + 2;
+};
+```
 
 Now when I replace add2(2) === 4 with 4 === 4, how many Product Managers am I going to have in my inbox in the morning because the add2 engagements are broken? Imagine trying to write tests for both versions of add2. Which one is easier?
 
@@ -62,44 +70,48 @@ Before we begin, let's define some types to work with:
 
 ### Types.ts
 
-        interface Encoding {
-          id: string;
-          name: string;
-        }
+```typescript
+interface Encoding {
+  id: string;
+  name: string;
+}
 
-        interface Stream {
-          id: string;
-          codec: string;
-        }
+interface Stream {
+  id: string;
+  codec: string;
+}
 
-        interface Video {
-          encoding: Encoding;
-          streams: Stream[]
-        }
+interface Video {
+  encoding: Encoding;
+  streams: Stream[]
+}
 
-        const videos: Video[] = // ... assume we initialized this array with videos
+const videos: Video[] = // ... assume we initialized this array with videos
+```
 
 Now lets write a couple loops. One that gets all of the encoding ids from the list of videos, and another that gets all the stream ids from the list of videos:
 
 ### Get you some encoding ids
 
-        const encodingIds: string[] = [];
+```typescript
+const encodingIds: string[] = [];
 
-        for (let i = 0; i < videos.length; i++) {
-          const id = videos[i].encoding.id;
-          encodingIds.push(id);
-        }
+for (let i = 0; i < videos.length; i++) {
+  const id = videos[i].encoding.id;
+  encodingIds.push(id);
+}
 
-        const streamIds: string[] = [];
+const streamIds: string[] = [];
 
-        for (let i = 0; i < videos.length; i++) {
-          const streams = videos[i].streams;
+for (let i = 0; i < videos.length; i++) {
+  const streams = videos[i].streams;
 
-          for (let j = 0; j < streams.length; j++) {
-            const id = streams[j].id;
-            streamIds.push(id);
-          }
-        }
+  for (let j = 0; j < streams.length; j++) {
+    const id = streams[j].id;
+    streamIds.push(id);
+  }
+}
+```
 
 If you read this code honestly, you have to admit that it's mostly loop management and state initialization; low level concepts that muddy up our business concerns.
 
@@ -107,33 +119,37 @@ Now let's extract the "business logic" into some functions:
 
 ### Functions.ts
 
-        const getId = <T extends { id: string }>(thing: T): string => thing.id;
+```typescript
+const getId = <T extends { id: string }>(thing: T): string => thing.id;
 
-        const getStreams = (video: Video): Stream[] => video.streams;
+const getStreams = (video: Video): Stream[] => video.streams;
 
-        const getEncoding = (video: Video): Encoding => video.encoding;
+const getEncoding = (video: Video): Encoding => video.encoding;
+```
 
 And we'll try again:
 
 ### Loops redeux
 
-        const encodingIds: string[] = [];
+```typescript
+const encodingIds: string[] = [];
 
-        for (let i = 0; i < videos.length; i++) {
-          const id = getId(getEncoding(videos[i]))
-          encodingIds.push(id);
-        }
+for (let i = 0; i < videos.length; i++) {
+  const id = getId(getEncoding(videos[i]));
+  encodingIds.push(id);
+}
 
-        const streamIds: string[] = [];
+const streamIds: string[] = [];
 
-        for (let i = 0; i < videos.length; i++) {
-          const streams = getStreams(videos[i]);
+for (let i = 0; i < videos.length; i++) {
+  const streams = getStreams(videos[i]);
 
-          for (let j = 0; j < streams.length; j++) {
-            const id = getId(streams[j]);
-            streamIds.push(id);
-          }
-        }
+  for (let j = 0; j < streams.length; j++) {
+    const id = getId(streams[j]);
+    streamIds.push(id);
+  }
+}
+```
 
 Is this better? Well, each piece of business logic is much easier to test now. But we're still doing loop maintenance and state management, and depending on how you feel about reading functions vs. dot notation, this might be harder for you to read.
 
@@ -141,9 +157,9 @@ Let's look again at the encoding ids example, this time using map:
 
 ### Encoding IDs, Mapped edition
 
-        const encodingIds: string[] = videos
-          .map(getEncoding)
-          .map(getId);
+```typescript
+const encodingIds: string[] = videos.map(getEncoding).map(getId);
+```
 
 And that's all she wrote. Loop maintenance is gone. State management is gone. All that's left are the declarations of what the logic is doing.
 
@@ -153,20 +169,21 @@ Let us now take a look at a hypothetical implementation of map in a hypothetical
 
 ### Map's Guts
 
-        class Array<A> {
-          //... a bunch of stuff that makes arrays arrays
-          map = <B>(fn: (a: A) => B): Array<B> => {
-            const newArray: B[] = [];
+```typescript
+class Array<A> {
+  //... a bunch of stuff that makes arrays arrays
+  map = <B>(fn: (a: A) => B): Array<B> => {
+    const newArray: B[] = [];
 
-            for (let i = 0; i < this.length; i++) {
-              const b = fn(this[i]);
-              newArray.push(b);
-            }
+    for (let i = 0; i < this.length; i++) {
+      const b = fn(this[i]);
+      newArray.push(b);
+    }
 
-            return newArray;
-
-          }
-        }
+    return newArray;
+  };
+}
+```
 
 So that's where all the loop maintenance and state management went!? Indeed. This is the power of map: It abstracts away low level considerations, and surfaces only the business concerns.
 
@@ -174,13 +191,15 @@ Now I want to take a look at the signature of the fn argument in map and compare
 
 ### Map Signature
 
-        fn: (a: A) => B
+```typescript
+fn: (a: A) => B
 
-        getId: (thing: T): string
+getId: (thing: T): string
 
-        getStreams: (video: Video): Stream[]
+getStreams: (video: Video): Stream[]
 
-        getEncoding: (video: Video): Encoding
+getEncoding: (video: Video): Encoding
+```
 
 Every single one of our business logic functions is compatible with map. And this will be true of any pure function. As long as it takes a single argument (or can be curried down to take a single argument) then that function can be used with map. And we can see in the array example that map frees up a lot of mental bandwidth, freeing up cycles that were once devoted to tracking loop and state details but can now be applied to solving actual application space problems.
 
@@ -190,9 +209,9 @@ Of course, when everything seems rosy, there's always something that comes along
 
 ### map stream ids
 
-        const streamIds: string[] = videos
-          .map(getStreams)
-          .map(streams => streams.map(getId));
+```typescript
+const streamIds: string[] = videos.map(getStreams).map((streams) => streams.map(getId));
+```
 
 Ugh... getStreams is breaking my beautiful code. Since it returns an array, I have to nest a map inside another map; abstraction details are leaking out. Also, this won't compile because I've declared that I need a string[], but I'm actually getting a string[][]. Ay caramba!
 
@@ -200,11 +219,11 @@ We could fix the compiler error with something intensely JavaScripty, like this:
 
 ### Intense JavaScript
 
-        const tempStreamIds: string[][] = videos
-          .map(getStreams)
-          .map(streams => streams.map(getId));
+```typescript
+const tempStreamIds: string[][] = videos.map(getStreams).map((streams) => streams.map(getId));
 
-        const streamIds: string[] = [].concat.apply([], tempStreamIds);
+const streamIds: string[] = [].concat.apply([], tempStreamIds);
+```
 
 It should compile now, but so help me... I need to know how JavaScript functions can be applied; the lowest of low level details. Calgon, take me away.
 
@@ -212,20 +231,21 @@ What would be great here, is if we had a function like map, but instead of appen
 
 ### concatMap
 
-        class Array<A> {
-          //... a bunch of stuff that makes arrays arrays
-          concatMap = <B>(fn: (a: A) => B[]): Array<B> => {
-            let newArray: B[] = [];
+```typescript
+class Array<A> {
+  //... a bunch of stuff that makes arrays arrays
+  concatMap = <B>(fn: (a: A) => B[]): Array<B> => {
+    let newArray: B[] = [];
 
-            for (let i = 0; i < this.length; i++) {
-              const bs = fn(this[i]);
-              newArray = newArray.concat(bs);
-            }
+    for (let i = 0; i < this.length; i++) {
+      const bs = fn(this[i]);
+      newArray = newArray.concat(bs);
+    }
 
-            return newArray;
-
-          }
-        }
+    return newArray;
+  };
+}
+```
 
 Heavens to Betsy, that looks a lot like map, doesn't it? The differences are that the fn function argument must return an array, and those arrays are being concatenated, rather then appended.
 
@@ -233,9 +253,9 @@ Well, now that we have concatMap, let's go back and fix our streamIds:
 
 ### fixed stream ids
 
-        const streamIds: string[] = videos
-          .concatMap(getStreams)
-          .map(getId);
+```typescript
+const streamIds: string[] = videos.concatMap(getStreams).map(getId);
+```
 
 Phew... that is so much nicer.
 
@@ -249,20 +269,21 @@ To make sure we clearly understand what is going on here, let's walk through the
 
 ### Map's Guts
 
-        class Array<A> {
-          //... a bunch of stuff that makes arrays arrays
-          map = <B>(fn: (a: A) => B): Array<B> => {
-            const newArray: B[] = [];
+```typescript
+class Array<A> {
+  //... a bunch of stuff that makes arrays arrays
+  map = <B>(fn: (a: A) => B): Array<B> => {
+    const newArray: B[] = [];
 
-            for (let i = 0; i < this.length; i++) {
-              const b = fn(this[i]);
-              newArray.push(b);
-            }
+    for (let i = 0; i < this.length; i++) {
+      const b = fn(this[i]);
+      newArray.push(b);
+    }
 
-            return newArray;
-
-          }
-        }
+    return newArray;
+  };
+}
+```
 
 Line 4: When we enter into map, the first thing that happens is a new Array is instantiated.
 
@@ -280,20 +301,21 @@ Now we'll do the same walk through, but with concatMap. Here's the code again:
 
 ### concatMap
 
-        class Array<A> {
-          //... a bunch of stuff that makes arrays arrays
-          concatMap = <B>(fn: (a: A) => B[]): Array<B> => {
-            let newArray: B[] = [];
+```typescript
+class Array<A> {
+  //... a bunch of stuff that makes arrays arrays
+  concatMap = <B>(fn: (a: A) => B[]): Array<B> => {
+    let newArray: B[] = [];
 
-            for (let i = 0; i < this.length; i++) {
-              const bs = fn(this[i]);
-              newArray = newArray.concat(bs);
-            }
+    for (let i = 0; i < this.length; i++) {
+      const bs = fn(this[i]);
+      newArray = newArray.concat(bs);
+    }
 
-            return newArray;
-
-          }
-        }
+    return newArray;
+  };
+}
+```
 
 Line 4: When we enter into concatMap, we start by create a new array (same as with map)
 
@@ -311,68 +333,71 @@ We can now take this understanding of map and concatMap and apply it to other ma
 
 Let's start with a simple class definition for Optional:
 
-        class Optional<A> {
-          public static some = <A>(value: A) => {
-          return new Optional<A>(value);
-          }
+```typescript
+class Optional<A> {
+  public static some = <A>(value: A) => {
+    return new Optional<A>(value);
+  };
 
-          public static none = <A>() => {
-              return new Optional<A>();
-          }
+  public static none = <A>() => {
+    return new Optional<A>();
+  };
 
-          private value?: A;
+  private value?: A;
 
-          private constructor(value?: A) {
-            this.value = value
-          }
+  private constructor(value?: A) {
+    this.value = value;
+  }
 
-          // ... more to come
-
-        }
+  // ... more to come
+}
+```
 
 This class has a private value that could be undefined, or it could be some generic type of A.
 
 So far we can construct some value or we can construct a none value, but since the value is private, we can't do anything with it. Let's add a map method first, so we can at least get at the value. As we read this code, try to keep the Array map intuition in mind. The None case is like having an empty array, and the Some case is like having a one item array. Let's write this:
 
-        class Optional<A> {
-          // ... constructors and stuff
+```typescript
+class Optional<A> {
+  // ... constructors and stuff
 
-          map = <B>(fn: (a: A) => B) => {
-            return typeof this.value !== 'undefined'
-              ? Optional.some(fn(this.value))
-              : Optional.none();
-          }
-        }
+  map = <B>(fn: (a: A) => B) => {
+    return typeof this.value !== 'undefined' ? Optional.some(fn(this.value)) : Optional.none();
+  };
+}
+```
 
 Because there is no looping construct here, this logic is a bit more direct. We check if the value is defined. If it is, we apply fn to the value and return it wrapped in a new some. Otherwise, we return none.
 
 The concatMap implementation is equally direct.
 
-        class Optional<A> {
-          // ... constructors and stuff
+```typescript
+class Optional<A> {
+  // ... constructors and stuff
 
-          concatMap = <B>(fn: (a: A) => Optional<B>) => {
-            return typeof this.value !== 'undefined'
-              ? fn(this.value)
-              : Optional.none()
-          }
-        }
+  concatMap = <B>(fn: (a: A) => Optional<B>) => {
+    return typeof this.value !== 'undefined' ? fn(this.value) : Optional.none();
+  };
+}
+```
 
 Now we can compose operations that may fail or return no results in the same way we could chain those calls to an array. For example:
 
-        const add = (n1: number) => (n2: number): n => {
-          return n1 + n2;
-        }
+```typescript
+const add =
+  (n1: number) =>
+  (n2: number): n => {
+    return n1 + n2;
+  };
 
-        const safeDiv = (dividend: number) => (divisor: number): Optional<number> => {
-          return divisor === 0
-            ? Optional.none()
-            : Optional.some(dividend / divisor);
-        }
+const safeDiv =
+  (dividend: number) =>
+  (divisor: number): Optional<number> => {
+    return divisor === 0 ? Optional.none() : Optional.some(dividend / divisor);
+  };
 
-        Optional.some(2)
-          .map(add(-2))
-          .concatMap(safeDiv(4))
+Optional.some(2).map(add(-2)).concatMap(safeDiv(4));
+```
 
 Rather then producing NaN, this code will return None if the division fails (divide by zero error). That makes it easier to chain operations together.
 

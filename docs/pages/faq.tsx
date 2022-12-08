@@ -48,7 +48,6 @@ const FAQ: React.FC<Props> = ({ pages }) => {
                     <li key={slug} className={clsx('relative')}>
                       <Link href={`/faq/${slug}`}>
                         <a
-                          href="#"
                           className={clsx(
                             'block w-full pl-3.5',
                             'text-slate-500',
