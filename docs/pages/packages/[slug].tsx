@@ -3,6 +3,7 @@ import { string } from 'jsonous';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Markdown from '../../components/Markdown';
+import PageTitle from '../../components/PageTitle';
 import { getCombinedPackageData, getPackageDataFromSomeSlug, PackageData } from '../../GetPackages';
 import { requireDecoderDuringBuild } from '../../RequireDecoderDuringBuild';
 import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../../Types/NavTree';
@@ -13,6 +14,7 @@ interface Props {
 
 const PackagePage: React.FC<Props> = ({ packageData: { metadata, markdown } }) => (
   <>
+    <PageTitle title={metadata.name} />
     <span>
       <Link href="/packages">
         <a aria-label="Go Back">&larr; Go Back</a>

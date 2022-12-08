@@ -29,7 +29,7 @@ const PackagePage: React.FC<Props> = ({
     <div className={clsx('py-10 md:py-16')}>
       <span className="not-prose group">
         <a
-          href={'/guide'}
+          href={'/faq'}
           aria-label="Go Back"
           className={clsx(
             'dark:text-sky-400 ',
@@ -69,7 +69,7 @@ const PackagePage: React.FC<Props> = ({
 );
 
 export async function getStaticPaths() {
-  const files = getFilesFromPath('guide');
+  const files = getFilesFromPath('faq');
   const paths = files.map((filename) => ({ params: { slug: filename.replace('.md', '') } }));
   return { paths, fallback: false };
 }
@@ -78,7 +78,7 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   (context) =>
     Task.succeed(requireDecoderDuringBuild(string)(context.params?.slug))
       .map((slug) => ({ slug }))
-      .map((o) => ({ ...o, path: path.join('guide', `${o.slug}.md`) }))
+      .map((o) => ({ ...o, path: path.join('faq', `${o.slug}.md`) }))
       .map((o) => ({ ...o, file: fs.readFileSync(o.path, 'utf-8') }))
       .map((o) => ({ ...o, ...matter(o.file) }))
       // This is safe because we're reading our own markdown during build, not

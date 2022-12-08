@@ -38,8 +38,22 @@ const guideSection: NavSection = {
   links: guideLinks,
 };
 
+const faqLinks: Array<NavLink> = getFilesFromPath('faq')
+  .map((filename) => ({
+    filename,
+    slug: filename.replace('.md', ''),
+  }))
+  .map((d) => ({ ...d, ...matter(fs.readFileSync(path.join('faq', d.filename), 'utf-8')) }))
+  .map((d) => ({ ...d, frontmatter: requireFrontmatterDuringBuild(d.data) }))
+  .map((d) => ({ title: d.frontmatter.title, href: `/faq/${d.slug}` }));
+
+const faqSection: NavSection = {
+  title: 'Frequently Asked Questions',
+  links: faqLinks,
+};
+
 export const getNavTree: Task<GetCombinedPackageError, NavTree> = getPackagesSection.map(
-  (packagesSection) => [guideSection, packagesSection]
+  (packagesSection) => [guideSection, packagesSection, faqSection]
 );
 
 export type GetStaticPropsT<Props> = (
