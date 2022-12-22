@@ -1,7 +1,7 @@
 import { pipe } from '@kofno/piper';
+import clsx from 'clsx';
 import { string } from 'jsonous';
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import Markdown from '../../components/Markdown';
 import PageTitle from '../../components/PageTitle';
 import { getCombinedPackageData, getPackageDataFromSomeSlug, PackageData } from '../../GetPackages';
@@ -15,15 +15,12 @@ interface Props {
 const PackagePage: React.FC<Props> = ({ packageData: { metadata, markdown } }) => (
   <>
     <PageTitle title={metadata.name} />
-    <span>
-      <Link href="/packages">
-        <a aria-label="Go Back">&larr; Go Back</a>
-      </Link>
-    </span>
-    <p>
-      <strong>{metadata.name}</strong>: {metadata.description}
-    </p>
-    <Markdown markdown={markdown} />
+    <div className={clsx('py-10 md:py-16')}>
+      <p>
+        <strong>{metadata.name}</strong>: {metadata.description}
+      </p>
+      <Markdown markdown={markdown} />
+    </div>
   </>
 );
 
@@ -40,7 +37,7 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
     return getPackageDataFromSomeSlug(slug).map((packageData) => ({ packageData }));
   },
   withNavTreeStaticProp,
-  taskToStaticProps
+  taskToStaticProps,
 );
 
 export default PackagePage;

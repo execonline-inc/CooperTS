@@ -6,6 +6,7 @@ export interface NavLink {
 export interface NavSection {
   title: string;
   links: Array<NavLink>;
+  href: string;
 }
 
 export type NavTree = Array<NavSection>;

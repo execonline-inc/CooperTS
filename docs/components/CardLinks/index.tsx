@@ -11,11 +11,6 @@ const CardLinks: React.FC = () => {
         subtitle="Learn about CooperTS in a series of introductory pages"
       />
       <CardLink
-        href="/packages"
-        title="Packages"
-        subtitle="In-depth information on CooperTS packages and their APIs"
-      />
-      <CardLink
         href="/examples"
         title="Examples"
         subtitle="Discover boilerplate example CooperTS projects"
@@ -24,6 +19,11 @@ const CardLinks: React.FC = () => {
         href="/faq"
         title="FAQs"
         subtitle="Explore frequently asked questions and helpful tips"
+      />
+      <CardLink
+        href="/packages"
+        title="Packages"
+        subtitle="In-depth information on CooperTS packages and their APIs"
       />
     </div>
   );

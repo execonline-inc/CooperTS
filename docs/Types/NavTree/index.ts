@@ -14,14 +14,15 @@ const getPackagesLinks: Task<
   GetCombinedPackageError,
   Array<NavLink>
 > = getCombinedPackageData().map((datas) =>
-  datas.map((data) => ({ title: data.metadata.name, href: `/packages/${data.slug}` }))
+  datas.map((data) => ({ title: data.metadata.name, href: `/packages/${data.slug}` })),
 );
 
 const getPackagesSection: Task<GetCombinedPackageError, NavSection> = getPackagesLinks.map(
   (links) => ({
     title: 'Packages',
+    href: '/packages',
     links,
-  })
+  }),
 );
 
 const guideLinks: Array<NavLink> = getFilesFromPath('guide')
@@ -35,6 +36,7 @@ const guideLinks: Array<NavLink> = getFilesFromPath('guide')
 
 const guideSection: NavSection = {
   title: 'Guide',
+  href: '/guide',
   links: guideLinks,
 };
 
@@ -49,24 +51,43 @@ const faqLinks: Array<NavLink> = getFilesFromPath('faq')
 
 const faqSection: NavSection = {
   title: 'Frequently Asked Questions',
+  href: '/faq',
   links: faqLinks,
 };
 
+const exampleLinks: Array<NavLink> = [
+  { title: 'Task Manager App', href: '/examples#task-manager-app' },
+  { title: 'Cellular Automata Emulator', href: '/examples#cellular-automata-emulator' },
+  { title: 'This Doc Site 😁', href: '/examples#this-doc-site' },
+];
+
+const exampleSection = {
+  title: 'Examples',
+  href: '/examples',
+  links: exampleLinks,
+};
+
+const aboutSection = {
+  title: 'About',
+  href: '/about',
+  links: [],
+};
+
 export const getNavTree: Task<GetCombinedPackageError, NavTree> = getPackagesSection.map(
-  (packagesSection) => [guideSection, packagesSection, faqSection]
+  (packagesSection) => [aboutSection, guideSection, exampleSection, faqSection, packagesSection],
 );
 
 export type GetStaticPropsT<Props> = (
-  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
+  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>,
 ) => Task<unknown, Props>;
 
 export type WithNavTree<T extends {}> = T & { navTree: NavTree };
 
 export const withNavTreeStaticProp = <Props extends {}, E>(
-  fn: Task<E, Props>
+  fn: Task<E, Props>,
 ): Task<E | GetCombinedPackageError, WithNavTree<Props>> =>
   fn.mapError<E | GetCombinedPackageError>(identity).assign('navTree', getNavTree);
 
 export const taskToStaticProps = <Props extends {}>(
-  t: Task<unknown, Props>
+  t: Task<unknown, Props>,
 ): Promise<GetStaticPropsResult<Props>> => t.map((props) => ({ props })).resolve();

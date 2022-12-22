@@ -27,36 +27,13 @@ const PackagePage: React.FC<Props> = ({
   <>
     <PageTitle title={title} />
     <div className={clsx('py-10 md:py-16')}>
-      <span className="not-prose group">
-        <a
-          href={'/faq'}
-          aria-label="Go Back"
-          className={clsx(
-            'dark:text-sky-400 ',
-            'dark:hover:text-slate-300',
-            'text-sky-500 hover:text-sky-600',
-            'text-base font-bold',
-            'hover:text-sky-600 dark:hover:text-sky-500',
-            'relative transform transition'
-          )}
-        >
-          <span
-            aria-hidden="true"
-            className={clsx(
-              'translate-x-0 transform transition-all duration-200 group-hover:-translate-x-2'
-            )}
-          >
-            <i className="fa fas fa-arrow-left group-hover:text-amber-500"></i>
-          </span>{' '}
-          Go Back
-        </a>
-      </span>
+      <span className="not-prose group"></span>
       <article className={clsx('relative')}>
         <header>
           <h1
             className={clsx(
               'font-display text-3xl tracking-tight',
-              'text-slate-900 dark:text-white'
+              'text-slate-900 dark:text-white',
             )}
           >
             {title}
@@ -88,7 +65,7 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
       .map<Page>(({ slug, frontmatter, markdown }) => ({ slug, frontmatter, markdown }))
       .map((page) => ({ page })),
   withNavTreeStaticProp,
-  taskToStaticProps
+  taskToStaticProps,
 );
 
 export default PackagePage;
