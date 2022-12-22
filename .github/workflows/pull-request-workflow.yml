@@ -1,0 +1,23 @@
+name: Pull Request Workflow
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  githubLabelSlack:
+    if: github.event.label.name == format('Status{0} Needs Review', ':')
+    name: Slack notify when Needs Review label removed
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: cd ./.github/actions/slack-action && yarn install
+      - run: cd ./.github/actions/slack-action && yarn run tsc
+      - name: Slack notify when Needs Review label applied
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        uses: ./.github/actions/slack-action
+        id: githubLabelSlack
+
