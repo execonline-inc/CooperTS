@@ -11,7 +11,7 @@ const Examples: NextPage<Props> = () => (
     <PageTitle title="Examples" />
     <div className="prose dark:prose-invert">
       <h1>Examples</h1>
-      <h2>Task Manager App</h2>
+      <h2 id="task-manager-app">Task Manager App</h2>
       <img src="/images/task_manager_app.png" />
       <p>A Kanban-style task manager.</p>
       <ul>
@@ -25,7 +25,7 @@ const Examples: NextPage<Props> = () => (
         </li>
       </ul>
 
-      <h2>Cellular Automata Emulator</h2>
+      <h2 id="cellular-automata-emulator">Cellular Automata Emulator</h2>
       <img src="/images/cellular_automata.png" />
       <p>An emulator written with NextJS & CooperTS.</p>
       <ul>
@@ -37,7 +37,7 @@ const Examples: NextPage<Props> = () => (
         </li>
       </ul>
 
-      <h2>This Doc Site 😁</h2>
+      <h2 id="this-doc-site">This Doc Site 😁</h2>
       <p>Written with NextJS & CooperTS.</p>
       <ul>
         <li>
