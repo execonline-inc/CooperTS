@@ -5,18 +5,21 @@ import BreakPointDebug from '../components/BreakPointDebug/BreakPointDebug';
 import { Footer } from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import NavLinks from '../components/NavLinks';
+import WhenPage from '../components/WhenPage';
 import { requireDecoderDuringBuild } from '../RequireDecoderDuringBuild';
 import '../styles/globals.css';
 import { navTreeDecoder } from '../Types/NavTree/Decoder';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  // TODO: render the navTree
   const navTree = requireDecoderDuringBuild(navTreeDecoder)(pageProps.navTree);
+
   return (
     <div className="flex h-screen w-screen flex-col justify-between scroll-smooth">
       <Header />
       <div className="flex w-screen items-start">
-        <NavLinks navTree={navTree} />
+        <WhenPage withPathname={(pathname) => pathname !== '/'}>
+          <NavLinks navTree={navTree} />
+        </WhenPage>
         <div className="flex h-screen w-screen flex-col justify-between scroll-smooth">
           <main
             className={clsx(
