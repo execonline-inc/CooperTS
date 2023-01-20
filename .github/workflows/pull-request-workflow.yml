@@ -16,8 +16,8 @@ jobs:
       - name: Slack notify when Needs Review label applied
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: ${{ secrets.SRE_REVIEW_SLACK_CHANNEL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SRE_REVIEW_SLACK_WEBHOOK_URL }}
         uses: ./.github/actions/slack-action
         id: githubLabelSlack
 
