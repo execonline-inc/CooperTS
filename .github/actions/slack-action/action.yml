@@ -1,0 +1,5 @@
+name: 'github-label-slack'
+description: Notifies developer when code review is complete on PR
+runs:
+  using: node16
+  main: lib/index.js
