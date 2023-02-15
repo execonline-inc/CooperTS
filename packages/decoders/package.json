@@ -27,7 +27,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/time": "^5.1.1",
+    "@execonline-inc/time": "workspace:^",
     "js-base64": "^3.7.2",
     "jsonous": "^7.3.0",
     "maybeasy": "^3.0.0",

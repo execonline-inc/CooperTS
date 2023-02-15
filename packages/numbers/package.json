@@ -29,7 +29,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@execonline-inc/maybe-adapter": "^4.5.0",
+    "@execonline-inc/maybe-adapter": "workspace:^",
     "@kofno/piper": "^4.3.0",
     "maybeasy": "^3.0.0",
     "resulty": "^5.0.0",

@@ -27,6 +27,9 @@
     "@kofno/piper": "4.3.0",
     "maybeasy": "3.0.0"
   },
+  "devDependencies": {
+    "typescript": "4.9.5"
+  },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },

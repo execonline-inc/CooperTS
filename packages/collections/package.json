@@ -27,7 +27,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/maybe-adapter": "^4.5.0",
+    "@execonline-inc/maybe-adapter": "workspace:^",
     "@kofno/piper": "^4.3.0",
     "ajaxian": "^4.4.0",
     "jsonous": "^7.3.0",
