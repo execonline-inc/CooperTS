@@ -27,7 +27,7 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@kofno/piper": "^4.3.0",

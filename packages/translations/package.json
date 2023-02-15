@@ -50,6 +50,6 @@
     "react": ">=16"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
