@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: cd ./.github/actions/slack-action && yarn install
-      - run: cd ./.github/actions/slack-action && yarn run tsc
+      - name: Install machine specific libraries
+        run: yarn install
+      - name: Build workspace dependencies
+        run: yarn run tsc
       - name: Slack notify when Needs Review label applied
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
@@ -20,4 +22,3 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SRE_REVIEW_SLACK_WEBHOOK_URL }}
         uses: ./.github/actions/slack-action
         id: githubLabelSlack
-

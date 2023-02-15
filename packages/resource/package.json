@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/resource",
-  "version": "6.19.0",
+  "version": "6.21.0",
   "description": "Models JSON api resources ",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,26 +20,25 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/collections": "^10.5.0",
-    "@execonline-inc/decoders": "^6.4.1",
-    "@execonline-inc/environment": "^5.5.1",
-    "@execonline-inc/maybe-adapter": "^4.5.0",
-    "@kofno/piper": "^4.3.0",
-    "ajaxian": "^4.4.0",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
-    "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "@execonline-inc/collections": "workspace:^",
+    "@execonline-inc/decoders": "workspace:^",
+    "@execonline-inc/environment": "workspace:^",
+    "@execonline-inc/maybe-adapter": "workspace:^",
+    "@kofno/piper": "^4.4.0",
+    "ajaxian": "^4.7.0",
+    "jsonous": "^7.7.0",
+    "maybeasy": "^5.1.0",
+    "resulty": "^5.1.0",
+    "taskarian": "^5.4.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

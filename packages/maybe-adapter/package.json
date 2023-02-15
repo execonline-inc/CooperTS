@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/maybe-adapter",
-  "version": "4.5.0",
+  "version": "4.7.0",
   "description": "Convert types to and from Maybeasy",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,22 +20,21 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "node ./__tests__/maybe-adapter.test.js"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@kofno/piper": "^4.3.0",
-    "ajaxian": "^4.4.0",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
-    "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "@kofno/piper": "^4.4.0",
+    "ajaxian": "^4.7.0",
+    "jsonous": "^7.7.0",
+    "maybeasy": "^5.1.0",
+    "resulty": "^5.1.0",
+    "taskarian": "^5.4.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

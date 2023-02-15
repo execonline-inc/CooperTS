@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/url",
-  "version": "8.0.1",
+  "version": "8.2.0",
   "description": "Safe URL parsing",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -15,11 +15,11 @@
     "lib"
   ],
   "dependencies": {
-    "@kofno/piper": "^4.3.0",
+    "@kofno/piper": "^4.4.0",
     "@types/url-parse": "^1.4.8",
-    "maybeasy": "^3.0.0",
-    "resulty": "^5.0.0",
-    "taskarian": "^5.1.0",
+    "maybeasy": "^5.1.0",
+    "resulty": "^5.1.0",
+    "taskarian": "^5.4.0",
     "url-parse": "^1.5.10"
   },
   "repository": {
@@ -28,14 +28,13 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

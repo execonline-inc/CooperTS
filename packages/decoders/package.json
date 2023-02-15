@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/decoders",
-  "version": "6.4.1",
+  "version": "6.6.0",
   "description": "Generally useful decoders that extend Jsonous",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,21 +20,20 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/time": "^5.1.1",
+    "@execonline-inc/time": "workspace:^",
     "js-base64": "^3.7.2",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
-    "resulty": "^5.0.0"
+    "jsonous": "^7.7.0",
+    "maybeasy": "^5.1.0",
+    "resulty": "^5.1.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "gitHead": "551c57fe501811e1b5b2d4f049a79c19b6d087c0",
   "devDependencies": {

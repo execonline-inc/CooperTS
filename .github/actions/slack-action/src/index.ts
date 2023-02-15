@@ -9,4 +9,4 @@ Task.succeed<ActionFailed, {}>({})
   .assign('context', readContext)
   .assign('decodedEvent', decodeEvent)
   .andThen(({ decodedEvent }) => sendMessage(decodedEvent.event))
-  .fork((err) => logWithTimestamp(JSON.stringify(err)), logWithTimestamp);
+  .fork(err => logWithTimestamp(JSON.stringify(err)), logWithTimestamp);

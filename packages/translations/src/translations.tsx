@@ -6,7 +6,7 @@ import { fromNullable } from 'maybeasy';
 import * as React from 'react';
 import { err, ok, Result } from 'resulty';
 import L from './L';
-import { ChildNode, RootNode, TagNode, translationDecoder } from './Parser';
+import { ChildNode, RootNode, TagNode, translationDecoder } from './parser';
 import TranslationsContext from './TranslationsContext';
 import {
   AlreadyTranslatedText,
