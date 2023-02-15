@@ -133,6 +133,8 @@ __metadata:
     highlight.js: ^11.5.1
     jsonous: ^7.3.0
     marked: ^4.0.17
+    mobx: ^6.8.0
+    mobx-react: ^7.6.0
     next: 12.1.6
     postcss: ^8.4.14
     postcss-focus-visible: ^6.0.4
@@ -4979,6 +4981,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mobx-react-lite@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "mobx-react-lite@npm:3.4.0"
+  peerDependencies:
+    mobx: ^6.1.0
+    react: ^16.8.0 || ^17 || ^18
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 9294e127e281c8b37ec7bcaf17de479f50519e6ad485b58d7b991291900511541a5a718653759d3cf6503462c70325d025e1c2ed376d4584fb1b2d3aac9d9b48
+  languageName: node
+  linkType: hard
+
 "mobx-react@npm:^5.4.4":
   version: 5.4.4
   resolution: "mobx-react@npm:5.4.4"
@@ -4992,10 +5009,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mobx-react@npm:^7.6.0":
+  version: 7.6.0
+  resolution: "mobx-react@npm:7.6.0"
+  dependencies:
+    mobx-react-lite: ^3.4.0
+  peerDependencies:
+    mobx: ^6.1.0
+    react: ^16.8.0 || ^17 || ^18
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 07ce6eb297ddab2cc693df7350a3e2f730194cc6eb56bd912f80e28f9427237569e0bda6b30167154faf094e7c5e5ff360abd52acd2860d9a0d0e53320617ee8
+  languageName: node
+  linkType: hard
+
 "mobx@npm:^4.15.7":
   version: 4.15.7
   resolution: "mobx@npm:4.15.7"
   checksum: 9ddda3a7fbb92f02cc9da7d6551e4914611dfa90d5cd6509b5abcdddc872f4bbb3cf6bb0537abd716738e0021d632de21013876a9f334a72cb7a1c7fd9664441
+  languageName: node
+  linkType: hard
+
+"mobx@npm:^6.8.0":
+  version: 6.8.0
+  resolution: "mobx@npm:6.8.0"
+  checksum: f09bb079292ea59023a7e35a9c73ed577e3de9a0175ec3d5a2adc8192e2e3a352b29ec0981ee06d1d63f701f81bb7fc6cc19fd9089edf84a754a8a75ef00ef7f
   languageName: node
   linkType: hard
 
