@@ -18,8 +18,8 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc",
-    "yarn": "yarn"
+    "yarn": "yarn",
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

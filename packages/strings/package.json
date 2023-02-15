@@ -20,8 +20,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "node ./__tests__/strings.test.js"
+    "yarn": "yarn"
   },
   "dependencies": {
     "@kofno/piper": "4.3.0",
