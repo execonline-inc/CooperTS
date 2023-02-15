@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/translations",
-  "version": "9.15.0",
+  "version": "9.17.0",
   "description": "Support for typed and interpolatable translations",
   "author": "Patrick Rebsch <pjrebsch@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,24 +20,23 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/collections": "^10.5.0",
-    "@execonline-inc/logging": "^6.2.1",
-    "@execonline-inc/maybe-adapter": "^4.5.0",
-    "@kofno/piper": "^4.3.0",
+    "@execonline-inc/collections": "workspace:^",
+    "@execonline-inc/logging": "workspace:^",
+    "@execonline-inc/maybe-adapter": "workspace:^",
+    "@kofno/piper": "^4.4.0",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "htmlparser2": "^4.1.0",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
-    "nonempty-list": "^3.3.0",
-    "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "jsonous": "^7.7.0",
+    "maybeasy": "^5.1.0",
+    "nonempty-list": "^3.6.0",
+    "resulty": "^5.1.0",
+    "taskarian": "^5.4.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
@@ -48,6 +47,6 @@
     "react": ">=16"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/appy",
-  "version": "8.19.0",
+  "version": "8.21.0",
   "description": "Call api patterns around ajaxian http tasks",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,24 +20,23 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/environment": "^5.5.1",
-    "@execonline-inc/resource": "^6.19.0",
-    "@kofno/piper": "^4.3.0",
-    "ajaxian": "^4.4.0",
-    "jsonous": "^7.3.0",
-    "maybeasy": "^3.0.0",
-    "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "@execonline-inc/environment": "workspace:^",
+    "@execonline-inc/resource": "workspace:^",
+    "@kofno/piper": "^4.4.0",
+    "ajaxian": "^4.7.0",
+    "jsonous": "^7.7.0",
+    "maybeasy": "^5.1.0",
+    "resulty": "^5.1.0",
+    "taskarian": "^5.4.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

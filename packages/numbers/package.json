@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/numbers",
-  "version": "4.8.0",
+  "version": "4.10.0",
   "description": "Type safe number ops",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -12,8 +12,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "files": [
     "lib"
@@ -26,14 +25,14 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@execonline-inc/maybe-adapter": "^4.5.0",
-    "@kofno/piper": "^4.3.0",
-    "maybeasy": "^3.0.0",
-    "resulty": "^5.0.0",
-    "taskarian": "^5.1.0"
+    "@execonline-inc/maybe-adapter": "workspace:^",
+    "@kofno/piper": "^4.4.0",
+    "maybeasy": "^5.1.0",
+    "resulty": "^5.1.0",
+    "taskarian": "^5.4.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

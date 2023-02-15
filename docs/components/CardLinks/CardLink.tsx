@@ -20,22 +20,22 @@ const CardLink: React.FC<Props> = ({ href, title, subtitle }) => (
       )}
     />
     <div className="relative overflow-hidden rounded-xl p-6">
-      <Link href={href} className="relative overflow-hidden rounded-xl p-6">
-        <a href={href} aria-label={title} aria-describedby="grid-learn-desc">
-          <h2
-            className={clsx(
-              'inline-flex font-display text-base text-slate-900',
-              ' dark:text-white'
-            )}
-            aria-label={title}
-          >
-            <span className="absolute -inset-px rounded-xl" />
-            {title}{' '}
-            <span className="ml-3 text-amber-500" aria-hidden="true">
-              <i className="fa fas fa-arrow-right"></i>
-            </span>
-          </h2>
-        </a>
+      <Link
+        href={href}
+        className="relative overflow-hidden rounded-xl p-6"
+        aria-label={title}
+        aria-describedby="grid-learn-desc"
+      >
+        <h2
+          className={clsx('inline-flex font-display text-base text-slate-900', ' dark:text-white')}
+          aria-label={title}
+        >
+          <span className="absolute -inset-px rounded-xl" />
+          {title}{' '}
+          <span className="ml-3 text-amber-500" aria-hidden="true">
+            <i className="fa fas fa-arrow-right"></i>
+          </span>
+        </h2>
       </Link>
       <p id="grid-learn-desc" className="mt-1 text-sm text-slate-700 dark:text-slate-400">
         {subtitle}

@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/dom",
-  "version": "3.2.1",
+  "version": "3.4.0",
   "description": "DOM functions",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,19 +20,18 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@kofno/piper": "^4.3.0",
+    "@kofno/piper": "^4.4.0",
     "@types/node": "^17.0.23",
-    "taskarian": "^5.1.0"
+    "taskarian": "^5.4.0"
   },
   "devDependencies": {
     "typescript": "^4.6.3"

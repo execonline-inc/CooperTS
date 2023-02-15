@@ -16,5 +16,5 @@ jobs:
 
       - name: Check Docs 📝
         run: |
-          yarn bootstrap
-          yarn docs build
+          yarn workspace @execonline-inc/cooperts-docs install --immutable
+          yarn workspace @execonline-inc/cooperts-docs build

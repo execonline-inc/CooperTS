@@ -1,5 +1,8 @@
 name: 'github-label-slack'
 description: Notifies developer when code review is complete on PR
 runs:
-  using: node16
-  main: lib/index.js
+  using: composite
+  steps:
+    - run: yarn workspace github-label-slack notify
+      shell: bash
+      name: Run the script
