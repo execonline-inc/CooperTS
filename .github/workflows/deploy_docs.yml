@@ -16,7 +16,6 @@ jobs:
 
       - name: Build
         run: |
-          yarn bootstrap
           yarn docs build
 
       - name: Deploy 🚀

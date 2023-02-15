@@ -16,5 +16,5 @@ jobs:
 
       - name: Check Docs 📝
         run: |
-          yarn bootstrap
+          yarn install
           yarn docs build
