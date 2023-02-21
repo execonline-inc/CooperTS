@@ -3,7 +3,6 @@ import { warn } from '@execonline-inc/logging';
 import { toResult } from '@execonline-inc/maybe-adapter';
 import { identity } from '@kofno/piper';
 import { fromNullable } from 'maybeasy';
-import { observer } from 'mobx-react';
 import * as React from 'react';
 import { err, ok, Result } from 'resulty';
 import L from './L';
@@ -196,9 +195,9 @@ export const translations = <
       .getOrElse(() => <React.Fragment key={kind}>{t}</React.Fragment>);
   };
 
-  const T: React.FC<PropsT> = observer((tProps: PropsT) => (
+  const T: React.FC<PropsT> = (tProps: PropsT) => (
     <TranslationsContext.Consumer>{translator(tProps)}</TranslationsContext.Consumer>
-  ));
+  );
 
   return {
     L,
