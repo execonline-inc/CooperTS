@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react';
 import * as React from 'react';
 import { localizer } from './localizations';
 import TranslationsContext from './TranslationsContext';
@@ -13,4 +12,4 @@ const L: React.FC<Props> = ({ localizeable, format }) => (
   <TranslationsContext.Consumer>{localizer(localizeable, format)}</TranslationsContext.Consumer>
 );
 
-export default observer(L);
+export default L;
