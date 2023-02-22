@@ -20,9 +20,7 @@ const Packages: React.FC<Props> = ({ allPackageData }) => {
           .map(({ slug, metadata: { name, description } }) => (
             <li key={slug}>
               <Link href={`/packages/${slug}`}>
-                <a>
-                  <strong>{name}</strong>
-                </a>
+                <strong>{name}</strong>
               </Link>
               : {description}
             </li>

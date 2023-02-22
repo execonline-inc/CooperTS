@@ -8,15 +8,14 @@ interface Props {
 }
 
 const ItemLink: React.FC<Props> = ({ href, children }) => (
-  <Link href={href}>
-    <a
-      className={clsx(
-        'font-medium text-gray-600 hover:text-gray-900',
-        'dark:text-gray-300 dark:hover:text-white',
-      )}
-    >
-      {children}
-    </a>
+  <Link
+    href={href}
+    className={clsx(
+      'font-medium text-gray-600 hover:text-gray-900',
+      'dark:text-gray-300 dark:hover:text-white'
+    )}
+  >
+    {children}
   </Link>
 );
 
