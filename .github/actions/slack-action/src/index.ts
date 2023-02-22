@@ -8,6 +8,5 @@ import { ActionFailed } from './Types';
 Task.succeed<ActionFailed, {}>({})
   .assign('context', readContext)
   .assign('decodedEvent', decodeEvent)
-  .do(({ decodedEvent }) => logWithTimestamp(JSON.stringify(decodedEvent)))
   .andThen(({ decodedEvent }) => sendMessage(decodedEvent.event))
   .fork(err => logWithTimestamp(JSON.stringify(err)), logWithTimestamp);
