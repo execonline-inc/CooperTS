@@ -4,10 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-If you haven't already, run the bootstrap command in the root CooperTS directory:
+If you haven't already, run the yarn install command in the root CooperTS directory:
 
 ```bash
-yarn bootstrap
+yarn install
 ```
 
 Then, run the development server in the same root directory:

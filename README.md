@@ -45,12 +45,13 @@ git clone https://github.com/execonline-inc/CooperTS.git
 cd CooperTS
 
 # Install dependencies
-yarn run bootstrap
+yarn install
 ```
 
 # To run the docs app
+
 ```bash
-yarn bootstrap
+yarn install
 ```
 
 Then, run the development server in the same root directory:

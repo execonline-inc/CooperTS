@@ -16,8 +16,8 @@ jobs:
 
       - name: Build
         run: |
-          yarn bootstrap
-          yarn docs build
+          yarn workspace @execonline-inc/cooperts-docs install --immutable
+          yarn workspace @execonline-inc/cooperts-docs build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.5

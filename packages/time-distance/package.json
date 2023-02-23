@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/time-distance",
-  "version": "1.3.1",
+  "version": "1.5.0",
   "description": "Computes differences between times and dates",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,18 +20,17 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "yarn": "yarn",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "yarn": "yarn"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
-    "@execonline-inc/time": "^5.1.1",
-    "resulty": "^5.0.0"
+    "@execonline-inc/time": "workspace:^",
+    "resulty": "^5.1.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
