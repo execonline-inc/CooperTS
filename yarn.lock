@@ -198,7 +198,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@execonline-inc/maybe-adapter@4.7.0, @execonline-inc/maybe-adapter@workspace:^, @execonline-inc/maybe-adapter@workspace:packages/maybe-adapter":
+"@execonline-inc/maybe-adapter@^5.0.0, @execonline-inc/maybe-adapter@workspace:^, @execonline-inc/maybe-adapter@workspace:packages/maybe-adapter":
   version: 0.0.0-use.local
   resolution: "@execonline-inc/maybe-adapter@workspace:packages/maybe-adapter"
   dependencies:
@@ -3292,7 +3292,7 @@ __metadata:
     "@execonline-inc/environment": "workspace:*"
     "@execonline-inc/error-handling": "workspace:*"
     "@execonline-inc/logging": "workspace:*"
-    "@execonline-inc/maybe-adapter": 4.7.0
+    "@execonline-inc/maybe-adapter": ^5.0.0
     "@kofno/piper": ^4.3.0
     "@types/node": ^18.8.1
     ajaxios: ^2.10.0
