@@ -1,7 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
-import clsx from 'clsx';
 import Head from 'next/head';
-import Link from 'next/link';
 import Task from 'taskarian';
 import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
 import { pipe } from '@kofno/piper';
@@ -9,13 +7,6 @@ import CardLinks from '../components/CardLinks';
 
 interface Props {}
 
-/*
-'absolute -inset-px rounded-xl border-2 border-transparent opacity-0',
-                'gradient-border',
-                '[--link-grid-hover-bg:theme(colors.slate.50)]',
-                'dark:[--link-grid-hover-bg:theme(colors.slate.800)]',
-                'group-hover:opacity-100'
-*/
 const Home: NextPage<Props> = () => {
   return (
     <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
