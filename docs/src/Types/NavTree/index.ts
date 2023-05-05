@@ -14,7 +14,7 @@ const getPackagesLinks: Task<
   GetCombinedPackageError,
   Array<NavLink>
 > = getCombinedPackageData().map((datas) =>
-  datas.map((data) => ({ title: data.metadata.name, href: `/packages/${data.slug}` })),
+  datas.map((data) => ({ title: data.metadata.name, href: `/packages/${data.slug}` }))
 );
 
 const getPackagesSection: Task<GetCombinedPackageError, NavSection> = getPackagesLinks.map(
@@ -22,15 +22,15 @@ const getPackagesSection: Task<GetCombinedPackageError, NavSection> = getPackage
     title: 'Packages',
     href: '/packages',
     links,
-  }),
+  })
 );
 
-const guideLinks: Array<NavLink> = getFilesFromPath('guide')
+const guideLinks: Array<NavLink> = getFilesFromPath('src/guide')
   .map((filename) => ({
     filename,
     slug: filename.replace('.md', ''),
   }))
-  .map((d) => ({ ...d, ...matter(fs.readFileSync(path.join('guide', d.filename), 'utf-8')) }))
+  .map((d) => ({ ...d, ...matter(fs.readFileSync(path.join('src/guide', d.filename), 'utf-8')) }))
   .map((d) => ({ ...d, frontmatter: requireFrontmatterDuringBuild(d.data) }))
   .map((d) => ({ title: d.frontmatter.title, href: `/guide/${d.slug}` }));
 
@@ -40,12 +40,12 @@ const guideSection: NavSection = {
   links: guideLinks,
 };
 
-const faqLinks: Array<NavLink> = getFilesFromPath('faq')
+const faqLinks: Array<NavLink> = getFilesFromPath('src/faq')
   .map((filename) => ({
     filename,
     slug: filename.replace('.md', ''),
   }))
-  .map((d) => ({ ...d, ...matter(fs.readFileSync(path.join('faq', d.filename), 'utf-8')) }))
+  .map((d) => ({ ...d, ...matter(fs.readFileSync(path.join('src/faq', d.filename), 'utf-8')) }))
   .map((d) => ({ ...d, frontmatter: requireFrontmatterDuringBuild(d.data) }))
   .map((d) => ({ title: d.frontmatter.title, href: `/faq/${d.slug}` }));
 
@@ -74,20 +74,20 @@ const aboutSection = {
 };
 
 export const getNavTree: Task<GetCombinedPackageError, NavTree> = getPackagesSection.map(
-  (packagesSection) => [aboutSection, guideSection, exampleSection, faqSection, packagesSection],
+  (packagesSection) => [aboutSection, guideSection, exampleSection, faqSection, packagesSection]
 );
 
 export type GetStaticPropsT<Props> = (
-  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>,
+  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
 ) => Task<unknown, Props>;
 
 export type WithNavTree<T extends {}> = T & { navTree: NavTree };
 
 export const withNavTreeStaticProp = <Props extends {}, E>(
-  fn: Task<E, Props>,
+  fn: Task<E, Props>
 ): Task<E | GetCombinedPackageError, WithNavTree<Props>> =>
   fn.mapError<E | GetCombinedPackageError>(identity).assign('navTree', getNavTree);
 
 export const taskToStaticProps = <Props extends {}>(
-  t: Task<unknown, Props>,
+  t: Task<unknown, Props>
 ): Promise<GetStaticPropsResult<Props>> => t.map((props) => ({ props })).resolve();

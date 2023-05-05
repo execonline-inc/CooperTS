@@ -33,7 +33,7 @@ const PackagePage: React.FC<Props> = ({
           <h1
             className={clsx(
               'font-display text-3xl tracking-tight',
-              'text-slate-900 dark:text-white',
+              'text-slate-900 dark:text-white'
             )}
           >
             {title}
@@ -46,7 +46,7 @@ const PackagePage: React.FC<Props> = ({
 );
 
 export async function getStaticPaths() {
-  const files = getFilesFromPath('faq');
+  const files = getFilesFromPath('src/faq');
   const paths = files.map((filename) => ({ params: { slug: filename.replace('.md', '') } }));
   return { paths, fallback: false };
 }
@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   (context) =>
     Task.succeed(requireDecoderDuringBuild(string)(context.params?.slug))
       .map((slug) => ({ slug }))
-      .map((o) => ({ ...o, path: path.join('faq', `${o.slug}.md`) }))
+      .map((o) => ({ ...o, path: path.join('src/faq', `${o.slug}.md`) }))
       .map((o) => ({ ...o, file: fs.readFileSync(o.path, 'utf-8') }))
       .map((o) => ({ ...o, ...matter(o.file) }))
       // This is safe because we're reading our own markdown during build, not
@@ -65,7 +65,7 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
       .map<Page>(({ slug, frontmatter, markdown }) => ({ slug, frontmatter, markdown }))
       .map((page) => ({ page })),
   withNavTreeStaticProp,
-  taskToStaticProps,
+  taskToStaticProps
 );
 
 export default PackagePage;

@@ -13,10 +13,10 @@ interface Props {
   pages: Page[];
 }
 
-const FAQ: React.FC<Props> = ({ pages }) => {
+const Guide: React.FC<Props> = ({ pages }) => {
   return (
     <>
-      <PageTitle title="FAQs" />
+      <PageTitle title="Guide" />
       <div className={clsx('not-prose relative lg:block lg:flex-none')}>
         <div
           className={clsx(
@@ -34,7 +34,7 @@ const FAQ: React.FC<Props> = ({ pages }) => {
                   className={clsx('font-display font-medium text-slate-900 dark:text-white')}
                   id="secondary-nav-header"
                 >
-                  Frequently Asked Questions
+                  Guide
                 </h1>
                 <ul
                   className={clsx(
@@ -47,7 +47,7 @@ const FAQ: React.FC<Props> = ({ pages }) => {
                   {pages.map(({ slug, frontmatter: { title } }) => (
                     <li key={slug} className={clsx('relative')}>
                       <Link
-                        href={`/faq/${slug}`}
+                        href={`/guide/${slug}`}
                         className={clsx(
                           'block w-full pl-3.5',
                           'text-slate-500',
@@ -75,12 +75,12 @@ const FAQ: React.FC<Props> = ({ pages }) => {
 
 export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   () => {
-    const pages = getFilesFromPath('faq')
+    const pages = getFilesFromPath('src/guide')
       .map(Task.succeed)
       .map((task) =>
         task.map((filename) => {
           const slug = filename.replace('.md', '');
-          const markDownWithMeta = getMarkDownWithMeta('faq', filename);
+          const markDownWithMeta = getMarkDownWithMeta('src/guide', filename);
 
           const { data, content } = matter(markDownWithMeta);
           // This is safe because we're reading our own markdown, not user-submitted markdown.
@@ -100,4 +100,4 @@ export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   taskToStaticProps
 );
 
-export default FAQ;
+export default Guide;
