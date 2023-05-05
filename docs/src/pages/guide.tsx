@@ -75,12 +75,12 @@ const Guide: React.FC<Props> = ({ pages }) => {
 
 export const getStaticProps: GetStaticProps<WithNavTree<Props>> = pipe(
   () => {
-    const pages = getFilesFromPath('guide')
+    const pages = getFilesFromPath('src/guide')
       .map(Task.succeed)
       .map((task) =>
         task.map((filename) => {
           const slug = filename.replace('.md', '');
-          const markDownWithMeta = getMarkDownWithMeta('guide', filename);
+          const markDownWithMeta = getMarkDownWithMeta('src/guide', filename);
 
           const { data, content } = matter(markDownWithMeta);
           // This is safe because we're reading our own markdown, not user-submitted markdown.

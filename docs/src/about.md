@@ -3,8 +3,6 @@
 CooperTS is a collection of [Elm]-inspired functional-programming tools in Typescript. CooperTS is
 focused on eliminating runtime exceptions and reducing testing burden.
 
-[Elm]: https://elm-lang.org/
-
 ## Why CooperTS?
 
 CooperTS lets the Typescript compiler do as much of the work as possible.
@@ -81,7 +79,6 @@ export const helloUserWithDecoder = (data: string) => {
     .map((name) => `Hello ${name}`)
     .do(console.log);
 };
-
 ```
 
 ### Prefer [Pure Functions] by Isolating Side-Effects
@@ -107,20 +104,20 @@ export const sendMessage = (event: Event) =>
 
 ### Prefer Functional Programming Over Nesting Logic
 
-[`Maybe<T>`], [`Result<E, T>`], [`Decoder<T>`], and [`Task<E, T>`] all have similar methods, can be
-used to avoid complex if/else scenarios
+[`Maybe<T>`], [`Result<E, T>`], [`Decoder<T>`], and [`Task<E, T>`] all have similar methods, and can
+be used to avoid complex if/else scenarios.
 
 For example, we can use the `find` method from the [section above on avoiding `null` errors] to
 simplify this code:
 
 ```ts
-const users: Array<{ id: number; parentId: number }> = findUsers();
-const user = users.find(({ id }) => id === 1);
+const users: Array<{ id: number; parentId: number; name: string }> = getUsers();
+const user = users.find(({ id }) => id === 123);
 
 if (user) {
   const parent = users.find(({ id }) => id === user.parentId);
   if (parent) {
-    console.log(`Found parent of user #1: ${parent.name}!`);
+    console.log(`Found parent of user #123: ${parent.name}!`);
   }
 }
 ```
@@ -130,12 +127,13 @@ Into this:
 ```ts
 const users: Array<{ id: number; parentId: number }> = findUsers();
 
-find(({ id }) => id === 1, users)
+find(({ id }) => id === 123, users)
   .andThen(({ parentId }) => find(({ id }) => id === parentId, users))
-  .map(({ name }) => `Found parent of user #1: ${name}!`)
+  .map(({ name }) => `Found parent of user #123: ${name}!`)
   .do(console.log);
 ```
 
+[Elm]: https://elm-lang.org/
 [`Maybe<T>`]: /packages/maybeasy
 [`Result<E, T>`]: /packages/resulty
 [Pure Functions]: https://en.wikipedia.org/wiki/Pure_function
