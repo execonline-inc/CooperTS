@@ -27,7 +27,7 @@
     "maybeasy": "5.1.0"
   },
   "devDependencies": {
-    "typescript": "4.9.5"
+    "typescript": "^5.0.4"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
