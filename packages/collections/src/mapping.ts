@@ -1,43 +1,27 @@
-import { always } from "@kofno/piper";
-import { Maybe } from "maybeasy";
+import { always } from '@kofno/piper';
+import { Maybe } from 'maybeasy';
+import { reduce } from './reduce';
 
-export const map = <A, B>(fn: (a: A) => B) => (as: ReadonlyArray<A>): B[] =>
-  as.map(fn);
+export const map = <A, B>(fn: (a: A) => B) => (as: ReadonlyArray<A>): B[] => as.map(fn);
 
-export function flatMap<T, U>(
-  fn: (value: T) => U[],
-  ary: ReadonlyArray<T>
-): ReadonlyArray<U>;
-export function flatMap<T, U>(
-  fn: (value: T) => U[]
-): (ary: ReadonlyArray<T>) => ReadonlyArray<U>;
+export function flatMap<T, U>(fn: (value: T) => U[], ary: ReadonlyArray<T>): ReadonlyArray<U>;
+export function flatMap<T, U>(fn: (value: T) => U[]): (ary: ReadonlyArray<T>) => ReadonlyArray<U>;
 export function flatMap<T, U>(fn: (value: T) => U[], ary?: ReadonlyArray<T>) {
-  const flatMapImpl = (ary: ReadonlyArray<T>) => {
-    const result: U[] = [];
-    ary.forEach(t => fn(t).forEach(u => result.push(u)));
-    return result as ReadonlyArray<U>;
-  };
+  const reducer = reduce<T, ReadonlyArray<U>>((accum, t) => {
+    const vs = fn(t);
+    return [...accum, ...vs];
+  }, []);
 
-  return typeof ary === "undefined" ? flatMapImpl : flatMapImpl(ary);
+  return typeof ary === 'undefined' ? reducer : reducer(ary);
 }
 
-export function mapMaybe<T, B>(
-  fn: (a: T) => Maybe<B>
-): (ts: ReadonlyArray<T>) => ReadonlyArray<B>;
-export function mapMaybe<T, B>(
-  fn: (a: T) => Maybe<B>,
-  ts: ReadonlyArray<T>
-): ReadonlyArray<B>;
+export function mapMaybe<T, B>(fn: (a: T) => Maybe<B>): (ts: ReadonlyArray<T>) => ReadonlyArray<B>;
+export function mapMaybe<T, B>(fn: (a: T) => Maybe<B>, ts: ReadonlyArray<T>): ReadonlyArray<B>;
 export function mapMaybe<T, B>(fn: (a: T) => Maybe<B>, ts?: ReadonlyArray<T>) {
-  const reducer = (collection: ReadonlyArray<T>) =>
-    collection.reduce(
-      (accum, t) =>
-        fn(t).cata({
-          Just: value => accum.concat([value]),
-          Nothing: always(accum)
-        }),
-      [] as ReadonlyArray<B>
-    );
+  const reducer = reduce<T, ReadonlyArray<B>>(
+    (accum, t) => fn(t).cata({ Just: v => [...accum, v], Nothing: always(accum) }),
+    []
+  );
 
-  return typeof ts === "undefined" ? reducer : reducer(ts);
+  return typeof ts === 'undefined' ? reducer : reducer(ts);
 }

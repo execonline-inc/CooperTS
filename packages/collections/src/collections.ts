@@ -7,6 +7,7 @@ export * from './group';
 export * from './mapping';
 export * from './predicates';
 export * from './range';
+export * from './reduce';
 export * from './sets';
 export * from './sort';
 export * from './take';
