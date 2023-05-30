@@ -1,7 +1,15 @@
-import { get, HttpError, toHttpTask } from 'ajaxios';
+import { get, Header, HttpError, toHttpTask } from 'ajaxios';
 import Task from 'taskarian';
-import { quoteDecoder } from './Decoders';
-import { ZenQuote } from './Types';
+import { jokeDecoder } from './Decoders';
+import { Joke } from './Types';
 
-export const getZenQuote = (): Task<HttpError, ZenQuote> =>
-  toHttpTask(get('https://zenquotes.io/api/random').withDecoder(quoteDecoder));
+const href = 'https://icanhazdadjoke.com/';
+
+const header: Header = { field: 'Accept', value: 'application/json' };
+
+export const getJoke = (): Task<HttpError, Joke> =>
+  toHttpTask(
+    get(href)
+      .withDecoder(jokeDecoder)
+      .withHeader(header),
+  );

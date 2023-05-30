@@ -47,14 +47,14 @@ export interface MessageDecoderFailed {
 }
 
 export interface SlackMessage {
-  zenQuote: ZenQuote;
+  joke: Joke;
   slackChannel: string;
   slackWebhookUrl: string;
 }
-
-export interface ZenQuote {
-  quote: string;
-  author: string;
+export interface Joke {
+  id: string;
+  joke: string;
+  status: number;
 }
 export interface User {
   login: string;

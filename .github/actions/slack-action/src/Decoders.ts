@@ -1,10 +1,11 @@
 import { stringLiteral } from '@execonline-inc/decoders';
-import Decoder, { at, field, string, succeed } from 'jsonous';
-import { Event, Label, Links, Message, PullRequest, Self, User, ZenQuote } from './Types';
+import Decoder, { field, number, string, succeed } from 'jsonous';
+import { Event, Joke, Label, Links, Message, PullRequest, Self, User } from './Types';
 
-export const quoteDecoder: Decoder<ZenQuote> = succeed({})
-  .assign('quote', at([0, 'q'], string))
-  .assign('author', at([0, 'a'], string));
+export const jokeDecoder: Decoder<Joke> = succeed({})
+  .assign('id', field('id', string))
+  .assign('joke', field('joke', string))
+  .assign('status', field('status', number));
 
 const userDecoder: Decoder<User> = succeed({})
   .assign('login', field('login', string))

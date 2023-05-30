@@ -1,17 +1,17 @@
 import { HttpError, post, toHttpTask } from 'ajaxios';
 import Task from 'taskarian';
 import { slackChannel, slackWebhookUrl } from '../Environment';
-import { getZenQuote } from '../Quote';
+import { getJoke } from '../Quote';
 import {
-  Event,
   ActionFailed,
+  Event,
   PullRequest,
   SlackMessage,
   SlackNotificationSuccess,
   SlackNotifierRequestFailed,
+  User,
   slackNotifierRequestFailed,
   slackNotifierRequestSucceded,
-  User,
 } from '../Types';
 
 const pretext = (user: User) =>
@@ -24,7 +24,7 @@ const messageBody = (pullRequest: PullRequest, slackMessage: SlackMessage) => ({
     {
       title: `<${pullRequest.htmlUrl}|${pullRequest.title}>`,
       pretext: pretext(pullRequest.user),
-      text: `"${slackMessage.zenQuote.quote}"`,
+      text: `"${slackMessage.joke}"`,
       thumb_url: pullRequest.user.avatarUrl,
       mrkdwn_in: ['text', 'pretext'],
     },
@@ -36,16 +36,16 @@ const buildRequestT = (event: Event, slackMessage: SlackMessage): Task<HttpError
     post(slackMessage.slackWebhookUrl).withData(messageBody(event.pullRequest, slackMessage)),
   );
 
-const postQuoteToSlack =
-  (event: Event) =>
-  (slackMessage: SlackMessage): Task<SlackNotifierRequestFailed, SlackNotificationSuccess> =>
-    buildRequestT(event, slackMessage)
-      .mapError(slackNotifierRequestFailed)
-      .map(slackNotifierRequestSucceded);
+const postQuoteToSlack = (event: Event) => (
+  slackMessage: SlackMessage,
+): Task<SlackNotifierRequestFailed, SlackNotificationSuccess> =>
+  buildRequestT(event, slackMessage)
+    .mapError(slackNotifierRequestFailed)
+    .map(slackNotifierRequestSucceded);
 
 export const sendMessage = (event: Event) =>
   Task.succeed<ActionFailed, {}>({})
-    .assign('zenQuote', getZenQuote)
+    .assign('joke', getJoke)
     .assign('slackChannel', slackChannel)
     .assign('slackWebhookUrl', slackWebhookUrl)
     .andThen(postQuoteToSlack(event));
