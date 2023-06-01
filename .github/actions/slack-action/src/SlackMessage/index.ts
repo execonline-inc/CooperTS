@@ -24,7 +24,7 @@ const messageBody = (pullRequest: PullRequest, slackMessage: SlackMessage) => ({
     {
       title: `<${pullRequest.htmlUrl}|${pullRequest.title}>`,
       pretext: pretext(pullRequest.user),
-      text: `"${slackMessage.joke}"`,
+      text: `"${slackMessage.joke.joke}"`,
       thumb_url: pullRequest.user.avatarUrl,
       mrkdwn_in: ['text', 'pretext'],
     },

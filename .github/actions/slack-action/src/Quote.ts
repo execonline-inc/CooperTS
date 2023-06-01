@@ -10,6 +10,6 @@ const header: Header = { field: 'Accept', value: 'application/json' };
 export const getJoke = (): Task<HttpError, Joke> =>
   toHttpTask(
     get(href)
-      .withDecoder(jokeDecoder)
-      .withHeader(header),
+      .withHeader(header)
+      .withDecoder(jokeDecoder),
   );
