@@ -1,7 +1,7 @@
 import { HttpError, post, toHttpTask } from 'ajaxios';
 import Task from 'taskarian';
 import { slackChannel, slackWebhookUrl } from '../Environment';
-import { getJoke } from '../Quote';
+import { runJoke } from '../Quote';
 import {
   ActionFailed,
   Event,
@@ -24,7 +24,7 @@ const messageBody = (pullRequest: PullRequest, slackMessage: SlackMessage) => ({
     {
       title: `<${pullRequest.htmlUrl}|${pullRequest.title}>`,
       pretext: pretext(pullRequest.user),
-      text: `"${slackMessage.joke.joke}"`,
+      text: `"${slackMessage.dadJokeApiResponse.joke}"`,
       thumb_url: pullRequest.user.avatarUrl,
       mrkdwn_in: ['text', 'pretext'],
     },
@@ -45,7 +45,7 @@ const postQuoteToSlack = (event: Event) => (
 
 export const sendMessage = (event: Event) =>
   Task.succeed<ActionFailed, {}>({})
-    .assign('joke', getJoke)
+    .assign('dadJokeApiResponse', runJoke)
     .assign('slackChannel', slackChannel)
     .assign('slackWebhookUrl', slackWebhookUrl)
     .andThen(postQuoteToSlack(event));

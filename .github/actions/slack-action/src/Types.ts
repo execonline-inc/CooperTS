@@ -1,5 +1,6 @@
 import { MissingVarError } from '@execonline-inc/environment';
 import { HttpError } from 'ajaxios';
+import { QuoteError } from './Quote';
 
 export interface MessageArgs {
   decodedEvent: Message;
@@ -8,8 +9,8 @@ export interface MessageArgs {
 export type ActionFailed =
   | MissingVarError
   | EventDecodeFailed
-  | HttpError
-  | SlackNotifierRequestFailed;
+  | SlackNotifierRequestFailed
+  | QuoteError;
 
 export interface SlackNotifierRequestFailed {
   kind: 'slack-notifier-request-failed';
@@ -47,14 +48,12 @@ export interface MessageDecoderFailed {
 }
 
 export interface SlackMessage {
-  joke: Joke;
+  dadJokeApiResponse: Joke;
   slackChannel: string;
   slackWebhookUrl: string;
 }
 export interface Joke {
-  id: string;
   joke: string;
-  status: number;
 }
 export interface User {
   login: string;
