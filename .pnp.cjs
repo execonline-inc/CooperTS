@@ -4271,6 +4271,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@execonline-inc/error-handling", "workspace:packages/error-handling"],\
             ["@execonline-inc/logging", "workspace:packages/logging"],\
             ["@execonline-inc/maybe-adapter", "workspace:packages/maybe-adapter"],\
+            ["@execonline-inc/url", "workspace:packages/url"],\
             ["@kofno/piper", "npm:4.3.0"],\
             ["@types/node", "npm:18.13.0"],\
             ["ajaxios", "npm:2.10.0"],\
