@@ -10,7 +10,7 @@ const href = 'https://icanhazdadjoke.com/';
 
 const header: Header = { field: 'Accept', value: 'application/json' };
 
-const parseUrlTask = (href: string): Task<QuoteError, URLParser> => toUrlT(href);
+const validateUrl = (href: string): Task<QuoteError, URLParser> => toUrlT(href);
 
 export const getJoke = (url: URLParser): Task<QuoteError, Joke> =>
   toHttpTask(
@@ -19,4 +19,4 @@ export const getJoke = (url: URLParser): Task<QuoteError, Joke> =>
       .withDecoder(jokeDecoder),
   );
 
-export const runJoke = () => parseUrlTask(href).andThen(getJoke);
+export const fetchDadJoke = () => validateUrl(href).andThen(getJoke);

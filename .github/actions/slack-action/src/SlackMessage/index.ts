@@ -1,7 +1,7 @@
 import { HttpError, post, toHttpTask } from 'ajaxios';
 import Task from 'taskarian';
 import { slackChannel, slackWebhookUrl } from '../Environment';
-import { runJoke } from '../Quote';
+import { fetchDadJoke } from '../Quote';
 import {
   ActionFailed,
   Event,
@@ -45,7 +45,7 @@ const postQuoteToSlack = (event: Event) => (
 
 export const sendMessage = (event: Event) =>
   Task.succeed<ActionFailed, {}>({})
-    .assign('dadJokeApiResponse', runJoke)
+    .assign('dadJokeApiResponse', fetchDadJoke)
     .assign('slackChannel', slackChannel)
     .assign('slackWebhookUrl', slackWebhookUrl)
     .andThen(postQuoteToSlack(event));
