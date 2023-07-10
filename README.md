@@ -6,6 +6,8 @@ Elm-inspired functional-programming tools in Typescript.
 
 Compilers are great. Let the compiler do the work.
 
+For additional information and examples, please visit [cooperts.io](https://cooperts.io/).
+
 ## Packages
 
 Most CooperTS packages are utility packages that build on primitive functional types from [`festive-possum`](https://github.com/kofno/festive-possum), such as `Maybe`, `Task`, `Result`, and `Decoder` types.
