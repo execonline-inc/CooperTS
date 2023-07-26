@@ -325,6 +325,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@execonline-inc/web-url@workspace:packages/web-url":
+  version: 0.0.0-use.local
+  resolution: "@execonline-inc/web-url@workspace:packages/web-url"
+  dependencies:
+    "@execonline-inc/error-handling": "workspace:*"
+    "@kofno/piper": 4.4.0
+    maybeasy: 5.1.0
+    resulty: 5.1.0
+    taskarian: 5.4.0
+    typescript: 5.1.6
+  languageName: unknown
+  linkType: soft
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -6675,7 +6688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resulty@npm:^5.1.0":
+"resulty@npm:5.1.0, resulty@npm:^5.1.0":
   version: 5.1.0
   resolution: "resulty@npm:5.1.0"
   checksum: d21081b236f60327eb554d568339f7eb60d306a1652d63f2f6e9b2820bdede2ac6c9d31526e296e00882637e888b28f570e6e0318918011f0250df458ffc646e
@@ -7316,7 +7329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"taskarian@npm:^5.4.0":
+"taskarian@npm:5.4.0, taskarian@npm:^5.4.0":
   version: 5.4.0
   resolution: "taskarian@npm:5.4.0"
   dependencies:

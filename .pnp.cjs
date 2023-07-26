@@ -82,6 +82,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "@execonline-inc/url",\
         "reference": "workspace:packages/url"\
+      },\
+      {\
+        "name": "@execonline-inc/web-url",\
+        "reference": "workspace:packages/web-url"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -103,6 +107,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@execonline-inc/time-distance", ["workspace:packages/time-distance"]],\
       ["@execonline-inc/translations", ["workspace:packages/translations"]],\
       ["@execonline-inc/url", ["workspace:packages/url"]],\
+      ["@execonline-inc/web-url", ["workspace:packages/web-url"]],\
       ["github-label-slack", ["workspace:.github/actions/slack-action"]],\
       ["root", ["workspace:."]]\
     ],\
@@ -492,6 +497,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["taskarian", "npm:5.4.0"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
             ["url-parse", "npm:1.5.10"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@execonline-inc/web-url", [\
+        ["workspace:packages/web-url", {\
+          "packageLocation": "./packages/web-url/",\
+          "packageDependencies": [\
+            ["@execonline-inc/web-url", "workspace:packages/web-url"],\
+            ["@execonline-inc/error-handling", "workspace:packages/error-handling"],\
+            ["@kofno/piper", "npm:4.4.0"],\
+            ["maybeasy", "npm:5.1.0"],\
+            ["resulty", "npm:5.1.0"],\
+            ["taskarian", "npm:5.4.0"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
           ],\
           "linkType": "SOFT"\
         }]\

@@ -1,0 +1,40 @@
+{
+  "name": "@execonline-inc/web-url",
+  "version": "1.0.0",
+  "description": "Browser API safe URL parsing",
+  "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
+  "homepage": "https://github.com/execonline-inc/CooperTS#readme",
+  "license": "MIT",
+  "main": "lib/web-url.js",
+  "typings": "lib/web-url.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@execonline-inc/error-handling": "workspace:*",
+    "@kofno/piper": "4.4.0",
+    "maybeasy": "5.1.0",
+    "resulty": "5.1.0",
+    "taskarian": "5.4.0"
+  },
+  "devDependencies": {
+    "typescript": "5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/execonline-inc/CooperTS.git"
+  },
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/execonline-inc/CooperTS/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "packageManager": "yarn@3.5.1"
+}
