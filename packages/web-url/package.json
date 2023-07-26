@@ -14,13 +14,15 @@
     "lib"
   ],
   "dependencies": {
-    "@execonline-inc/error-handling": "workspace:*",
+    "@execonline-inc/error-handling": "portal:../error-handling",
     "@kofno/piper": "4.4.0",
     "maybeasy": "5.1.0",
     "resulty": "5.1.0",
     "taskarian": "5.4.0"
   },
   "devDependencies": {
+    "@types/node": "^18.0.0",
+    "ts-node": "10.9.1",
     "typescript": "5.1.6"
   },
   "repository": {
@@ -28,7 +30,8 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "test": "yarn ts-node test/runner.ts"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

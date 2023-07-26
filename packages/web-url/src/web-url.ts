@@ -73,9 +73,9 @@ export function getPathname(url: URL): string {
   return url.pathname;
 }
 
-export function putPathname(pathname: string): (url: URL) => URL;
-export function putPathname(pathname: string, url: URL): URL;
-export function putPathname(pathname: string, url?: URL) {
+export function setPathname(pathname: string): (url: URL) => URL;
+export function setPathname(pathname: string, url: URL): URL;
+export function setPathname(pathname: string, url?: URL) {
   const doit = (url: URL): URL => {
     const u = new URL(url);
     u.pathname = pathname;

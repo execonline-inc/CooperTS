@@ -345,6 +345,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@execonline-inc/error-handling", [\
+        ["portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url", {\
+          "packageLocation": "./packages/error-handling/",\
+          "packageDependencies": [\
+            ["@execonline-inc/error-handling", "portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url"],\
+            ["@kofno/piper", "npm:4.4.0"],\
+            ["maybeasy", "npm:5.1.0"],\
+            ["resulty", "npm:5.1.0"],\
+            ["taskarian", "npm:5.4.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["workspace:packages/error-handling", {\
           "packageLocation": "./packages/error-handling/",\
           "packageDependencies": [\
@@ -506,11 +517,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/web-url/",\
           "packageDependencies": [\
             ["@execonline-inc/web-url", "workspace:packages/web-url"],\
-            ["@execonline-inc/error-handling", "workspace:packages/error-handling"],\
+            ["@execonline-inc/error-handling", "portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url"],\
             ["@kofno/piper", "npm:4.4.0"],\
+            ["@types/node", "npm:18.17.1"],\
             ["maybeasy", "npm:5.1.0"],\
             ["resulty", "npm:5.1.0"],\
             ["taskarian", "npm:5.4.0"],\
+            ["ts-node", "virtual:b5f6621c61ff39953dc51d80cd50e8136ccc2f1e9473a668c1bc8391d00a3aefb508ef40bfe28c9c2990c7cf9a1ff852c858b85fab13e0cfc4daf66c68d7d42c#npm:10.9.1"],\
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
           ],\
           "linkType": "SOFT"\
@@ -1574,6 +1587,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-18.13.0-00f732af8e-4ea10f8802.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:18.13.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:18.17.1", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.17.1-4d5cf864b8-56201bda9a.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.17.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8653,6 +8673,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
             ["@types/node", "npm:18.13.0"],\
+            ["@types/swc__core", null],\
+            ["@types/swc__wasm", null],\
+            ["@types/typescript", null],\
+            ["acorn", "npm:8.8.2"],\
+            ["acorn-walk", "npm:8.2.0"],\
+            ["arg", "npm:4.1.3"],\
+            ["create-require", "npm:1.1.1"],\
+            ["diff", "npm:4.0.2"],\
+            ["make-error", "npm:1.3.6"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
+            ["v8-compile-cache-lib", "npm:3.0.1"],\
+            ["yn", "npm:3.1.1"]\
+          ],\
+          "packagePeers": [\
+            "@swc/core",\
+            "@swc/wasm",\
+            "@types/node",\
+            "@types/swc__core",\
+            "@types/swc__wasm",\
+            "@types/typescript",\
+            "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:b5f6621c61ff39953dc51d80cd50e8136ccc2f1e9473a668c1bc8391d00a3aefb508ef40bfe28c9c2990c7cf9a1ff852c858b85fab13e0cfc4daf66c68d7d42c#npm:10.9.1", {\
+          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-c51b8f564b/0/cache/ts-node-npm-10.9.1-6c268be7f4-090adff130.zip/node_modules/ts-node/",\
+          "packageDependencies": [\
+            ["ts-node", "virtual:b5f6621c61ff39953dc51d80cd50e8136ccc2f1e9473a668c1bc8391d00a3aefb508ef40bfe28c9c2990c7cf9a1ff852c858b85fab13e0cfc4daf66c68d7d42c#npm:10.9.1"],\
+            ["@cspotcode/source-map-support", "npm:0.8.1"],\
+            ["@swc/core", null],\
+            ["@swc/wasm", null],\
+            ["@tsconfig/node10", "npm:1.0.9"],\
+            ["@tsconfig/node12", "npm:1.0.11"],\
+            ["@tsconfig/node14", "npm:1.0.3"],\
+            ["@tsconfig/node16", "npm:1.0.3"],\
+            ["@types/node", "npm:18.17.1"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\

@@ -186,6 +186,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@execonline-inc/error-handling@portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url":
+  version: 0.0.0-use.local
+  resolution: "@execonline-inc/error-handling@portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url"
+  dependencies:
+    "@kofno/piper": ^4.4.0
+    maybeasy: ^5.1.0
+    resulty: ^5.1.0
+    taskarian: ^5.4.0
+  languageName: node
+  linkType: soft
+
 "@execonline-inc/error-handling@workspace:*, @execonline-inc/error-handling@workspace:packages/error-handling":
   version: 0.0.0-use.local
   resolution: "@execonline-inc/error-handling@workspace:packages/error-handling"
@@ -329,11 +340,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@execonline-inc/web-url@workspace:packages/web-url"
   dependencies:
-    "@execonline-inc/error-handling": "workspace:*"
+    "@execonline-inc/error-handling": "portal:../error-handling"
     "@kofno/piper": 4.4.0
+    "@types/node": ^18.0.0
     maybeasy: 5.1.0
     resulty: 5.1.0
     taskarian: 5.4.0
+    ts-node: 10.9.1
     typescript: 5.1.6
   languageName: unknown
   linkType: soft
@@ -1207,6 +1220,13 @@ __metadata:
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
   checksum: aa04366b9103b7d6cfd6b2ef64182e0eaa7d4462c3f817618486ea0422984c51fc69fd0d436eae6c9e696ddfdbec9ccaa27a917f7c2e8c75c5d57827fe3d95e8
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.0.0":
+  version: 18.17.1
+  resolution: "@types/node@npm:18.17.1"
+  checksum: 56201bda9a2d05d68602df63b4e67b0545ac8c6d0280bd5fb31701350a978a577a027501fbf49db99bf177f2242ebd1244896bfd35e89042d5bd7dfebff28d4e
   languageName: node
   linkType: hard
 
@@ -7441,7 +7461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.9.0":
+"ts-node@npm:10.9.1, ts-node@npm:^10.9.0":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:
