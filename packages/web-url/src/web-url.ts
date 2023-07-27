@@ -13,6 +13,8 @@ const invalidWebUrlError = (error: unknown): InvalidWebUrlError => ({
   error,
 });
 
+export const href = (url: URL): string => url.href;
+
 export const toUrlR = (href: string, base?: string | URL): Result<InvalidWebUrlError, URL> => {
   try {
     const url = typeof base === 'undefined' ? new URL(href) : new URL(href, base);

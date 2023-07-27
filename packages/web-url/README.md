@@ -26,9 +26,16 @@ This function constructs an `InvalidWebUrlError` object from the given parameter
 import { InvalidWebUrlError } from '@execonline-inc/web-url';
 
 const error: unknown = {};
-const href: string = 'href';
-const base: string = 'base';
-const result: InvalidWebUrlError = invalidWebUrlError(error, href, base);
+const result: InvalidWebUrlError = invalidWebUrlError(error);
+```
+
+### `href`
+
+This function returns the `href` of the `URL` object.
+
+```ts
+import { href, toUrl } from '@execonline-inc/web-url';
+toUrl("https://example.com").map(href) // Just("https://example.com")
 ```
 
 ### `toUrlR`
@@ -75,7 +82,7 @@ This function returns the first value of the query parameter with the given name
 
 ```ts
 import { getQueryParam, toUrl } from '@execonline-inc/web-url';
-toUrl("https://example.com?foo=bar&foo=baz").map(getQueryParam("foo")) // Just("bar")
+toUrl("https://example.com?foo=bar&foo=baz").andThen(getQueryParam("foo")) // Just("bar")
 ```
 
 ### `getQueryParamArray`
@@ -102,8 +109,8 @@ toUrl("https://example.com?foo[]=bar&foo[]=baz").map(getQueryParamRailsArray("fo
 This function adds a query parameter with the given name and value to the URL.
 
 ```ts
-import { putQueryParam, toUrl } from '@execonline-inc/web-url';
-toUrl("https://example.com").map(putQueryParam("foo", "bar")) // Just("https://example.com?foo=bar")
+import { putQueryParam, toUrl, href } from '@execonline-inc/web-url';
+toUrl("https://example.com").map(putQueryParam("foo", "bar")).map(href) // Just("https://example.com?foo=bar")
 ```
 
 ### `putQueryParamArray`
@@ -111,8 +118,8 @@ toUrl("https://example.com").map(putQueryParam("foo", "bar")) // Just("https://e
 This function adds a query parameter with the given name and values to the URL.
 
 ```ts
-import { putQueryParamArray, toUrl } from '@execonline-inc/web-url';
-toUrl("https://example.com").map(putQueryParamArray("foo", ["bar", "baz"])) // Just("https://example.com?foo=bar&foo=baz")
+import { putQueryParamArray, toUrl, href } from '@execonline-inc/web-url';
+toUrl("https://example.com").map(putQueryParamArray("foo", ["bar", "baz"])).map(href) // Just("https://example.com?foo=bar&foo=baz")
 ```
 
 ### `putQueryParamRailsArray`
@@ -120,8 +127,8 @@ toUrl("https://example.com").map(putQueryParamArray("foo", ["bar", "baz"])) // J
 This function adds a query parameter with the given name and values to the URL, Rails-style.
 
 ```ts
-import { putQueryParamRailsArray, toUrl } from '@execonline-inc/web-url';
-toUrl("https://example.com").map(putQueryParamRailsArray("foo", ["bar", "baz"])) // Just("https://example.com?foo[]=bar&foo[]=baz")
+import { putQueryParamRailsArray, toUrl, href } from '@execonline-inc/web-url';
+toUrl("https://example.com").map(putQueryParamRailsArray("foo", ["bar", "baz"])).map(href) // Just("https://example.com?foo[]=bar&foo[]=baz")
 ```
 
 ### `getPathname`
@@ -129,8 +136,8 @@ toUrl("https://example.com").map(putQueryParamRailsArray("foo", ["bar", "baz"]))
 This function returns the pathname of the URL.
 
 ```ts
-import { getPathname, toUrl } from '@execonline-inc/web-url';
-toUrl("https://example.com/foo/bar").map(getPathname) // Just("/foo/bar")
+import { getPathname, toUrl, href } from '@execonline-inc/web-url';
+toUrl("https://example.com/foo/bar").map(getPathname).map(href) // Just("/foo/bar")
 ```
 
 ### `setrPathname`
@@ -138,8 +145,8 @@ toUrl("https://example.com/foo/bar").map(getPathname) // Just("/foo/bar")
 This function sets the pathname of the URL.
 
 ```ts
-import { setPathname, toUrl } from '@execonline-inc/web-url';
-toUrl("https://example.com").map(setPathname("/foo/bar")) // Just("https://example.com/foo/bar")
+import { setPathname, toUrl, href } from '@execonline-inc/web-url';
+toUrl("https://example.com").map(setPathname("/foo/bar")).map(href) // Just("https://example.com/foo/bar")
 ```
 
 ### `windowLocation`
