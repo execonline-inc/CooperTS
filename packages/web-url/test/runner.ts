@@ -1,5 +1,10 @@
 import * as assert from 'assert';
-import { putQueryParam, putQueryParamArray, setPathname } from '../src/web-url';
+import {
+  putQueryParam,
+  putQueryParamArray,
+  putQueryParamRailsArray,
+  setPathname,
+} from '../src/web-url';
 
 const fooPath = new URL('https://foo.com/foo');
 
@@ -13,6 +18,12 @@ assert(
 
 const queryArray = putQueryParamArray('foo', ['1', '2', '3'], fooPath);
 assert(
-  'https://foo.com/foo?foo%5B%5D=1&foo%5B%5D=2&foo%5B%5D=3' === queryArray.href,
+  'https://foo.com/foo?foo=1&foo=2&foo=3' === queryArray.href,
   `putQueryParamArray failed: ${queryArray.href}`
+);
+
+const railsStyleQueryArray = putQueryParamRailsArray('foo', ['1', '2', '3'], fooPath);
+assert(
+  'https://foo.com/foo?foo%5B%5D=1&foo%5B%5D=2&foo%5B%5D=3' === railsStyleQueryArray.href,
+  `putQueryParamArray failed: ${railsStyleQueryArray.href}`
 );

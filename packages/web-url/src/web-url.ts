@@ -38,9 +38,16 @@ export function getQueryParam(key: string, url?: URL) {
 export function getQueryParamArray(key: string): (url: URL) => string[];
 export function getQueryParamArray(key: string, url: URL): string[];
 export function getQueryParamArray(key: string, url?: URL) {
-  const getThem = (url: URL): string[] => url.searchParams.getAll(`${key}[]`);
+  const getThem = (url: URL): string[] => url.searchParams.getAll(key);
 
   return typeof url === 'undefined' ? getThem : getThem(url);
+}
+
+export function getQueryParamRailsArray(key: string): (url: URL) => string[];
+export function getQueryParamRailsArray(key: string, url: URL): string[];
+export function getQueryParamRailsArray(key: string, url?: URL) {
+  const doit = (url: URL) => getQueryParamArray(`${key}[]`, url);
+  return typeof url === 'undefined' ? doit : doit(url);
 }
 
 export function putQueryParam(key: string, value: string): (url: URL) => URL;
@@ -61,11 +68,18 @@ export function putQueryParamArray(key: string, values: string[], url?: URL) {
   const putAll = (url: URL): URL => {
     const u = new URL(url);
     for (const v of values) {
-      u.searchParams.append(`${key}[]`, v);
+      u.searchParams.append(key, v);
     }
     return u;
   };
 
+  return typeof url === 'undefined' ? putAll : putAll(url);
+}
+
+export function putQueryParamRailsArray(key: string, values: string[]): (url: URL) => URL;
+export function putQueryParamRailsArray(key: string, values: string[], url: URL): URL;
+export function putQueryParamRailsArray(key: string, values: string[], url?: URL) {
+  const putAll = (url: URL) => putQueryParamArray(`${key}[]`, values, url);
   return typeof url === 'undefined' ? putAll : putAll(url);
 }
 
