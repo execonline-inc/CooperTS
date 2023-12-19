@@ -349,10 +349,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/error-handling/",\
           "packageDependencies": [\
             ["@execonline-inc/error-handling", "portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url"],\
-            ["@kofno/piper", "npm:4.4.0"],\
+            ["@kofno/piper", "npm:4.5.1"],\
             ["maybeasy", "npm:5.1.0"],\
             ["resulty", "npm:5.1.0"],\
-            ["taskarian", "npm:5.4.0"]\
+            ["taskarian", "npm:5.5.2"]\
           ],\
           "linkType": "SOFT"\
         }],\
@@ -360,10 +360,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/error-handling/",\
           "packageDependencies": [\
             ["@execonline-inc/error-handling", "workspace:packages/error-handling"],\
-            ["@kofno/piper", "npm:4.4.0"],\
+            ["@kofno/piper", "npm:4.5.1"],\
             ["maybeasy", "npm:5.1.0"],\
             ["resulty", "npm:5.1.0"],\
-            ["taskarian", "npm:5.4.0"]\
+            ["taskarian", "npm:5.5.2"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -597,6 +598,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@kofno-piper-npm-4.4.0-788649cc6b-57311742a0.zip/node_modules/@kofno/piper/",\
           "packageDependencies": [\
             ["@kofno/piper", "npm:4.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.5.1", {\
+          "packageLocation": "./.yarn/cache/@kofno-piper-npm-4.5.1-28a42885be-d06476d88e.zip/node_modules/@kofno/piper/",\
+          "packageDependencies": [\
+            ["@kofno/piper", "npm:4.5.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8529,6 +8537,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["taskarian", "npm:5.4.0"],\
             ["@kofno/piper", "npm:4.4.0"],\
+            ["maybeasy", "npm:5.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.5.2", {\
+          "packageLocation": "./.yarn/cache/taskarian-npm-5.5.2-ce50287ee4-ed0cdd7d1e.zip/node_modules/taskarian/",\
+          "packageDependencies": [\
+            ["taskarian", "npm:5.5.2"],\
+            ["@kofno/piper", "npm:4.5.1"],\
             ["maybeasy", "npm:5.1.0"]\
           ],\
           "linkType": "HARD"\

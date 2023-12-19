@@ -190,10 +190,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@execonline-inc/error-handling@portal:../error-handling::locator=%40execonline-inc%2Fweb-url%40workspace%3Apackages%2Fweb-url"
   dependencies:
-    "@kofno/piper": ^4.4.0
+    "@kofno/piper": ^4.5.1
     maybeasy: ^5.1.0
     resulty: ^5.1.0
-    taskarian: ^5.4.0
+    taskarian: ^5.5.2
   languageName: node
   linkType: soft
 
@@ -201,10 +201,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@execonline-inc/error-handling@workspace:packages/error-handling"
   dependencies:
-    "@kofno/piper": ^4.4.0
+    "@kofno/piper": ^4.5.1
     maybeasy: ^5.1.0
     resulty: ^5.1.0
-    taskarian: ^5.4.0
+    taskarian: ^5.5.2
+    typescript: 5.3.3
   languageName: unknown
   linkType: soft
 
@@ -407,6 +408,13 @@ __metadata:
   version: 4.3.0
   resolution: "@kofno/piper@npm:4.3.0"
   checksum: a2170478f95cd68be56da562339bc76085b8d003cce86b39e56879d06469acbc3ed105bb31aff4384512b7d78acc7f878d2a9132dbd1365c0c3f9d833f3b68b5
+  languageName: node
+  linkType: hard
+
+"@kofno/piper@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "@kofno/piper@npm:4.5.1"
+  checksum: d06476d88e5b765e60400a0293c096598fd51c697c5bc6cd9dde44dec2e503b67adf8824ed09df734b2ac33bee8ac4afc771ab725359beb57f318def85b7dd0c
   languageName: node
   linkType: hard
 
@@ -7356,6 +7364,16 @@ __metadata:
     "@kofno/piper": ^4.4.0
     maybeasy: ^5.1.0
   checksum: 3698acdf5db183005c22b9fc51bae1573446fe52bd46c3a842abd01a4efeb714229565fc823eff8d61d255b65368f63c130a222fec8e4795fc06c9ea2203ea9b
+  languageName: node
+  linkType: hard
+
+"taskarian@npm:^5.5.2":
+  version: 5.5.2
+  resolution: "taskarian@npm:5.5.2"
+  dependencies:
+    "@kofno/piper": ^4.5.1
+    maybeasy: ^5.1.0
+  checksum: ed0cdd7d1e2cd3540d1e3209cb569afff32ece928546e9b55541750dc553114372be65a7913efe5b146e4b4c6d0e2621d8b704974ec21d6bf1d837b056b41677
   languageName: node
   linkType: hard
 
