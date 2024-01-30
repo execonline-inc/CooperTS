@@ -158,7 +158,7 @@ Value is zero
 Multiplies the value by inputted value
 ### `divideBy`
 Divides the value by inputted value
-### `addOn`
+### `add`
 Adds the value to inputted value
 ### `subtractBy`
 Subtracts the value from inputted value

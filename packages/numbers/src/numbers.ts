@@ -58,7 +58,7 @@ export const negative = (value: number) => value < 0;
 export const zero = eq(0);
 export const multiplyBy = (input: number) => (value: number) => value * input
 export const divideBy = (input: number) => (value: number) => value / input
-export const addOn = (input: number) => (value: number) => value + input
+export const add = (input: number) => (value: number) => value + input
 export const subtractby = (input: number) => (value: number) => value - input
 
 export const whenPositive = when(positive);
