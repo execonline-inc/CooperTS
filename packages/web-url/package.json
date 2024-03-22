@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/web-url",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Browser API safe URL parsing",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
