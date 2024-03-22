@@ -181,7 +181,7 @@ This curried function wraps `findItem` functionality in a `Task`. It is particul
 
 ```ts
 import { findItemT, ItemNotFound } from '@execonline-inc/collections';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const list = [{ id: 1 }, { id: 2 }, { id: 3 }];
 const task = Task.succeed<ItemNotFound, { id: number }[]>(list);
@@ -210,7 +210,7 @@ Same as `findItemT` but with the functionality of `findPayload`.
 
 ```ts
 import { findPayloadT, PayloadNotFound } from '@execonline-inc/collections';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const payloads = [{ payload: { id: 1 } }, { payload: { id: 2 } }, { payload: { id: 3 } }];
 const task = Task.succeed<PayloadNotFound, { payload: { id: number } }[]>(payloads);

@@ -17,7 +17,7 @@ import {
 } from 'ajaxian';
 import Decoder from 'jsonous';
 import { Maybe } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 export interface MissingApplicationId {
   kind: 'missing-application-id';
@@ -105,7 +105,7 @@ export const postToApi = (token: Maybe<string>) => (whenUnauthenticated: Task<ne
         .setWithCredentials(false);
       return headers.reduce((req, header) => req.withHeader(header), request);
     })
-    .andThen(toHttpTask)
+    .andThen<string>(toHttpTask)
     .orElse(logoutIfSessionExpired(whenUnauthenticated));
 
 export const putToApi = (token: Maybe<string>) => (whenUnauthenticated: Task<never, void>) => (
@@ -120,7 +120,7 @@ export const putToApi = (token: Maybe<string>) => (whenUnauthenticated: Task<nev
         .setWithCredentials(false);
       return headers.reduce((req, header) => req.withHeader(header), request);
     })
-    .andThen(toHttpTask)
+    .andThen<string>(toHttpTask)
     .orElse(logoutIfSessionExpired(whenUnauthenticated));
 
 export const deleteToApi = (token: Maybe<string>) => (whenAuthenticated: Task<never, void>) => <
@@ -135,7 +135,7 @@ export const deleteToApi = (token: Maybe<string>) => (whenAuthenticated: Task<ne
       const request = del(link.href).setWithCredentials(false);
       return headers.reduce((req, header) => req.withHeader(header), request);
     })
-    .andThen(toHttpTask)
+    .andThen<string>(toHttpTask)
     .orElse(logoutIfSessionExpired(whenAuthenticated));
 
 export const getFromApi = (token: Maybe<string>) => (
@@ -150,7 +150,7 @@ export const getFromApi = (token: Maybe<string>) => (
         .setWithCredentials(false);
       return headers.reduce((req, header) => req.withHeader(header), request);
     })
-    .andThen(toHttpTask)
+    .andThen<string>(toHttpTask)
     .orElse(logoutIfSessionExpired(whenAuthenticated));
 
 export const getRespFromApi = (token: Maybe<string>) => (
@@ -167,5 +167,5 @@ export const getRespFromApi = (token: Maybe<string>) => (
         .setWithCredentials(false);
       return headers.reduce((req, header) => req.withHeader(header), request);
     })
-    .andThen(toHttpResponseTask)
+    .andThen<HttpSuccess<string>>(toHttpResponseTask)
     .orElse(logoutIfSessionExpired(whenUnauthenticated));

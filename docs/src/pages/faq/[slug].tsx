@@ -6,13 +6,13 @@ import { string } from 'jsonous';
 import { GetStaticProps } from 'next';
 import path from 'path';
 import React from 'react';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
+import { requireDecoderDuringBuild } from '../../RequireDecoderDuringBuild';
+import { WithNavTree, taskToStaticProps, withNavTreeStaticProp } from '../../Types/NavTree';
+import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../../Types/guide';
 import Markdown from '../../components/Markdown';
 import PageTitle from '../../components/PageTitle';
 import { getFilesFromPath } from '../../lib';
-import { requireDecoderDuringBuild } from '../../RequireDecoderDuringBuild';
-import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../../Types/guide';
-import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../../Types/NavTree';
 
 interface Props {
   page: Page;

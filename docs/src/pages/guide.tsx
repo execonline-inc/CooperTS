@@ -1,13 +1,13 @@
+import { pipe } from '@kofno/piper';
 import clsx from 'clsx';
 import matter from 'gray-matter';
-import Link from 'next/link';
-import Task from 'taskarian';
-import { getFilesFromPath, getMarkDownWithMeta } from '../lib';
-import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../Types/guide';
-import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
-import { pipe } from '@kofno/piper';
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
+import { Task } from 'taskarian';
+import { WithNavTree, taskToStaticProps, withNavTreeStaticProp } from '../Types/NavTree';
+import { Page, requireFrontmatterDuringBuild, unsafeMarkdownFromContent } from '../Types/guide';
 import PageTitle from '../components/PageTitle';
+import { getFilesFromPath, getMarkDownWithMeta } from '../lib';
 
 interface Props {
   pages: Page[];

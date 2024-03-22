@@ -1,7 +1,7 @@
 import { warn } from '@execonline-inc/logging';
 import { noop } from '@kofno/piper';
 import i18next, * as i18n from '@prebsch-exo/i18next';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { loaded, loadedFromFallback } from '../../translations';
 import { Loader } from '../../types';
 

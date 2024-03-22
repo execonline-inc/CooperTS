@@ -42,7 +42,7 @@ This curried function creates an HTTP request `Task` using a given authenticatio
 import { AppyError, HReferenceable, request } from '@execonline-inc/appy';
 import Decoder, { succeed } from 'jsonous';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'get' };
@@ -61,7 +61,7 @@ Similar to `request`, this function creates an HTTP request `Task`. The signific
 import { AppyError, callApi, HReferenceable } from '@execonline-inc/appy';
 import Decoder, { succeed } from 'jsonous';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'get' };
@@ -80,7 +80,7 @@ Similar to `callApi`, this function creates an HTTP request `Task`, but it's har
 ```ts
 import { AppyError, HReferenceable, postToApi } from '@execonline-inc/appy';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'post' };
@@ -97,7 +97,7 @@ Similar to `callApi`, this function creates an HTTP request `Task`, but it's har
 ```ts
 import { AppyError, HReferenceable, putToApi } from '@execonline-inc/appy';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'put' };
@@ -114,7 +114,7 @@ Similar to `callApi`, this function creates an HTTP request `Task`, but it's har
 ```ts
 import { AppyError, deleteToApi, HReferenceable } from '@execonline-inc/appy';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'delete' };
@@ -130,7 +130,7 @@ Similar to `callApi`, this function creates an HTTP request `Task`, but it's har
 ```ts
 import { AppyError, getFromApi, HReferenceable } from '@execonline-inc/appy';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'get' };
@@ -147,7 +147,7 @@ Similar to `callApi`, this function creates an HTTP request `Task`, but it's har
 ```ts
 import { AppyError, getRespFromApi, HReferenceable } from '@execonline-inc/appy';
 import { Maybe, just } from 'maybeasy';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const token: Maybe<string> = just('3ad1afde-6d9f-4e29-97d4-4396f891267f');
 const link: HReferenceable = { href: 'https://example.com/', method: 'get' };

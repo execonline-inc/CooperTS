@@ -1,5 +1,5 @@
 import { logWithTimestamp } from '@execonline-inc/logging';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { readContext } from './Environment';
 import { decodeEvent } from './Event';
 import { sendMessage } from './SlackMessage';

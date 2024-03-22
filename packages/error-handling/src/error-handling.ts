@@ -1,6 +1,6 @@
 import { just, Maybe, nothing } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 export const asTask = <E, T>(result: Result<E, T>): Task<E, T> =>
   result.cata<Task<E, T>>({ Ok: Task.succeed, Err: Task.fail });

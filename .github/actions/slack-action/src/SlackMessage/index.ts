@@ -1,5 +1,5 @@
 import { HttpError, post, toHttpTask } from 'ajaxios';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { slackChannel, slackWebhookUrl } from '../Environment';
 import { fetchDadJoke } from '../Quote';
 import {

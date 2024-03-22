@@ -2,7 +2,7 @@ import { toResult } from '@execonline-inc/maybe-adapter';
 import { noop } from '@kofno/piper';
 import { just, Maybe, nothing } from 'maybeasy';
 import { Result } from 'resulty';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { byId, byPayloadId, byPayloadUuid } from './predicates';
 import { first } from './take';
 

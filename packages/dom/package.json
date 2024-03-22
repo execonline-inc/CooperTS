@@ -19,8 +19,7 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc",
-    "yarn": "yarn"
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -29,11 +28,11 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@kofno/piper": "^4.4.0",
-    "@types/node": "^17.0.23",
-    "taskarian": "^5.4.0"
+    "@kofno/piper": "^5.0.1",
+    "@types/node": "^20.11.30",
+    "taskarian": "^6.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "typescript": "^5.4.3"
   }
 }

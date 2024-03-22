@@ -1,6 +1,6 @@
-import Task from 'taskarian';
-import glob from 'glob';
 import { noop } from '@kofno/piper';
+import glob from 'glob';
+import { Task } from 'taskarian';
 
 import fs from 'fs';
 

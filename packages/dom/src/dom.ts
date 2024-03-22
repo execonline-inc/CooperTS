@@ -1,5 +1,5 @@
 import { noop } from '@kofno/piper';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 export interface ElementNotFound {
   kind: 'element-not-found';

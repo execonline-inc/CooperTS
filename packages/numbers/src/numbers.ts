@@ -1,8 +1,8 @@
 import { toResult, toTask, when } from '@execonline-inc/maybe-adapter';
-import { pipe, UnaryFunction } from '@kofno/piper';
-import { just, Maybe, nothing } from 'maybeasy';
+import { UnaryFunction, pipe } from '@kofno/piper';
+import { Maybe, just, nothing } from 'maybeasy';
 import { Result } from 'resulty';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 export const percentage = (nbr: number): string => {
   return `${Math.round(nbr)}%`;

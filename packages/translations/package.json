@@ -19,8 +19,7 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc",
-    "yarn": "yarn"
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -29,19 +28,19 @@
     "@execonline-inc/collections": "workspace:^",
     "@execonline-inc/logging": "workspace:^",
     "@execonline-inc/maybe-adapter": "workspace:^",
-    "@kofno/piper": "^4.4.0",
+    "@kofno/piper": "^5.0.1",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "htmlparser2": "^4.1.0",
-    "jsonous": "^7.7.0",
-    "maybeasy": "^5.1.0",
-    "nonempty-list": "^3.6.0",
-    "resulty": "^5.1.0",
-    "taskarian": "^5.4.0"
+    "jsonous": "^8.0.0",
+    "maybeasy": "^6.2.0",
+    "nonempty-list": "^3.7.0",
+    "resulty": "^6.1.0",
+    "taskarian": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23",
+    "@types/node": "^20.11.30",
     "@types/react": ">=16",
-    "typescript": "^5.0.4"
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "react": ">=16"
