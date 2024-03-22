@@ -1,6 +1,6 @@
 import { just, Maybe, nothing } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 export function toResult<X, T>(e: X, thing: Maybe<T>): Result<X, T>;
 export function toResult<X, T>(e: X): (thing: Maybe<T>) => Result<X, T>;

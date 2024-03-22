@@ -4,26 +4,23 @@ import matter from 'gray-matter';
 import { GetStaticPropsContext, GetStaticPropsResult, PreviewData } from 'next';
 import path from 'path';
 import { ParsedUrlQuery } from 'querystring';
-import Task from 'taskarian';
-import { getCombinedPackageData, GetCombinedPackageError } from '../../GetPackages';
+import { Task } from 'taskarian';
+import { GetCombinedPackageError, getCombinedPackageData } from '../../GetPackages';
 import { getFilesFromPath } from '../../lib';
 import { requireFrontmatterDuringBuild } from '../guide';
 import { NavLink, NavSection, NavTree } from './Types';
 
-const getPackagesLinks: Task<
-  GetCombinedPackageError,
-  Array<NavLink>
-> = getCombinedPackageData().map((datas) =>
-  datas.map((data) => ({ title: data.metadata.name, href: `/packages/${data.slug}` }))
-);
+const getPackagesLinks = (): Task<GetCombinedPackageError, Array<NavLink>> =>
+  getCombinedPackageData().map((datas) =>
+    datas.map((data) => ({ title: data.metadata.name, href: `/packages/${data.slug}` }))
+  );
 
-const getPackagesSection: Task<GetCombinedPackageError, NavSection> = getPackagesLinks.map(
-  (links) => ({
+const getPackagesSection = (): Task<GetCombinedPackageError, NavSection> =>
+  getPackagesLinks().map((links) => ({
     title: 'Packages',
     href: '/packages',
     links,
-  })
-);
+  }));
 
 const guideLinks: Array<NavLink> = getFilesFromPath('src/guide')
   .map((filename) => ({
@@ -73,9 +70,14 @@ const aboutSection = {
   links: [],
 };
 
-export const getNavTree: Task<GetCombinedPackageError, NavTree> = getPackagesSection.map(
-  (packagesSection) => [aboutSection, guideSection, exampleSection, faqSection, packagesSection]
-);
+export const getNavTree = (): Task<GetCombinedPackageError, NavTree> =>
+  getPackagesSection().map((packagesSection) => [
+    aboutSection,
+    guideSection,
+    exampleSection,
+    faqSection,
+    packagesSection,
+  ]);
 
 export type GetStaticPropsT<Props> = (
   context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>

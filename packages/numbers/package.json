@@ -11,8 +11,7 @@
     "test": "__tests__"
   },
   "scripts": {
-    "tsc": "tsc",
-    "yarn": "yarn"
+    "tsc": "tsc"
   },
   "files": [
     "lib"
@@ -29,13 +28,13 @@
   },
   "dependencies": {
     "@execonline-inc/maybe-adapter": "workspace:^",
-    "@kofno/piper": "^4.4.0",
-    "maybeasy": "^5.1.0",
-    "resulty": "^5.1.0",
-    "taskarian": "^5.4.0"
+    "@kofno/piper": "^5.0.1",
+    "maybeasy": "^6.2.0",
+    "resulty": "^6.1.0",
+    "taskarian": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23",
-    "typescript": "^5.0.4"
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
   }
 }

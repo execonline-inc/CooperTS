@@ -1,8 +1,8 @@
+import { pipe } from '@kofno/piper';
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Task from 'taskarian';
-import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
-import { pipe } from '@kofno/piper';
+import { Task } from 'taskarian';
+import { WithNavTree, taskToStaticProps, withNavTreeStaticProp } from '../Types/NavTree';
 import CardLinks from '../components/CardLinks';
 
 interface Props {}

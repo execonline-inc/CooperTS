@@ -1,7 +1,7 @@
 import { asTask } from '@execonline-inc/error-handling';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { messageDecoder } from '../Decoders';
-import { eventDecodeFailed, ActionFailed, Message } from '../Types';
+import { ActionFailed, Message, eventDecodeFailed } from '../Types';
 
 interface EventObject {
   context: string;

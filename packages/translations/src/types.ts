@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { Props as LProps } from './L';
 
 export type Translator = (translationKey: string, options: {}) => string;

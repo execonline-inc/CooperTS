@@ -1,7 +1,7 @@
 import { asMaybe, asTask } from '@execonline-inc/error-handling';
 import { Maybe, fromNullable } from 'maybeasy';
 import { Result, err, ok } from 'resulty';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 export interface InvalidWebUrlError {
   kind: 'invalid-web-url-error';

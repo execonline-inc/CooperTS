@@ -1,8 +1,8 @@
 import { always, identity, noop } from '@kofno/piper';
-import { fromNullable, just, Maybe, nothing } from 'maybeasy';
-import { err, ok, Result } from 'resulty';
-import Task from 'taskarian';
-import * as ParsedURL from 'url-parse';
+import { Maybe, fromNullable, just, nothing } from 'maybeasy';
+import { Result, err, ok } from 'resulty';
+import { Task } from 'taskarian';
+import ParsedURL from 'url-parse';
 
 export type URLParser = ParsedURL<Record<string, string | undefined>>;
 

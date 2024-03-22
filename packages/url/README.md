@@ -58,7 +58,7 @@ This function attempts construction of a `URL` object (via `toUrlR`) as a `Task`
 
 ```ts
 import { InvalidUrlError, toUrlT } from '@execonline-inc/url';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const result: Task<InvalidUrlError, URL> = toUrlT('href', 'base');
 ```

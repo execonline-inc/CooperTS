@@ -92,7 +92,7 @@ Like `readVarR`, but as a `Task` instead of a `Result`.
 
 ```ts
 import { MissingVarError, readVarT } from '@execonline-inc/environment';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 
 const result: Task<MissingVarError, string> = readVarT('SOME_ENV_VAR');
 ```

@@ -19,8 +19,7 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc",
-    "yarn": "yarn"
+    "tsc": "tsc"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -33,7 +32,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23",
-    "typescript": "^5.0.4"
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
   }
 }

@@ -1,11 +1,11 @@
 import { pipe } from '@kofno/piper';
 import { GetStaticProps, NextPage } from 'next';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
+import { ReadFileError, readFileT } from '../GetPackages/filesystem';
+import { WithNavTree, taskToStaticProps, withNavTreeStaticProp } from '../Types/NavTree';
+import { SafeMarkdown, unsafeMarkdownFromContent } from '../Types/guide';
 import Markdown from '../components/Markdown';
 import PageTitle from '../components/PageTitle';
-import { ReadFileError, readFileT } from '../GetPackages/filesystem';
-import { SafeMarkdown, unsafeMarkdownFromContent } from '../Types/guide';
-import { taskToStaticProps, WithNavTree, withNavTreeStaticProp } from '../Types/NavTree';
 
 interface Props {
   markdown: SafeMarkdown;

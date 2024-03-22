@@ -1,15 +1,15 @@
-import { identity } from '@kofno/piper';
-import { get, HttpError, toHttpTask } from 'ajaxios';
+import { always, identity } from '@kofno/piper';
+import { HttpError, get, toHttpTask } from 'ajaxios';
 import Decoder, { field, string, succeed } from 'jsonous';
 import { fromNullable } from 'maybeasy';
 import path from 'path';
 import { cwd } from 'process';
-import Task from 'taskarian';
+import { Task } from 'taskarian';
 import { requireDecoderDuringBuild, requireResultDuringBuild } from '../RequireDecoderDuringBuild';
 import { SafeMarkdown, unsafeMarkdownFromContent } from '../Types/guide';
 import { packageDirDecoder } from './Decoders';
-import { GlobError, globT, ReadFileError, readFileT } from './filesystem';
-import { festivePossumPackagesPath, GithubFestivePossumPath, PackageDir } from './Types';
+import { GithubFestivePossumPath, PackageDir, festivePossumPackagesPath } from './Types';
+import { GlobError, ReadFileError, globT, readFileT } from './filesystem';
 
 export interface PackageMetadata {
   name: string;
@@ -29,12 +29,14 @@ const packageMetadataDecoder: Decoder<PackageMetadata> = succeed({})
 const localPackageDirFromSlug = (slug: string): PackageDir => `${cwd()}/../packages/${slug}`;
 
 const getLocalPackageDirs = (): Task<GlobError, PackageDir[]> =>
-  globT(localPackageDirFromSlug('*')).map(a => a.map(requireDecoderDuringBuild(packageDirDecoder)));
+  globT(localPackageDirFromSlug('*')).map((a) =>
+    a.map(requireDecoderDuringBuild(packageDirDecoder))
+  );
 
 const slugFromPackageDir = (packageDir: PackageDir): string => path.basename(packageDir);
 
 const getLocalPackageSlugs = (): Task<GlobError, string[]> =>
-  getLocalPackageDirs().map(a => a.map(slugFromPackageDir));
+  getLocalPackageDirs().map((a) => a.map(slugFromPackageDir));
 
 const localPackageMetadataFromSlug = (slug: string): Task<ReadFileError, PackageMetadata> =>
   readFileT(`${localPackageDirFromSlug(slug)}/package.json`)
@@ -47,15 +49,15 @@ const localReadmeFromSlug = (slug: string): Task<ReadFileError, SafeMarkdown> =>
 
 const localPackageDataFromSlug = (slug: string): Task<ReadFileError, PackageData> =>
   Task.succeed<ReadFileError, { slug: string }>({ slug })
-    .assign('metadata', localPackageMetadataFromSlug(slug))
-    .assign('markdown', localReadmeFromSlug(slug));
+    .assign('metadata', always(localPackageMetadataFromSlug(slug)))
+    .assign('markdown', always(localReadmeFromSlug(slug)));
 
 type GetLocalPackagesError = GlobError | ReadFileError;
 
 const getAllLocalPackageData = (): Task<GetLocalPackagesError, PackageData[]> =>
   getLocalPackageSlugs()
     .mapError<GetLocalPackagesError>(identity)
-    .andThen(a => Task.all(a.map(localPackageDataFromSlug)));
+    .andThen((a) => Task.all(a.map(localPackageDataFromSlug)));
 
 interface FestivePossumPackagePaths {
   slug: string;
@@ -102,8 +104,8 @@ const festivePossumPackageReadmeContent = (
 
 const festivePossumPackageData = (paths: FestivePossumPackagePaths): Task<HttpError, PackageData> =>
   Task.succeed<HttpError, { slug: string }>({ slug: paths.slug })
-    .assign('metadata', festivePossumPackageMetadata(paths))
-    .assign('markdown', festivePossumPackageReadmeContent(paths));
+    .assign('metadata', always(festivePossumPackageMetadata(paths)))
+    .assign('markdown', always(festivePossumPackageReadmeContent(paths)));
 
 type GetFestivePossumPackagesError = HttpError;
 
@@ -116,15 +118,15 @@ export type GetCombinedPackageError = GetFestivePossumPackagesError | GetLocalPa
 
 export const getCombinedPackageData = (): Task<GetCombinedPackageError, Array<PackageData>> =>
   Task.succeed<GetCombinedPackageError, {}>({})
-    .assign('fpData', getAllFestivePossumPackageData())
-    .assign('localData', getAllLocalPackageData())
+    .assign('fpData', getAllFestivePossumPackageData)
+    .assign('localData', getAllLocalPackageData)
     .map(({ fpData, localData }) => [...fpData, ...localData]);
 
 export const getPackageDataFromSomeSlug = (
   slug: string
 ): Task<GetCombinedPackageError, PackageData> =>
   fromNullable(festivePossumReadmes.get(slug))
-    .map<Task<GetCombinedPackageError, PackageData>>(readme =>
+    .map<Task<GetCombinedPackageError, PackageData>>((readme) =>
       festivePossumPackageData(festivePossumPackage(slug, readme))
     )
     .getOrElse(() => localPackageDataFromSlug(slug));
