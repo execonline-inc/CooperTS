@@ -32,6 +32,6 @@
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   }
 }

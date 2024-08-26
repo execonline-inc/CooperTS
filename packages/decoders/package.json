@@ -32,7 +32,7 @@
     "resulty": "^6.1.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "gitHead": "551c57fe501811e1b5b2d4f049a79c19b6d087c0",
   "devDependencies": {

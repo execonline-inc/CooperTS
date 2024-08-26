@@ -28,7 +28,7 @@
     "resulty": "^6.1.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
