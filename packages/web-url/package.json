@@ -1,24 +1,32 @@
 {
   "name": "@execonline-inc/web-url",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Browser API safe URL parsing",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "MIT",
-  "main": "lib/web-url.js",
-  "typings": "lib/web-url.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib"
   },
   "files": [
     "lib"
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
   "dependencies": {
     "@execonline-inc/error-handling": "workspace:^",
     "@kofno/piper": "^5.0.1",
-    "maybeasy": "^6.2.0",
-    "resulty": "^6.1.0",
-    "taskarian": "^6.0.0"
+    "maybeasy": "^6.3.0",
+    "resulty": "^8.0.0",
+    "taskarian": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
@@ -31,13 +39,13 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "yarn ts-node test/runner.ts"
+    "test": "bun test/runner.ts",
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
-  },
-  "packageManager": "yarn@3.5.1"
+  }
 }

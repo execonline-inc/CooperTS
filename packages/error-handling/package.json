@@ -1,12 +1,13 @@
 {
   "name": "@execonline-inc/error-handling",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Functions to simplifiy error handling across monad types",
   "author": "kofno <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "MIT",
-  "main": "lib/error-handling.js",
-  "typings": "lib/error-handling.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
@@ -18,21 +19,30 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
     "@kofno/piper": "^5.0.1",
-    "maybeasy": "^6.2.0",
-    "resulty": "^6.1.0",
-    "taskarian": "^6.0.0"
+    "maybeasy": "^6.3.0",
+    "resulty": "^8.0.0",
+    "taskarian": "^6.1.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "tsup": "^8.4.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
   }
 }

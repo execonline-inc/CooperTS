@@ -1,10 +1,10 @@
 {
-  "name": "github-label-slack",
+  "name": "@execonline-inc/slack-action",
   "version": "2.1.0",
   "main": "lib/index.js",
   "private": true,
   "license": "UNLICENSED",
-  "dependencies": {
+  "devDependencies": {
     "@execonline-inc/appy": "workspace:^",
     "@execonline-inc/decoders": "workspace:^",
     "@execonline-inc/environment": "workspace:^",
@@ -14,19 +14,29 @@
     "@execonline-inc/url": "workspace:^",
     "@kofno/piper": "^5.0.1",
     "@types/node": "^20.11.30",
-    "ajaxios": "^2.13.0",
-    "jsonous": "^8.0.0",
+    "ajaxios": "^3.0.0",
+    "jsonous": "^9.1.0",
     "prettier": "^3.2.5",
-    "taskarian": "^6.0.0",
+    "taskarian": "^6.1.0",
     "ts-node": "^10.7.0",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "tsup": "8.4.0"
   },
   "scripts": {
-    "notify": "ts-node src/index.ts"
+    "notify": "bun src/index.ts",
+    "build": "tsup"
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "all",
     "printWidth": 100
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    }
   }
 }

@@ -1,12 +1,12 @@
 {
   "name": "@execonline-inc/time-distance",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Computes differences between times and dates",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/time-distance.js",
-  "typings": "lib/time-distance.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,15 +18,24 @@
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
   },
   "dependencies": {
     "@execonline-inc/time": "workspace:^",
-    "resulty": "^6.1.0"
+    "resulty": "^8.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

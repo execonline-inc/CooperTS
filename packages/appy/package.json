@@ -1,12 +1,12 @@
 {
   "name": "@execonline-inc/appy",
-  "version": "9.1.0",
+  "version": "9.2.0",
   "description": "Call api patterns around ajaxian http tasks",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/appy.js",
-  "typings": "lib/appy.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -14,12 +14,21 @@
   "files": [
     "lib"
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -28,11 +37,11 @@
     "@execonline-inc/environment": "workspace:^",
     "@execonline-inc/resource": "workspace:^",
     "@kofno/piper": "^5.0.1",
-    "ajaxian": "^4.9.0",
-    "jsonous": "^8.0.0",
-    "maybeasy": "^6.2.0",
-    "resulty": "^6.1.0",
-    "taskarian": "^6.0.0"
+    "ajaxian": "^5.0.0",
+    "jsonous": "^9.1.0",
+    "maybeasy": "^6.3.0",
+    "resulty": "^8.0.0",
+    "taskarian": "^6.1.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
