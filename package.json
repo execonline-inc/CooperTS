@@ -2,16 +2,17 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "docs": "yarn workspace @execonline-inc/cooperts-docs",
+    "docs": "bun workspace @execonline-inc/cooperts-docs",
     "tsc": "lerna run tsc",
-    "publish": "lerna run tsc && lerna publish"
+    "publish": "lerna run publish --concurrency 1",
+    "build": "lerna run build --concurrency 1"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "@yarnpkg/sdks": "^3.1.0",
-    "github-label-slack": "workspace:^",
+    "@execonline-inc/slack-action": "workspace:^",
     "lerna": "^8.1.2",
-    "prettier": "^3.2.5",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
     "typescript": "^5.4.3"
   },
   "prettier": {
@@ -20,9 +21,24 @@
     "printWidth": 100
   },
   "workspaces": [
-    "packages/*",
+    "packages/appy",
+    "packages/collections",
+    "packages/decoders",
+    "packages/dom",
+    "packages/environment",
+    "packages/error-handling",
+    "packages/logging",
+    "packages/maybe-adapter",
+    "packages/numbers",
+    "packages/resource",
+    "packages/strings",
+    "packages/time",
+    "packages/time-distance",
+    "packages/translations",
+    "packages/url",
+    "packages/web-url",
     "docs",
-    ".github/actions/*"
+    ".github/actions/slack-action"
   ],
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "bun@1.2.4"
 }

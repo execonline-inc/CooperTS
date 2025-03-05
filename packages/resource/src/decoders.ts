@@ -2,7 +2,7 @@ import { mapMaybe } from '@execonline-inc/collections';
 import { stringLiteral } from '@execonline-inc/decoders';
 import { identity } from '@kofno/piper';
 import { Method } from 'ajaxian';
-import Decoder, { array, field, maybe, number, string, stringify, succeed } from 'jsonous';
+import Decoder, { array, field, maybe, number, safeStringify, string, succeed } from 'jsonous';
 import { Maybe } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
 import {
@@ -18,7 +18,7 @@ import {
 
 const methodDecoder = new Decoder<Method>((value: unknown) => {
   if (typeof value !== 'string') {
-    const stringified = stringify(value);
+    const stringified = safeStringify(value);
     const errorMsg = `Expected to find an HTTP method string. Instead found ${stringified}`;
     return err(errorMsg);
   }
@@ -38,13 +38,13 @@ const methodDecoder = new Decoder<Method>((value: unknown) => {
 type ToRel<Rel extends string> = (v: string) => Result<string, Rel>;
 
 const relDecoder = <Rel extends string>(toRel: ToRel<Rel>) =>
-  new Decoder<Rel>(val => {
+  new Decoder<Rel>((val) => {
     if (typeof val !== 'string') {
       const errorMsg = `Expected to find a rel string, but instead found ${val}`;
       return err(errorMsg);
     }
 
-    return toRel(val).orElse(msg => {
+    return toRel(val).orElse((msg) => {
       return err(msg);
     });
   });
@@ -63,7 +63,7 @@ const unconfirmedLinkDecoder = <Rel extends string>(
     .assign('type', field('type', string));
 
 const confirmLinkRel = <Rel extends string>(l: UnconfirmedLink<Rel>): Maybe<Link<Rel>> =>
-  l.rel.map(rel => ({
+  l.rel.map((rel) => ({
     ...l,
     rel,
   }));
@@ -75,9 +75,7 @@ const confirmLinkRels = <Rel extends string>(
 export const linksDecoder = <Rel extends string>(
   toRel: ToRel<Rel>
 ): Decoder<ReadonlyArray<Link<Rel>>> =>
-  array(unconfirmedLinkDecoder(toRel))
-    .map(confirmLinkRels)
-    .map(mapMaybe(identity));
+  array(unconfirmedLinkDecoder(toRel)).map(confirmLinkRels).map(mapMaybe(identity));
 
 export const errorDecoder: Decoder<ServerError> = succeed({})
   .assign('type', field('type', string))
@@ -105,20 +103,22 @@ export function resourceDecoder<T, Rel extends string>(
   return typeof payloadDecoder === 'undefined' ? doit : doit(payloadDecoder);
 }
 
-export const resourceWithMetadataDecoder = <T, M, Rel extends string>(toRel: ToRel<Rel>) => (
-  payloadDecoder: Decoder<T>,
-  metadataDecoder: Decoder<M>
-): Decoder<ResourceWithMetadata<T, M, Rel>> =>
-  resourceDecoder<T, Rel>(toRel, payloadDecoder).andThen(r =>
-    field('metadata', metadataDecoder).map(metadata => ({ ...r, metadata }))
-  );
+export const resourceWithMetadataDecoder =
+  <T, M, Rel extends string>(toRel: ToRel<Rel>) =>
+  (
+    payloadDecoder: Decoder<T>,
+    metadataDecoder: Decoder<M>
+  ): Decoder<ResourceWithMetadata<T, M, Rel>> =>
+    resourceDecoder<T, Rel>(toRel, payloadDecoder).andThen((r) =>
+      field('metadata', metadataDecoder).map((metadata) => ({ ...r, metadata }))
+    );
 
-export const resourceWithErrorsDecoder = <T, Rel extends string>(toRel: ToRel<Rel>) => (
-  payloadDecoder: Decoder<T>
-): Decoder<ResourceWithErrors<T, Rel>> =>
-  resourceDecoder<T, Rel>(toRel, payloadDecoder).andThen(r =>
-    field('errors', array(errorDecoder)).map(errors => ({ ...r, errors }))
-  );
+export const resourceWithErrorsDecoder =
+  <T, Rel extends string>(toRel: ToRel<Rel>) =>
+  (payloadDecoder: Decoder<T>): Decoder<ResourceWithErrors<T, Rel>> =>
+    resourceDecoder<T, Rel>(toRel, payloadDecoder).andThen((r) =>
+      field('errors', array(errorDecoder)).map((errors) => ({ ...r, errors }))
+    );
 
 export const paginationMetadataDecoder: Decoder<PaginationMetadata> = succeed({})
   .assign('resultsCount', field('results_count', number))

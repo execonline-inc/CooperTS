@@ -1,17 +1,19 @@
 {
   "name": "@execonline-inc/numbers",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "Type safe number ops",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/numbers.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "files": [
     "lib"
@@ -29,12 +31,21 @@
   "dependencies": {
     "@execonline-inc/maybe-adapter": "workspace:^",
     "@kofno/piper": "^5.0.1",
-    "maybeasy": "^6.2.0",
-    "resulty": "^6.1.0",
-    "taskarian": "^6.0.0"
+    "maybeasy": "^6.3.0",
+    "resulty": "^8.0.0",
+    "taskarian": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "tsup": "^8.4.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    }
   }
 }

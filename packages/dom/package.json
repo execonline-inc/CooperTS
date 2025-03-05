@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/dom",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "DOM functions",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -14,12 +14,22 @@
   "files": [
     "lib"
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/dom.d.ts",
+      "import": "./lib/dom.js",
+      "require": "./lib/dom.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -30,7 +40,7 @@
   "dependencies": {
     "@kofno/piper": "^5.0.1",
     "@types/node": "^20.11.30",
-    "taskarian": "^6.0.0"
+    "taskarian": "^6.1.0"
   },
   "devDependencies": {
     "typescript": "^5.4.3"

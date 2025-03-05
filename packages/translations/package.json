@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/translations",
-  "version": "10.1.1",
+  "version": "10.2.0",
   "description": "Support for typed and interpolatable translations",
   "author": "Patrick Rebsch <pjrebsch@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -19,7 +19,9 @@
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -31,11 +33,11 @@
     "@kofno/piper": "^5.0.1",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "htmlparser2": "^4.1.0",
-    "jsonous": "^8.0.0",
-    "maybeasy": "^6.2.0",
-    "nonempty-list": "^3.7.0",
-    "resulty": "^6.1.0",
-    "taskarian": "^6.0.0"
+    "jsonous": "^9.1.0",
+    "maybeasy": "^6.3.0",
+    "nonempty-list": "^4.1.0",
+    "resulty": "^8.0.0",
+    "taskarian": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
@@ -47,5 +49,13 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    }
   }
 }

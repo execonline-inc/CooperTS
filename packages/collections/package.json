@@ -1,12 +1,12 @@
 {
   "name": "@execonline-inc/collections",
-  "version": "11.1.0",
+  "version": "11.2.0",
   "description": "Utilities for working with collections of data",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/collections.js",
-  "typings": "lib/collections.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -14,12 +14,22 @@
   "files": [
     "lib"
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -27,11 +37,11 @@
   "dependencies": {
     "@execonline-inc/maybe-adapter": "workspace:^",
     "@kofno/piper": "^5.0.1",
-    "ajaxian": "^4.9.0",
-    "jsonous": "^8.0.0",
-    "maybeasy": "^6.2.0",
-    "resulty": "^6.1.0",
-    "taskarian": "^6.0.0"
+    "ajaxian": "^5.0.0",
+    "jsonous": "^9.1.0",
+    "maybeasy": "^6.3.0",
+    "resulty": "^8.0.0",
+    "taskarian": "^6.1.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

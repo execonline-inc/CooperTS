@@ -10,11 +10,16 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
       - name: Check Docs 📝
         run: |
-          yarn workspace @execonline-inc/cooperts-docs install --immutable
-          yarn workspace @execonline-inc/cooperts-docs build
+          bun install --cwd docs/ --frozen-lockfile
+          bun run --cwd docs/ build

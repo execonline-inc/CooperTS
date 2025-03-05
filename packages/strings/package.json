@@ -1,12 +1,12 @@
 {
   "name": "@execonline-inc/strings",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Functions for manipulating strings",
   "author": "kofno <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
   "license": "ISC",
-  "main": "lib/strings.js",
-  "typings": "lib/strings.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -14,16 +14,26 @@
   "files": [
     "lib"
   ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/execonline-inc/CooperTS.git"
   },
   "scripts": {
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "dependencies": {
     "@kofno/piper": "^5.0.1",
-    "maybeasy": "^6.2.0"
+    "maybeasy": "^6.3.0"
   },
   "devDependencies": {
     "typescript": "^5.4.3"
