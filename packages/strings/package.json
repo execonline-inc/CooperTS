@@ -28,7 +28,8 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "dependencies": {
     "@kofno/piper": "^5.0.1",

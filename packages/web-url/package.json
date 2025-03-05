@@ -40,7 +40,8 @@
   "scripts": {
     "tsc": "tsc",
     "test": "bun test/runner.ts",
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

@@ -4,7 +4,7 @@
   "scripts": {
     "docs": "bun workspace @execonline-inc/cooperts-docs",
     "tsc": "lerna run tsc",
-    "publish": "lerna run publish",
+    "publish": "lerna run publish --concurrency 1",
     "build": "lerna run build --concurrency 1"
   },
   "devDependencies": {

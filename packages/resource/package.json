@@ -28,7 +28,8 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

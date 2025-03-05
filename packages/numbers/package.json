@@ -12,7 +12,8 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup"
+    "build": "tsup",
+    "publish": "bun publish"
   },
   "files": [
     "lib"
