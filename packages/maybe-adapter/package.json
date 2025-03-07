@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/maybe-adapter",
-  "version": "5.3.0",
+  "version": "5.4.0",
   "description": "Convert types to and from Maybeasy",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@kofno/piper": "^5.0.1",
-    "ajaxian": "^5.1.0",
+    "ajaxian": "^5.2.0",
     "jsonous": "^9.1.0",
     "maybeasy": "^6.3.0",
     "resulty": "^8.0.0",
