@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/slack-action",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "lib/index.js",
   "private": true,
   "license": "UNLICENSED",
@@ -14,8 +14,8 @@
     "@execonline-inc/url": "workspace:^",
     "@kofno/piper": "^5.0.1",
     "@types/node": "^20.11.30",
-    "ajaxios": "^3.0.0",
-    "jsonous": "^9.1.0",
+    "ajaxios": "^3.1.0",
+    "jsonous": "^10.0.0-pre.0",
     "prettier": "^3.2.5",
     "taskarian": "^6.1.0",
     "ts-node": "^10.7.0",

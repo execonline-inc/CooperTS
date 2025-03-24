@@ -1,5 +1,5 @@
 import { stringLiteral } from '@execonline-inc/decoders';
-import Decoder, { field, string, succeed } from 'jsonous';
+import { Decoder, field, string, succeed } from 'jsonous';
 import { Event, Joke, Label, Links, Message, PullRequest, Self, User } from './Types';
 
 export const jokeDecoder: Decoder<Joke> = succeed({}).assign('joke', field('joke', string));

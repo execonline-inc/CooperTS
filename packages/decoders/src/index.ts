@@ -1,16 +1,16 @@
 import { seconds, Time } from '@execonline-inc/time';
 import { Base64 } from 'js-base64';
-import Decoder, { fail, field, nullable, number, oneOf, string, succeed } from 'jsonous';
+import { Decoder, fail, field, nullable, number, oneOf, string, succeed } from 'jsonous';
 import { fromEmpty, just, Maybe, nothing } from 'maybeasy';
 import { err, ok } from 'resulty';
 
 export const eql = <T>(t: T): Decoder<T> =>
-  new Decoder<T>(v => {
+  new Decoder<T>((v) => {
     return t === v ? ok(v) : err(`Expected ${t} but got ${v}`);
   });
 
 export const regexDecoder = (regex: RegExp): Decoder<RegExpExecArray> =>
-  string.andThen(s => {
+  string.andThen((s) => {
     const result = regex.exec(s);
     return result
       ? succeed(result)
@@ -19,11 +19,11 @@ export const regexDecoder = (regex: RegExp): Decoder<RegExpExecArray> =>
 
 export const stringLiteral = <T extends string>(t: T): Decoder<T> => eql<T>(t);
 
-export const nullableBlankString: Decoder<Maybe<string>> = nullable(string).map(s =>
+export const nullableBlankString: Decoder<Maybe<string>> = nullable(string).map((s) =>
   s.andThen(fromEmpty)
 );
 
-export const base64Decoder: Decoder<string> = new Decoder<string>(value => {
+export const base64Decoder: Decoder<string> = new Decoder<string>((value) => {
   try {
     const decodedStr = Base64.atob(value);
     return ok(decodedStr);
@@ -32,7 +32,7 @@ export const base64Decoder: Decoder<string> = new Decoder<string>(value => {
   }
 });
 
-export const base64ToUTF8Decoder: Decoder<string> = new Decoder<string>(value => {
+export const base64ToUTF8Decoder: Decoder<string> = new Decoder<string>((value) => {
   try {
     const decodedStr = Base64.decode(value);
     return ok(decodedStr);
@@ -45,7 +45,7 @@ export function pipeD<A, B>(a: Decoder<A>): (b: Decoder<B>) => Decoder<B>;
 export function pipeD<A, B>(a: Decoder<A>, b: Decoder<B>): Decoder<B>;
 export function pipeD<A, B>(a: Decoder<A>, b?: Decoder<B>) {
   const doit = (b: Decoder<B>) =>
-    a.andThen(v =>
+    a.andThen((v) =>
       b.decodeAny(v).cata<Decoder<B>>({
         Ok: succeed,
         Err: fail,
@@ -56,7 +56,7 @@ export function pipeD<A, B>(a: Decoder<A>, b?: Decoder<B>) {
 }
 
 export const jsonParserDecoder = (decoder: Decoder<string>): Decoder<unknown> =>
-  decoder.andThen(someString => {
+  decoder.andThen((someString) => {
     try {
       const someJson = JSON.parse(someString);
       return succeed(someJson);
@@ -65,13 +65,13 @@ export const jsonParserDecoder = (decoder: Decoder<string>): Decoder<unknown> =>
     }
   });
 
-export const numberToStringDecoder: Decoder<string> = number.andThen(value =>
+export const numberToStringDecoder: Decoder<string> = number.andThen((value) =>
   succeed(value.toString())
 );
 
 export const stringToNumberDecoder: Decoder<number> = string
-  .map(s => Number(s))
-  .andThen(n => (isNaN(n) ? fail(`Expected a number but got ${n}`) : succeed(n)));
+  .map((s) => Number(s))
+  .andThen((n) => (isNaN(n) ? fail(`Expected a number but got ${n}`) : succeed(n)));
 
 export interface JsonValue {
   kind: 'json-value';
@@ -80,7 +80,7 @@ export interface JsonValue {
 
 const jsonValue = (value: any): JsonValue => ({ kind: 'json-value', value });
 
-export const jsonValueDecoder: Decoder<JsonValue> = new Decoder<JsonValue>(value =>
+export const jsonValueDecoder: Decoder<JsonValue> = new Decoder<JsonValue>((value) =>
   ok(jsonValue(value))
 );
 
@@ -90,7 +90,7 @@ const explicitJust = <T>(decoder: Decoder<T>): Decoder<Maybe<T>> =>
   succeed({})
     .assign('kind', field('kind', stringLiteral('just')))
     .assign('value', field('value', decoder))
-    .map(j => just(j.value));
+    .map((j) => just(j.value));
 
 const explicitNothing = <T>(): Decoder<Maybe<T>> =>
   field('kind', stringLiteral('nothing').map<Maybe<T>>(nothing));

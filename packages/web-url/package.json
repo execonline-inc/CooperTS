@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/web-url",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Browser API safe URL parsing",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -40,8 +40,7 @@
   "scripts": {
     "tsc": "tsc",
     "test": "bun test/runner.ts",
-    "build": "tsup",
-    "publish": "bun publish"
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

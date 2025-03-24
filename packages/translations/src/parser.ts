@@ -1,6 +1,6 @@
 import { always } from '@kofno/piper';
 import * as htmlparser from 'htmlparser2';
-import Decoder from 'jsonous';
+import { Decoder } from 'jsonous';
 import { just, Maybe, nothing } from 'maybeasy';
 import { fromValue, NonEmptyList } from 'nonempty-list';
 import { ok, Result } from 'resulty';
@@ -53,7 +53,7 @@ export default class Parser {
       childNode: ChildNode
     ): Result<string, ChildNode> =>
       parentNode
-        .do(node => {
+        .do((node) => {
           switch (node.kind) {
             case 'text':
               break;
@@ -61,7 +61,7 @@ export default class Parser {
             case 'tag':
               node.children = just(
                 node.children
-                  .map(children => children.concat([childNode]))
+                  .map((children) => children.concat([childNode]))
                   .getOrElse(() => fromValue(childNode))
               );
           }
@@ -70,7 +70,7 @@ export default class Parser {
 
     return {
       onopentag(name, _) {
-        p.currentNode = p.currentNode.andThen(node =>
+        p.currentNode = p.currentNode.andThen((node) =>
           child(p.currentNode, {
             kind: 'tag',
             name,
@@ -80,7 +80,7 @@ export default class Parser {
         );
       },
       onclosetag() {
-        p.currentNode.do(node => {
+        p.currentNode.do((node) => {
           switch (node.kind) {
             case 'root':
             case 'text':
@@ -91,7 +91,7 @@ export default class Parser {
         });
       },
       ontext(text) {
-        p.currentNode.do(node => {
+        p.currentNode.do((node) => {
           child(p.currentNode, { kind: 'text', text, parent: node });
         });
       },

@@ -1,4 +1,4 @@
-import Decoder, { array, field, string, succeed } from 'jsonous';
+import { Decoder, array, field, string, succeed } from 'jsonous';
 import { NavLink, NavSection, NavTree } from './Types';
 
 const navLinkDecoder: Decoder<NavLink> = succeed({})

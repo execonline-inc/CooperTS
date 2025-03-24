@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/time-distance",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Computes differences between times and dates",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -28,8 +28,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup",
-    "publish": "bun publish"
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

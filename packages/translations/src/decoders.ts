@@ -1,4 +1,4 @@
-import Decoder, { string } from 'jsonous';
+import { Decoder, string } from 'jsonous';
 import { alreadyTranslated } from './translations';
 import { AlreadyTranslatedText } from './types';
 

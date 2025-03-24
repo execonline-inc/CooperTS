@@ -2,7 +2,7 @@ import { mapMaybe } from '@execonline-inc/collections';
 import { stringLiteral } from '@execonline-inc/decoders';
 import { identity } from '@kofno/piper';
 import { Method } from 'ajaxian';
-import Decoder, { array, field, maybe, number, safeStringify, string, succeed } from 'jsonous';
+import { array, Decoder, field, maybe, number, safeStringify, string, succeed } from 'jsonous';
 import { Maybe } from 'maybeasy';
 import { err, ok, Result } from 'resulty';
 import {

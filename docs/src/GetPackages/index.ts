@@ -1,6 +1,6 @@
 import { always, identity } from '@kofno/piper';
 import { HttpError, get, toHttpTask } from 'ajaxios';
-import Decoder, { field, string, succeed } from 'jsonous';
+import { Decoder, field, string, succeed } from 'jsonous';
 import { fromNullable } from 'maybeasy';
 import path from 'path';
 import { cwd } from 'process';

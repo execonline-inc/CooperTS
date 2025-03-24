@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/translations",
-  "version": "11.0.0",
+  "version": "11.1.0",
   "description": "Support for typed and interpolatable translations",
   "author": "Patrick Rebsch <pjrebsch@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -20,8 +20,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup",
-    "publish": "bun publish"
+    "build": "tsup"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
@@ -33,7 +32,7 @@
     "@kofno/piper": "^5.0.1",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "htmlparser2": "^4.1.0",
-    "jsonous": "^9.1.0",
+    "jsonous": "^10.0.0-pre.0",
     "maybeasy": "^6.3.0",
     "nonempty-list": "^4.1.0",
     "resulty": "^8.0.0",

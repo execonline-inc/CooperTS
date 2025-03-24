@@ -1,4 +1,4 @@
-import Decoder, { field, string, succeed } from 'jsonous';
+import { Decoder, field, string, succeed } from 'jsonous';
 import { requireDecoderDuringBuild } from '../RequireDecoderDuringBuild';
 
 export interface SafeMarkdown {

@@ -1,4 +1,4 @@
-import Decoder, { string } from 'jsonous';
+import { Decoder, string } from 'jsonous';
 import { err, ok } from 'resulty';
 import { PackageDir } from './Types';
 
