@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/url",
-  "version": "9.4.0",
+  "version": "9.5.0",
   "description": "Safe URL parsing",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -29,7 +29,10 @@
     "tsc": "tsc",
     "build": "tsup",
     "pub:dryrun": "bun publish --dry-run",
-    "pub": "bun publish"
+    "pub": "bun publish",
+    "bump:major": "bun run ../../bump-version.ts --major",
+    "bump:minor": "bun run ../../bump-version.ts --minor",
+    "bump:patch": "bun run ../../bump-version.ts --patch"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"

@@ -35,7 +35,10 @@
     "typescript": "^5.4.3",
     "tsup": "^8.4.0",
     "pub:dryrun": "bun publish --dry-run",
-    "pub": "bun publish"
+    "pub": "bun publish",
+    "bump:major": "bun run ../../bump-version.ts --major",
+    "bump:minor": "bun run ../../bump-version.ts --minor",
+    "bump:patch": "bun run ../../bump-version.ts --patch"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

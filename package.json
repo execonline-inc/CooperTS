@@ -7,7 +7,10 @@
     "pub:dryrun": "lerna run pub:dryrun --concurrency 1",
     "pub": "lerna run pub --concurrency 1",
     "build": "lerna run build --concurrency 1",
-    "changed": "lerna changed"
+    "changed": "lerna changed",
+    "bump:major": "lerna run bump:major --concurrency 1",
+    "bump:minor": "lerna run bump:minor --concurrency 1",
+    "bump:patch": "lerna run bump:patch --concurrency 1"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",

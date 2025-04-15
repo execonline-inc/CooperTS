@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/decoders",
-  "version": "7.5.0",
+  "version": "7.6.0",
   "description": "Generally useful decoders that extend Jsonous",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
@@ -30,7 +30,10 @@
     "tsc": "tsc",
     "build": "tsup",
     "pub:dryrun": "bun publish --dry-run",
-    "pub": "bun publish"
+    "pub": "bun publish",
+    "bump:major": "bun run ../../bump-version.ts --major",
+    "bump:minor": "bun run ../../bump-version.ts --minor",
+    "bump:patch": "bun run ../../bump-version.ts --patch"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
