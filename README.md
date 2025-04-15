@@ -96,4 +96,6 @@ bun run pub
 ```
 This will build the `appy` package, bump the minor version of the `appy` package, and then publish the `appy` package to the github npm registry.
 
+## Conclusion
 
+CooperTS provides a robust set of functional programming tools inspired by Elm, designed to enhance your TypeScript development experience. Whether you're working with utilities, patterns, or lower-level packages, CooperTS aims to simplify and standardize your workflow. For more details, examples, and updates, visit [cooperts.io](https://cooperts.io/). Contributions and feedback are always welcome!
