@@ -12,7 +12,9 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup"
+    "build": "tsup",
+    "pub:dryrun": "bun publish --dry-run",
+    "pub": "bun publish"
   },
   "files": [
     "lib"

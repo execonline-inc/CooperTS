@@ -33,7 +33,9 @@
   },
   "devDependencies": {
     "typescript": "^5.4.3",
-    "tsup": "^8.4.0"
+    "tsup": "^8.4.0",
+    "pub:dryrun": "bun publish --dry-run",
+    "pub": "bun publish"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

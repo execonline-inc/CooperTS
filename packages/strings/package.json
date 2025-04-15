@@ -28,7 +28,9 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup"
+    "build": "tsup",
+    "pub:dryrun": "bun publish --dry-run",
+    "pub": "bun publish"
   },
   "dependencies": {
     "@kofno/piper": "^5.0.1",

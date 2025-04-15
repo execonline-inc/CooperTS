@@ -20,7 +20,9 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "build": "tsup"
+    "build": "tsup",
+    "pub:dryrun": "bun publish --dry-run",
+    "pub": "bun publish"
   },
   "bugs": {
     "url": "https://github.com/execonline-inc/CooperTS/issues"
