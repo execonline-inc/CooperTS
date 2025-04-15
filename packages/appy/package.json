@@ -43,8 +43,8 @@
     "@execonline-inc/resource": "workspace:^",
     "@kofno/piper": "^5.0.1",
     "ajaxian": "^5.4.0",
-    "jsonous": "^12.0.0",
-    "maybeasy": "^6.3.0",
+    "jsonous": "^12.1.0",
+    "maybeasy": "^7.1.0",
     "resulty": "^8.0.0",
     "taskarian": "^6.1.0"
   },

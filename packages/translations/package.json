@@ -37,11 +37,11 @@
     "@kofno/piper": "^5.0.1",
     "@prebsch-exo/i18next": "19.9.2-patch.1",
     "htmlparser2": "^4.1.0",
-    "jsonous": "^12.0.0",
-    "maybeasy": "^6.3.0",
-    "nonempty-list": "^4.1.0",
+    "jsonous": "^12.1.0",
+    "maybeasy": "^7.1.0",
+    "nonempty-list": "^4.2.0",
     "resulty": "^8.0.0",
-    "taskarian": "^6.1.0"
+    "taskarian": "^7.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",

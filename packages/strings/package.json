@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@kofno/piper": "^5.0.1",
-    "maybeasy": "^6.3.0"
+    "maybeasy": "^7.1.0"
   },
   "devDependencies": {
     "typescript": "^5.4.3"

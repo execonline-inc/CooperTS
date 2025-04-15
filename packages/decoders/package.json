@@ -41,8 +41,8 @@
   "dependencies": {
     "@execonline-inc/time": "workspace:^",
     "js-base64": "^3.7.2",
-    "jsonous": "^12.0.0",
-    "maybeasy": "^6.3.0",
+    "jsonous": "^12.1.0",
+    "maybeasy": "^7.1.0",
     "resulty": "^8.0.0"
   },
   "publishConfig": {

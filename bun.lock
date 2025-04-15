@@ -25,8 +25,8 @@
         "@execonline-inc/url": "workspace:^",
         "@kofno/piper": "^5.0.1",
         "@types/node": "^20.11.30",
-        "ajaxios": "^3.2.0",
-        "jsonous": "^12.0.0",
+        "ajaxios": "^3.3.0",
+        "jsonous": "^12.1.0",
         "prettier": "^3.2.5",
         "taskarian": "^6.1.0",
         "ts-node": "^10.7.0",
@@ -46,9 +46,9 @@
         "glob": "^8.0.3",
         "gray-matter": "^4.0.3",
         "highlight.js": "^11.5.1",
-        "jsonous": "^12.0.0",
+        "jsonous": "^12.1.0",
         "marked": "^4.0.17",
-        "maybeasy": "^6.3.0",
+        "maybeasy": "^7.1.0",
         "mobx": "^6.8.0",
         "mobx-react": "^7.6.0",
         "next": "^13.5.6",
@@ -62,7 +62,7 @@
         "@types/node": "^20.11.30",
         "@types/react": "^18.2.67",
         "@types/react-dom": "^18.2.22",
-        "ajaxios": "^3.2.0",
+        "ajaxios": "^3.3.0",
         "autoprefixer": "^10.4.7",
         "fork-ts-checker-webpack-plugin": "^7.2.11",
         "postcss": "^8.4.14",
@@ -79,14 +79,14 @@
     },
     "packages/appy": {
       "name": "@execonline-inc/appy",
-      "version": "9.6.0",
+      "version": "9.8.0",
       "dependencies": {
         "@execonline-inc/environment": "workspace:^",
         "@execonline-inc/resource": "workspace:^",
         "@kofno/piper": "^5.0.1",
         "ajaxian": "^5.4.0",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -98,13 +98,13 @@
     },
     "packages/collections": {
       "name": "@execonline-inc/collections",
-      "version": "11.6.0",
+      "version": "11.8.0",
       "dependencies": {
         "@execonline-inc/maybe-adapter": "workspace:^",
         "@kofno/piper": "^5.0.1",
         "ajaxian": "^5.4.0",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -115,12 +115,12 @@
     },
     "packages/decoders": {
       "name": "@execonline-inc/decoders",
-      "version": "7.4.0",
+      "version": "7.6.0",
       "dependencies": {
         "@execonline-inc/time": "workspace:^",
         "js-base64": "^3.7.2",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
       },
       "devDependencies": {
@@ -130,7 +130,7 @@
     },
     "packages/dom": {
       "name": "@execonline-inc/dom",
-      "version": "4.3.0",
+      "version": "4.6.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "@types/node": "^20.11.30",
@@ -142,12 +142,12 @@
     },
     "packages/environment": {
       "name": "@execonline-inc/environment",
-      "version": "6.6.0",
+      "version": "6.8.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "ajaxian": "^5.4.0",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -158,10 +158,10 @@
     },
     "packages/error-handling": {
       "name": "@execonline-inc/error-handling",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
-        "maybeasy": "^6.3.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -172,7 +172,7 @@
     },
     "packages/logging": {
       "name": "@execonline-inc/logging",
-      "version": "7.3.0",
+      "version": "7.5.0",
       "dependencies": {
         "@execonline-inc/environment": "workspace:^",
         "date-fns": "^2.28.0",
@@ -184,12 +184,12 @@
     },
     "packages/maybe-adapter": {
       "name": "@execonline-inc/maybe-adapter",
-      "version": "5.6.0",
+      "version": "5.8.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "ajaxian": "^5.4.0",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -200,11 +200,11 @@
     },
     "packages/numbers": {
       "name": "@execonline-inc/numbers",
-      "version": "5.3.0",
+      "version": "5.5.0",
       "dependencies": {
         "@execonline-inc/maybe-adapter": "workspace:^",
         "@kofno/piper": "^5.0.1",
-        "maybeasy": "^6.3.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -216,7 +216,7 @@
     },
     "packages/resource": {
       "name": "@execonline-inc/resource",
-      "version": "7.6.0",
+      "version": "7.8.0",
       "dependencies": {
         "@execonline-inc/collections": "workspace:^",
         "@execonline-inc/decoders": "workspace:^",
@@ -224,8 +224,8 @@
         "@execonline-inc/maybe-adapter": "workspace:^",
         "@kofno/piper": "^5.0.1",
         "ajaxian": "^5.4.0",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -236,10 +236,10 @@
     },
     "packages/strings": {
       "name": "@execonline-inc/strings",
-      "version": "2.3.0",
+      "version": "2.5.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
-        "maybeasy": "^6.3.0",
+        "maybeasy": "^7.1.0",
       },
       "devDependencies": {
         "typescript": "^5.4.3",
@@ -247,7 +247,7 @@
     },
     "packages/time": {
       "name": "@execonline-inc/time",
-      "version": "6.3.0",
+      "version": "6.5.0",
       "dependencies": {
         "resulty": "^8.0.0",
       },
@@ -259,7 +259,7 @@
     },
     "packages/time-distance": {
       "name": "@execonline-inc/time-distance",
-      "version": "2.3.0",
+      "version": "2.5.0",
       "dependencies": {
         "@execonline-inc/time": "workspace:^",
         "resulty": "^8.0.0",
@@ -271,7 +271,7 @@
     },
     "packages/translations": {
       "name": "@execonline-inc/translations",
-      "version": "11.1.0",
+      "version": "11.3.0",
       "dependencies": {
         "@execonline-inc/collections": "workspace:^",
         "@execonline-inc/logging": "workspace:^",
@@ -279,11 +279,11 @@
         "@kofno/piper": "^5.0.1",
         "@prebsch-exo/i18next": "19.9.2-patch.1",
         "htmlparser2": "^4.1.0",
-        "jsonous": "^12.0.0",
-        "maybeasy": "^6.3.0",
-        "nonempty-list": "^4.1.0",
+        "jsonous": "^12.1.0",
+        "maybeasy": "^7.1.0",
+        "nonempty-list": "^4.2.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -296,10 +296,10 @@
     },
     "packages/url": {
       "name": "@execonline-inc/url",
-      "version": "9.3.0",
+      "version": "9.5.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
-        "maybeasy": "^6.3.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
         "url-parse": "^1.5.10",
@@ -314,11 +314,11 @@
     },
     "packages/web-url": {
       "name": "@execonline-inc/web-url",
-      "version": "2.4.0",
+      "version": "2.6.0",
       "dependencies": {
         "@execonline-inc/error-handling": "workspace:^",
         "@kofno/piper": "^5.0.1",
-        "maybeasy": "^6.3.0",
+        "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
         "taskarian": "^6.1.0",
       },
@@ -810,7 +810,7 @@
 
     "ajaxian": ["ajaxian@5.4.0", "", { "dependencies": { "resulty": "^8.0.0", "taskarian": "^6.1.0" } }, "sha512-pxXh6GlAoel4wFM19NAiq1YrngL7kDMxhrbqTVKCdUJriTrm7dG11zloquWoEOMbyVEWA1bvFQ2HNQu07TNWnQ=="],
 
-    "ajaxios": ["ajaxios@3.2.0", "", { "dependencies": { "axios": "^1.8.1", "jsonous": "^12.0.0", "maybeasy": "^6.3.0", "resulty": "^8.0.0", "taskarian": "^6.1.0" } }, "sha512-a1z12uVuKW2KjaA8eqNGYhqeG1dEB954cyI+FmjYYYUGU2V8ptoG3vq34CnQTNOzwlqsiemP9uluMztKjEy4Yg=="],
+    "ajaxios": ["ajaxios@3.3.0", "", { "dependencies": { "axios": "^1.8.1", "jsonous": "^12.1.0", "maybeasy": "^6.3.0", "resulty": "^8.0.0", "taskarian": "^6.1.0" } }, "sha512-YmPozHYtiqBxeKEq2osTq0VjEUX673epsQFHtRXbzhh3UZAqySI/kDHTqTkT6dHssDVwyN0Ps4RbjdEmoT/Umw=="],
 
     "ajv": ["ajv@8.12.0", "", { "dependencies": { "fast-deep-equal": "^3.1.1", "json-schema-traverse": "^1.0.0", "require-from-string": "^2.0.2", "uri-js": "^4.2.2" } }, "sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA=="],
 
@@ -1372,7 +1372,7 @@
 
     "jsonfile": ["jsonfile@6.1.0", "", { "dependencies": { "universalify": "^2.0.0" }, "optionalDependencies": { "graceful-fs": "^4.1.6" } }, "sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ=="],
 
-    "jsonous": ["jsonous@12.0.0", "", { "dependencies": { "date-fns": "^4.1.0", "maybeasy": "^6.3.0", "resulty": "^8.0.0" } }, "sha512-PRwGiOi/sNQb6dFZl7afixvEBwR0fwuyZno4dvCq/pZR1+G0VYyOVizzgoCvHDUv4s/F82ECN2UjFTXw6vz68Q=="],
+    "jsonous": ["jsonous@12.1.0", "", { "dependencies": { "date-fns": "^4.1.0", "maybeasy": "^7.1.0", "resulty": "^8.0.0" } }, "sha512-/201tO3/60RQeF0eo7IjPBL+7lAra2GkLg+1KloSAYpreA+g4lVnEh/ao7CrEwved57wgz+o2deDNp9Hk07MfA=="],
 
     "jsonparse": ["jsonparse@1.3.1", "", {}, "sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg=="],
 
@@ -1434,7 +1434,7 @@
 
     "math-intrinsics": ["math-intrinsics@1.1.0", "", {}, "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g=="],
 
-    "maybeasy": ["maybeasy@6.3.0", "", {}, "sha512-/ygDC23BDtETAKyt5Jtd7sLEWIxq5Hc9/vzsFWyH7d88+N91s92AQlRwElYxgdiyQYW5ZBvc85EqXBizo0OImA=="],
+    "maybeasy": ["maybeasy@7.1.0", "", {}, "sha512-FardrD/ZYYOnfzJYSHAZH3efp+MTzXkV8/AZjoJhBzB9m1vgKbf9AIgXMFWqVh++w5FuZlpucyNRFWjU8dyMGw=="],
 
     "memfs": ["memfs@3.6.0", "", { "dependencies": { "fs-monkey": "^1.0.4" } }, "sha512-EGowvkkgbMcIChjMTMkESFDbZeSh8xZ7kNSF0hAiAN4Jh6jgHCRS0Ga/+C8y6Au+oqpezRHCfPsmJ2+DwAgiwQ=="],
 
@@ -1514,7 +1514,7 @@
 
     "node-releases": ["node-releases@2.0.19", "", {}, "sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw=="],
 
-    "nonempty-list": ["nonempty-list@4.1.0", "", { "dependencies": { "maybeasy": "^6.3.0", "resulty": "^8.0.0" } }, "sha512-f4SkFUgSLNZOOt8IzZ+Ll+XpZL3Q9DJ+AesJ++aYS+WhY3dZFilQqGSqXimsIncGLZv2W8kyJAE75E1zQFOnPw=="],
+    "nonempty-list": ["nonempty-list@4.2.0", "", { "dependencies": { "maybeasy": "^7.1.0", "resulty": "^8.0.0" } }, "sha512-g6Slmc7dSeLCvwe50b2W821dwWT+bU3h+gW4IRk1M5oPPyZDY+Wqj1frzBDbi6+42XRh1Ix9rsCCwVrATpDnRw=="],
 
     "nopt": ["nopt@7.2.1", "", { "dependencies": { "abbrev": "^2.0.0" }, "bin": { "nopt": "bin/nopt.js" } }, "sha512-taM24ViiimT/XntxbPyJQzCG+p4EKOpgD3mxFwW38mGjVUrfERQOeY4EDHjdnptttfHuHQXFx+lTP08Q+mLa/w=="],
 
@@ -1996,6 +1996,8 @@
 
     "yn": ["yn@3.1.1", "", {}, "sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q=="],
 
+    "@execonline-inc/translations/taskarian": ["taskarian@7.0.1", "", { "dependencies": { "@kofno/piper": "^5.0.1", "maybeasy": "^7.0.2" }, "peerDependencies": { "typescript": "^5" } }, "sha512-ZbeaoNAaSMsLo85VFn3Y4mjYKRUlzjzmD8lHSI7Jc5geKqhWo9wGoEouOQDzxi8cJ6zL8DusB/kZCMIAN/zPUA=="],
+
     "@isaacs/cliui/string-width": ["string-width@5.1.2", "", { "dependencies": { "eastasianwidth": "^0.2.0", "emoji-regex": "^9.2.2", "strip-ansi": "^7.0.1" } }, "sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA=="],
 
     "@isaacs/cliui/strip-ansi": ["strip-ansi@7.1.0", "", { "dependencies": { "ansi-regex": "^6.0.1" } }, "sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ=="],
@@ -2033,6 +2035,8 @@
     "@yarnpkg/sdks/chalk": ["chalk@3.0.0", "", { "dependencies": { "ansi-styles": "^4.1.0", "supports-color": "^7.1.0" } }, "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="],
 
     "@yarnpkg/shell/chalk": ["chalk@3.0.0", "", { "dependencies": { "ansi-styles": "^4.1.0", "supports-color": "^7.1.0" } }, "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="],
+
+    "ajaxios/maybeasy": ["maybeasy@6.3.0", "", {}, "sha512-/ygDC23BDtETAKyt5Jtd7sLEWIxq5Hc9/vzsFWyH7d88+N91s92AQlRwElYxgdiyQYW5ZBvc85EqXBizo0OImA=="],
 
     "ajv-keywords/ajv": ["ajv@6.12.6", "", { "dependencies": { "fast-deep-equal": "^3.1.1", "fast-json-stable-stringify": "^2.0.0", "json-schema-traverse": "^0.4.1", "uri-js": "^4.2.2" } }, "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g=="],
 
