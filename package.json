@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "docs": "bun workspace @execonline-inc/cooperts-docs",
-    "tsc": "lerna run tsc",
     "pub:dryrun": "lerna run pub:dryrun --concurrency 1",
     "pub": "lerna run pub --concurrency 1",
     "build": "lerna run build --concurrency 1",

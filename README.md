@@ -41,25 +41,59 @@ See also the lower-level packages at [`festive-possum`](https://github.com/kofno
 
 ## Local Development
 
-```bash
-# Clone the repo
-git clone https://github.com/execonline-inc/CooperTS.git
-cd CooperTS
+This repo uses [bun](https://bun.sh/) as a package manager and runtime. It is recommended to use bun for local development, as it is
+significantly faster than npm or yarn. Bun is also used to build the packages in this repo.
 
-# Install dependencies
-yarn install
-```
-
-# To run the docs app
+Install bun and then run the following command to install all dependencies:
 
 ```bash
-yarn install
+bun install
 ```
-
-Then, run the development server in the same root directory:
+Then, run the following command to build all packages:
 
 ```bash
-yarn docs dev
+bun run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Releasing new versions
+All packages in this repo are published to github's npm registry. You should already have your npm configured with
+the correct access token. Bun will use this same token to publish the packages.
+
+Because all of the packages are frequently interdependent. Often because a package either depends on other packages
+or else several packages all have the same dependencies. Often, when one package is updated, all of the packages need to
+be updated.
+
+For example, when a new version of `jsonous` is released, all of the packages that depend on `jsonous` need to be updated.
+This is especially true for `decoders`, which are used in many of the packages. Since there is so much interdependence,
+it is often easier to update all of the packages at once. In this example, you will want to update the version of `jsonous`
+in all of the packages that depend on it. Then you will want to rebuild all of the packages. Finally, you will want to
+bump the minor version of all the packages and then publish them.
+
+To release a new version of all packages, run the following commands in the root of the repo:
+
+```bash
+bun run build
+bun run bump:minor
+bun run pub
+```
+
+This will build all packages, bump the minor version of all packages, and then publish all packages to the github npm registry.
+
+Other commands of interest are:
+- `bun run bump:patch` - Bump the patch version of all packages
+- `bun run bump:major` - Bump the major version of all packages
+- `bun run pub:dryrun` - Run a dry run of the publish command to see what will be published
+- `bun run changed` - Show which packages have changed since the last release
+
+If only need to update a single package for some reason, all these commands can be run in an individual package directory.
+
+So for example, if you want to update the `appy` package, you can run the following commands in the `packages/appy` directory:
+
+```bash
+bun run build
+bun run bump:minor
+bun run pub
+```
+This will build the `appy` package, bump the minor version of the `appy` package, and then publish the `appy` package to the github npm registry.
+
+
