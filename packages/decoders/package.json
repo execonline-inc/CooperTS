@@ -1,6 +1,6 @@
 {
   "name": "@execonline-inc/decoders",
-  "version": "7.7.0",
+  "version": "7.8.0",
   "description": "Generally useful decoders that extend Jsonous",
   "author": "Ryan L. Bell <ryan.l.bell@gmail.com>",
   "homepage": "https://github.com/execonline-inc/CooperTS#readme",
