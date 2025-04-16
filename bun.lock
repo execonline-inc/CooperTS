@@ -28,7 +28,7 @@
         "ajaxios": "^3.3.0",
         "jsonous": "^12.1.0",
         "prettier": "^3.2.5",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
         "ts-node": "^10.7.0",
         "tsup": "8.4.0",
         "typescript": "^5.4.3",
@@ -55,14 +55,14 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/glob": "^7.2.0",
         "@types/node": "^20.11.30",
         "@types/react": "^18.2.67",
         "@types/react-dom": "^18.2.22",
-        "ajaxios": "^3.3.0",
+        "ajaxios": "^3.4.0",
         "autoprefixer": "^10.4.7",
         "fork-ts-checker-webpack-plugin": "^7.2.11",
         "postcss": "^8.4.14",
@@ -79,16 +79,16 @@
     },
     "packages/appy": {
       "name": "@execonline-inc/appy",
-      "version": "9.8.0",
+      "version": "9.9.0",
       "dependencies": {
         "@execonline-inc/environment": "workspace:^",
         "@execonline-inc/resource": "workspace:^",
         "@kofno/piper": "^5.0.1",
-        "ajaxian": "^5.4.0",
+        "ajaxian": "^5.5.0",
         "jsonous": "^12.1.0",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -98,15 +98,15 @@
     },
     "packages/collections": {
       "name": "@execonline-inc/collections",
-      "version": "11.8.0",
+      "version": "11.9.0",
       "dependencies": {
         "@execonline-inc/maybe-adapter": "workspace:^",
         "@kofno/piper": "^5.0.1",
-        "ajaxian": "^5.4.0",
+        "ajaxian": "^5.5.0",
         "jsonous": "^12.1.0",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -115,7 +115,7 @@
     },
     "packages/decoders": {
       "name": "@execonline-inc/decoders",
-      "version": "7.6.0",
+      "version": "7.7.0",
       "dependencies": {
         "@execonline-inc/time": "workspace:^",
         "js-base64": "^3.7.2",
@@ -130,11 +130,11 @@
     },
     "packages/dom": {
       "name": "@execonline-inc/dom",
-      "version": "4.6.0",
+      "version": "4.7.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "@types/node": "^20.11.30",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "typescript": "^5.4.3",
@@ -142,14 +142,14 @@
     },
     "packages/environment": {
       "name": "@execonline-inc/environment",
-      "version": "6.8.0",
+      "version": "6.9.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
-        "ajaxian": "^5.4.0",
+        "ajaxian": "^5.5.0",
         "jsonous": "^12.1.0",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -158,12 +158,12 @@
     },
     "packages/error-handling": {
       "name": "@execonline-inc/error-handling",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "tsup": "^8.4.0",
@@ -172,7 +172,7 @@
     },
     "packages/logging": {
       "name": "@execonline-inc/logging",
-      "version": "7.5.0",
+      "version": "7.6.0",
       "dependencies": {
         "@execonline-inc/environment": "workspace:^",
         "date-fns": "^2.28.0",
@@ -184,14 +184,14 @@
     },
     "packages/maybe-adapter": {
       "name": "@execonline-inc/maybe-adapter",
-      "version": "5.8.0",
+      "version": "5.9.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
-        "ajaxian": "^5.4.0",
+        "ajaxian": "^5.5.0",
         "jsonous": "^12.1.0",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -200,13 +200,13 @@
     },
     "packages/numbers": {
       "name": "@execonline-inc/numbers",
-      "version": "5.5.0",
+      "version": "5.6.0",
       "dependencies": {
         "@execonline-inc/maybe-adapter": "workspace:^",
         "@kofno/piper": "^5.0.1",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -216,18 +216,18 @@
     },
     "packages/resource": {
       "name": "@execonline-inc/resource",
-      "version": "7.8.0",
+      "version": "7.9.0",
       "dependencies": {
         "@execonline-inc/collections": "workspace:^",
         "@execonline-inc/decoders": "workspace:^",
         "@execonline-inc/environment": "workspace:^",
         "@execonline-inc/maybe-adapter": "workspace:^",
         "@kofno/piper": "^5.0.1",
-        "ajaxian": "^5.4.0",
+        "ajaxian": "^5.5.0",
         "jsonous": "^12.1.0",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -236,7 +236,7 @@
     },
     "packages/strings": {
       "name": "@execonline-inc/strings",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "maybeasy": "^7.1.0",
@@ -247,7 +247,7 @@
     },
     "packages/time": {
       "name": "@execonline-inc/time",
-      "version": "6.5.0",
+      "version": "6.6.0",
       "dependencies": {
         "resulty": "^8.0.0",
       },
@@ -259,7 +259,7 @@
     },
     "packages/time-distance": {
       "name": "@execonline-inc/time-distance",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "dependencies": {
         "@execonline-inc/time": "workspace:^",
         "resulty": "^8.0.0",
@@ -271,7 +271,7 @@
     },
     "packages/translations": {
       "name": "@execonline-inc/translations",
-      "version": "11.3.0",
+      "version": "11.4.0",
       "dependencies": {
         "@execonline-inc/collections": "workspace:^",
         "@execonline-inc/logging": "workspace:^",
@@ -296,12 +296,12 @@
     },
     "packages/url": {
       "name": "@execonline-inc/url",
-      "version": "9.5.0",
+      "version": "9.6.0",
       "dependencies": {
         "@kofno/piper": "^5.0.1",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
         "url-parse": "^1.5.10",
       },
       "devDependencies": {
@@ -314,13 +314,13 @@
     },
     "packages/web-url": {
       "name": "@execonline-inc/web-url",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "dependencies": {
         "@execonline-inc/error-handling": "workspace:^",
         "@kofno/piper": "^5.0.1",
         "maybeasy": "^7.1.0",
         "resulty": "^8.0.0",
-        "taskarian": "^6.1.0",
+        "taskarian": "^7.0.1",
       },
       "devDependencies": {
         "@types/node": "^20.11.30",
@@ -808,9 +808,9 @@
 
     "aggregate-error": ["aggregate-error@3.1.0", "", { "dependencies": { "clean-stack": "^2.0.0", "indent-string": "^4.0.0" } }, "sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA=="],
 
-    "ajaxian": ["ajaxian@5.4.0", "", { "dependencies": { "resulty": "^8.0.0", "taskarian": "^6.1.0" } }, "sha512-pxXh6GlAoel4wFM19NAiq1YrngL7kDMxhrbqTVKCdUJriTrm7dG11zloquWoEOMbyVEWA1bvFQ2HNQu07TNWnQ=="],
+    "ajaxian": ["ajaxian@5.5.0", "", { "dependencies": { "resulty": "^8.0.0", "taskarian": "^7.0.1" } }, "sha512-wumEL/ts0uFGkArLYCV7kg0BRChal9PwN8cQ6RvsuXg5jQnOHgUYOPKIYl7vOXNWZIxwyfZ36Q1Sus/BmZI9Yw=="],
 
-    "ajaxios": ["ajaxios@3.3.0", "", { "dependencies": { "axios": "^1.8.1", "jsonous": "^12.1.0", "maybeasy": "^6.3.0", "resulty": "^8.0.0", "taskarian": "^6.1.0" } }, "sha512-YmPozHYtiqBxeKEq2osTq0VjEUX673epsQFHtRXbzhh3UZAqySI/kDHTqTkT6dHssDVwyN0Ps4RbjdEmoT/Umw=="],
+    "ajaxios": ["ajaxios@3.4.0", "", { "dependencies": { "axios": "^1.8.1", "jsonous": "^12.1.0", "maybeasy": "^7.1.0", "resulty": "^8.0.0", "taskarian": "^7.0.1" } }, "sha512-bPBYKw65Q5OFz7dVcquhfy54BM3cEpxjjFjcNq9/fsuL+eVPIQS+0XhPr9UICY/OPA/+ZQpCBnayTDImYGHKkg=="],
 
     "ajv": ["ajv@8.12.0", "", { "dependencies": { "fast-deep-equal": "^3.1.1", "json-schema-traverse": "^1.0.0", "require-from-string": "^2.0.2", "uri-js": "^4.2.2" } }, "sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA=="],
 
@@ -1854,7 +1854,7 @@
 
     "tar-stream": ["tar-stream@2.2.0", "", { "dependencies": { "bl": "^4.0.3", "end-of-stream": "^1.4.1", "fs-constants": "^1.0.0", "inherits": "^2.0.3", "readable-stream": "^3.1.1" } }, "sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ=="],
 
-    "taskarian": ["taskarian@6.1.0", "", {}, "sha512-qOaI9/J4KHwEtEXePEc95FoftgGp0hm3b+9VdzG8ed/f1RB3Lx+YK/CbQdoyPz51Ww//qxW/f0CNA/CUa7Do2w=="],
+    "taskarian": ["taskarian@7.0.1", "", { "dependencies": { "@kofno/piper": "^5.0.1", "maybeasy": "^7.0.2" }, "peerDependencies": { "typescript": "^5" } }, "sha512-ZbeaoNAaSMsLo85VFn3Y4mjYKRUlzjzmD8lHSI7Jc5geKqhWo9wGoEouOQDzxi8cJ6zL8DusB/kZCMIAN/zPUA=="],
 
     "temp-dir": ["temp-dir@1.0.0", "", {}, "sha512-xZFXEGbG7SNC3itwBzI3RYjq/cEhBkx2hJuKGIUOcEULmkQExXiHat2z/qkISYsuR+IKumhEfKKbV5qXmhICFQ=="],
 
@@ -1996,7 +1996,7 @@
 
     "yn": ["yn@3.1.1", "", {}, "sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q=="],
 
-    "@execonline-inc/translations/taskarian": ["taskarian@7.0.1", "", { "dependencies": { "@kofno/piper": "^5.0.1", "maybeasy": "^7.0.2" }, "peerDependencies": { "typescript": "^5" } }, "sha512-ZbeaoNAaSMsLo85VFn3Y4mjYKRUlzjzmD8lHSI7Jc5geKqhWo9wGoEouOQDzxi8cJ6zL8DusB/kZCMIAN/zPUA=="],
+    "@execonline-inc/slack-action/ajaxios": ["ajaxios@3.3.0", "", { "dependencies": { "axios": "^1.8.1", "jsonous": "^12.1.0", "maybeasy": "^6.3.0", "resulty": "^8.0.0", "taskarian": "^6.1.0" } }, "sha512-YmPozHYtiqBxeKEq2osTq0VjEUX673epsQFHtRXbzhh3UZAqySI/kDHTqTkT6dHssDVwyN0Ps4RbjdEmoT/Umw=="],
 
     "@isaacs/cliui/string-width": ["string-width@5.1.2", "", { "dependencies": { "eastasianwidth": "^0.2.0", "emoji-regex": "^9.2.2", "strip-ansi": "^7.0.1" } }, "sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA=="],
 
@@ -2035,8 +2035,6 @@
     "@yarnpkg/sdks/chalk": ["chalk@3.0.0", "", { "dependencies": { "ansi-styles": "^4.1.0", "supports-color": "^7.1.0" } }, "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="],
 
     "@yarnpkg/shell/chalk": ["chalk@3.0.0", "", { "dependencies": { "ansi-styles": "^4.1.0", "supports-color": "^7.1.0" } }, "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="],
-
-    "ajaxios/maybeasy": ["maybeasy@6.3.0", "", {}, "sha512-/ygDC23BDtETAKyt5Jtd7sLEWIxq5Hc9/vzsFWyH7d88+N91s92AQlRwElYxgdiyQYW5ZBvc85EqXBizo0OImA=="],
 
     "ajv-keywords/ajv": ["ajv@6.12.6", "", { "dependencies": { "fast-deep-equal": "^3.1.1", "fast-json-stable-stringify": "^2.0.0", "json-schema-traverse": "^0.4.1", "uri-js": "^4.2.2" } }, "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g=="],
 
@@ -2257,6 +2255,10 @@
     "write-json-file/write-file-atomic": ["write-file-atomic@2.4.3", "", { "dependencies": { "graceful-fs": "^4.1.11", "imurmurhash": "^0.1.4", "signal-exit": "^3.0.2" } }, "sha512-GaETH5wwsX+GcnzhPgKcKjJ6M2Cq3/iZp1WyY/X1CSqrW+jVNM9Y7D8EC2sM4ZG/V8wZlSniJnCKWPmBYAucRQ=="],
 
     "write-pkg/type-fest": ["type-fest@0.4.1", "", {}, "sha512-IwzA/LSfD2vC1/YDYMv/zHP4rDF1usCwllsDpbolT3D4fUepIO7f9K70jjmUewU/LmGUKJcwcVtDCpnKk4BPMw=="],
+
+    "@execonline-inc/slack-action/ajaxios/maybeasy": ["maybeasy@6.3.0", "", {}, "sha512-/ygDC23BDtETAKyt5Jtd7sLEWIxq5Hc9/vzsFWyH7d88+N91s92AQlRwElYxgdiyQYW5ZBvc85EqXBizo0OImA=="],
+
+    "@execonline-inc/slack-action/ajaxios/taskarian": ["taskarian@6.1.0", "", {}, "sha512-qOaI9/J4KHwEtEXePEc95FoftgGp0hm3b+9VdzG8ed/f1RB3Lx+YK/CbQdoyPz51Ww//qxW/f0CNA/CUa7Do2w=="],
 
     "@isaacs/cliui/string-width/emoji-regex": ["emoji-regex@9.2.2", "", {}, "sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg=="],
 

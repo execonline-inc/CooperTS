@@ -44,7 +44,7 @@
   "dependencies": {
     "@kofno/piper": "^5.0.1",
     "@types/node": "^20.11.30",
-    "taskarian": "^6.1.0"
+    "taskarian": "^7.0.1"
   },
   "devDependencies": {
     "typescript": "^5.4.3"

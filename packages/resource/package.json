@@ -44,11 +44,11 @@
     "@execonline-inc/environment": "workspace:^",
     "@execonline-inc/maybe-adapter": "workspace:^",
     "@kofno/piper": "^5.0.1",
-    "ajaxian": "^5.4.0",
+    "ajaxian": "^5.5.0",
     "jsonous": "^12.1.0",
     "maybeasy": "^7.1.0",
     "resulty": "^8.0.0",
-    "taskarian": "^6.1.0"
+    "taskarian": "^7.0.1"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

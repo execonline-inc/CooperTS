@@ -18,7 +18,7 @@
     "@kofno/piper": "^5.0.1",
     "maybeasy": "^7.1.0",
     "resulty": "^8.0.0",
-    "taskarian": "^6.1.0",
+    "taskarian": "^7.0.1",
     "url-parse": "^1.5.10"
   },
   "repository": {

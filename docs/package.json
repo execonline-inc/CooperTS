@@ -25,14 +25,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "resulty": "^8.0.0",
-    "taskarian": "^6.1.0"
+    "taskarian": "^7.0.1"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
-    "ajaxios": "^3.3.0",
+    "ajaxios": "^3.4.0",
     "autoprefixer": "^10.4.7",
     "fork-ts-checker-webpack-plugin": "^7.2.11",
     "postcss": "^8.4.14",

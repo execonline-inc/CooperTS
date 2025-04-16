@@ -17,7 +17,7 @@
     "ajaxios": "^3.3.0",
     "jsonous": "^12.1.0",
     "prettier": "^3.2.5",
-    "taskarian": "^6.1.0",
+    "taskarian": "^7.0.1",
     "ts-node": "^10.7.0",
     "typescript": "^5.4.3",
     "tsup": "8.4.0"

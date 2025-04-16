@@ -26,7 +26,7 @@
     "@kofno/piper": "^5.0.1",
     "maybeasy": "^7.1.0",
     "resulty": "^8.0.0",
-    "taskarian": "^6.1.0"
+    "taskarian": "^7.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
