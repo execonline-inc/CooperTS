@@ -4,6 +4,7 @@ node_modules
 packages/*/lib
 .idea
 .vscode/
+.serena/
 
 # Yarn with zero-installs
 .yarn/*

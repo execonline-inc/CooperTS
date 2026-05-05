@@ -1,6 +1,6 @@
 import { warn } from '@execonline-inc/logging';
 import { noop } from '@kofno/piper';
-import i18next, * as i18n from '@prebsch-exo/i18next';
+import i18next, * as i18n from 'i18next';
 import { Task } from 'taskarian';
 import { loaded, loadedFromFallback } from '../../translations';
 import { Loader } from '../../types';
@@ -27,7 +27,7 @@ export const initTask = (initializer: i18n.i18n, options: i18n.InitOptions): Loa
           resolve(loaded(translator, i18next.language));
         }
       })
-      .catch(err => warn(err));
+      .catch((err) => warn(err));
 
     return noop;
   });
