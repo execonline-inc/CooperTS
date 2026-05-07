@@ -1,10 +1,10 @@
 {
   "name": "@execonline-inc/cooperts-docs",
   "private": true,
-  "version": "0.7.0",
+  "version": "0.8.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
     "start": "bun run build && serve out"
   },
   "dependencies": {
@@ -20,21 +20,20 @@
     "marked": "^4.0.17",
     "maybeasy": "^7.1.0",
     "mobx": "^6.8.0",
-    "mobx-react": "^7.6.0",
-    "next": "^13.5.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "mobx-react": "^9.2.1",
+    "next": "^16.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "resulty": "^8.0.0",
     "taskarian": "^7.0.1"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/node": "^20.11.30",
-    "@types/react": "^18.2.67",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "ajaxios": "^3.4.0",
     "autoprefixer": "^10.4.7",
-    "fork-ts-checker-webpack-plugin": "^7.2.11",
     "postcss": "^8.4.14",
     "postcss-focus-visible": "^6.0.4",
     "postcss-import": "^15.1.0",
