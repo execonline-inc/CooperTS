@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[421],{3070:(_,e,r)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/500",function(){return r(9879)}])},9879:(_,e,r)=>{"use strict";r.r(e),r.d(e,{__N_SSG:()=>u,default:()=>n});var s=r(6514),u=!0;let n=()=>(0,s.jsx)("h1",{children:"500 - Server-side error occurred"})}},_=>{_.O(0,[636,593,792],()=>_(_.s=3070)),_N_E=_.O()}]);
